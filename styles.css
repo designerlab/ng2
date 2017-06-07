@@ -33,10 +33,17 @@ button {
   background-color: #f89406;
 }
 
+/* slider css */
+
 .bx-wrapper {
     -moz-box-shadow: 0 0 0px #ccc;
     -webkit-box-shadow: 0 0 0px #ccc;
     box-shadow: 0 0 0px #ccc;
     border: 0px solid #fff;
     background: #a7a495;
+    margin-bottom:0px;
+}
+
+.bx-wrapper .bx-pager, .bx-wrapper .bx-controls-auto {
+    bottom: 8px;
 }

@@ -5,15 +5,17 @@ declare var jQuery:any
 @Component({
     selector: 'slider',
     template: `
-        <ul class="bxslider">
-            <li class="sliderContainer" *ngFor="let slide of slides"><img [src]="slide.imageUrl">
-                <span class="sliderBox">
-                    <h1>{{slide.title}}</h1>
-                    <h2>{{slide.description}}</h2>
-        
-                </span>
-            </li>
-        </ul>
+        <div class="container sliderMain">
+            <ul class="bxslider">
+                <li class="sliderContainer" *ngFor="let slide of slides"><img [src]="slide.imageUrl">
+                    <span class="sliderBox">
+                        <h1>{{slide.title}}</h1>
+                        <h2>{{slide.description}}</h2>
+            
+                    </span>
+                </li>
+            </ul>
+        </div>
         `,
         styles:[`
             .sliderBox{
@@ -30,11 +32,15 @@ declare var jQuery:any
             .sliderContainer:after{
                 display: block;
                 position: relative;
-                background-image: linear-gradient(to right, transparent 45%, #a7a495 60%), linear-gradient(to left, transparent 80%, #a7a495 95%);
+                background-image: linear-gradient(to right, transparent 30%, #a7a495 58%), linear-gradient(to left, transparent 80%, #a7a495 95%);
                 height: 500px;
                 width: 100%;
                 content: '';
                 margin-top: -43.8%;
+            }
+
+            .sliderMain{
+                padding:0px !important;
             }
 
         `]
