@@ -1,21 +1,38 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core'
-
+//<img [src]="event?.imageUrl" height="80px">
 @Component({
     selector:'event-thumbnail',
     template:`
         <div class="well hoverwell thumbnail">
-       <h2>{{event.name}}</h2>
-       <div>Date: {{event.date}}</div>
-       <div>Time: {{event.time}}</div>
-       <div>Price: \${{event.price}}</div>
-       <div>
-            <span>Location: {{event.location.address}}</span>
-            <span>&nbsp;</span>
-            <span>{{event.location.city}}, {{event.location.country}}</span>
-       </div>
-       <button class="btn btn-primary" (click)="handleClickMe()">Click Me! </button>
-    </div>
-    `
+            
+            <h2>{{event?.name}}</h2>
+            <div>Date: {{event?.date}}</div>
+            <div [ngSwitch]="event?.time">Time: {{event?.time}}
+                <span class="label label-success" *ngSwitchCase="'8:00 am'">Early Start</span>
+                <span class="label label-danger" *ngSwitchCase="'10:00 am'">Late Start</span>
+                <span class="label label-info" *ngSwitchDefault>Normal Start</span>
+            </div>
+           
+            <div>Price: \${{event?.price}}</div>
+            <div *ngIf="event?.location">
+                    <span>Location: {{event?.location?.address}}</span>
+                    <span class="pad-left">{{event?.location?.city}}, {{event?.location?.country}}</span>
+            </div>
+            <button class="btn btn-primary" (click)="handleClickMe()">Click Me! </button>
+        </div>
+    `,
+    styles:[`
+        .thumbnail{
+            min-height:270px;
+        }
+        .pad-left{
+            padding-left:10px;
+        }
+        .well{
+            color:#bbb;
+        }
+        button{margin-top:20px;}
+        `]
 })
 
 export class EventThumbnailComponent{
@@ -27,7 +44,7 @@ export class EventThumbnailComponent{
     handleClickMe(){
         this.eventClick.emit(this.event.name);
     }
-
+ 
     logfoo(){
         console.log('foo');
     }
