@@ -32,3 +32,11 @@ button {
 .toast-warning {
   background-color: #f89406;
 }
+
+.bx-wrapper {
+    -moz-box-shadow: 0 0 0px #ccc;
+    -webkit-box-shadow: 0 0 0px #ccc;
+    box-shadow: 0 0 0px #ccc;
+    border: 0px solid #fff;
+    background: #a7a495;
+}
