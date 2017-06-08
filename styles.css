@@ -1,4 +1,9 @@
 /* app css stylesheet */
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700');
+body{
+  font-family: 'Roboto', sans-serif !important;
+}
+
 .hoverwell:hover {
   background-color: #485563;
   cursor: pointer;
@@ -46,4 +51,8 @@ button {
 
 .bx-wrapper .bx-pager, .bx-wrapper .bx-controls-auto {
     bottom: 8px;
+}
+
+h1, h2, h3{
+  font-weight: 200;
 }

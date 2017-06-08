@@ -9,8 +9,8 @@ declare var jQuery:any
             <ul class="bxslider">
                 <li class="sliderContainer" *ngFor="let slide of slides"><img [src]="slide.imageUrl">
                     <span class="sliderBox">
-                        <h1>{{slide.title}}</h1>
-                        <h2>{{slide.description}}</h2>
+                        <h3>{{slide.title}}</h3>
+                        <p>{{slide.description}}</p>
             
                     </span>
                 </li>
@@ -22,11 +22,18 @@ declare var jQuery:any
                 position: absolute;
                 top: 0px;
                 right: 5%;
+                min-width: 470px;
                 margin-right: 20px;
                 background: rgba(102, 102, 102, 0.65);
                 z-index: 999;
                 padding: 10px;
                 top: 17%;
+            }
+
+            .sliderBox h3{
+                font-weight:500;
+                margin-top: 10px;
+                text-transform:uppercase;
             }
 
             .sliderContainer:after{
