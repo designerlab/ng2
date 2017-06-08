@@ -7,6 +7,7 @@ import { NavBarComponent } from './nav/navbar.component'
 import { EventService } from './events/shared/event.service'
 import { SliderService } from './slider/shared/slider.service'
 import { SliderComponent } from './slider/slider.component'
+import { TopNavComponent } from './topnav/topnav.component'
 
 @NgModule({
     imports: [BrowserModule],
@@ -15,7 +16,8 @@ import { SliderComponent } from './slider/slider.component'
         EventsListComponent,
         EventThumbnailComponent,
         NavBarComponent,
-        SliderComponent],
+        SliderComponent,
+        TopNavComponent],
     bootstrap: [EventsAppComponent],
     providers: [
         EventService,
