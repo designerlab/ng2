@@ -5,16 +5,8 @@ import { Component, OnInit } from '@angular/core'
     template: `
         <top-nav></top-nav>
         <nav-bar></nav-bar>
-        <slider></slider>
-        <events-list></events-list>
-    `,
-    styles:[`
-        slider{
-            background: #a7a495;
-            width: 100%;
-            display: block;
-        }
-    `]
+        <router-outlet></router-outlet>
+    `
 })
 export class EventsAppComponent{
     
