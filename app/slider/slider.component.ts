@@ -30,6 +30,21 @@ declare var jQuery:any
                 top: 17%;
             }
 
+            @media screen and (max-width:400px) and (min-width:320px){
+               .sliderBox{
+                    top: 60%;
+                    margin-right: 16px;
+                    left: 0%;
+                    min-width: 94%;
+                    margin: 0px 10px;
+                }
+
+                .sliderContainer:after{
+                    background-image: linear-gradient(to bottom, transparent 34%, #a7a495 47%) !important;
+                    height: 320px !important;
+                }
+            }
+
             .sliderBox h3{
                 font-weight:500;
                 margin-top: 10px;
