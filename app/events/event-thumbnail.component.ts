@@ -3,7 +3,7 @@ import { Component, Input, Output, EventEmitter } from '@angular/core'
 @Component({
     selector:'event-thumbnail',
     template:`
-        <div class="well hoverwell thumbnail">
+        <div  [routerLink]="['/events',event.id]" class="well hoverwell thumbnail">
             
             <h2>{{event?.name}}</h2>
             <div>Date: {{event?.date}}</div>
@@ -18,7 +18,7 @@ import { Component, Input, Output, EventEmitter } from '@angular/core'
                     <span>Location: {{event?.location?.address}}</span>
                     <span class="pad-left">{{event?.location?.city}}, {{event?.location?.country}}</span>
             </div>
-            <button class="btn btn-primary" (click)="handleClickMe()">Click Me! </button>
+            <!--<button class="btn btn-primary" (click)="handleClickMe()">Click Me! </button>-->
         </div>
     `,
     styles:[`

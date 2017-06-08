@@ -30,7 +30,7 @@ declare var jQuery:any
                 top: 17%;
             }
 
-            @media screen and (max-width:400px) and (min-width:320px){
+            @media screen and (max-width:760px) and (min-width:320px){
                .sliderBox{
                     top: 60%;
                     margin-right: 16px;
@@ -71,7 +71,7 @@ declare var jQuery:any
 export class SliderComponent implements AfterViewInit {
     ngAfterViewInit() {
         jQuery(function(){
-             jQuery('.bxslider').bxSlider();
+            jQuery('.bxslider').bxSlider();
         })
     }
 
