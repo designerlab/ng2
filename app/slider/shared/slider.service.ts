@@ -14,7 +14,7 @@ const SLIDES = [
       name: 'Image 01',
       imageUrl: '/app/assets/images/image_01.jpg',
       description: 'Some Description',
-      title: 'Some Title 1',
+      title: 'Ariff',
       url: 'http://google.com' 
     },
     {
