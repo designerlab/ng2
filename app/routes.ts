@@ -3,7 +3,7 @@ import { EventsListComponent } from './events/events-list.component'
 import { EventDetailsComponent } from './events/event-details/event-details.component'
 
 export const appRoutes:Routes = [
-    {path: 'events', component: EventsListComponent },
-    {path: 'events/:id', component: EventDetailsComponent },
-    {path: '', redirectTo: '/events', pathMatch: 'full'}
+    {path: 'public', component: EventsListComponent },
+    {path: 'public/:id', component: EventDetailsComponent },
+    {path: '', redirectTo: '/public', pathMatch: 'full'}
 ]
