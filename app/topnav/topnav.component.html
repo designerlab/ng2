@@ -1,0 +1,74 @@
+<!--<button (click)="topNavEvent()">Click Here</button>-->
+<div class="row top-bar menu_top">
+  <div class="col-sm-6 hidden-xs">
+    <ul class="list-inline font-size-s">
+      <li (click)="showConfBar()">
+       <a >Settings</a>
+      </li>
+      <li>|</li>
+      <li>
+          <a>Contact Us</a> </li>
+      <li>|</li>
+      <li>
+        <a>FAQ</a>
+      </li>
+      <li>|</li>
+      <li>
+        <a>Manual</a>
+      </li>
+      <li>|</li>
+      <li>
+        <a>About Us</a>
+      </li>
+    </ul>
+  </div>
+  <div id="menu_login" class="col-sm-6 col-xs-10 text-right">
+    <ul class="list-inline font-size-s">
+       <li id="bahasa_container">
+          <a class="my_lang btn btn-xs btn-default font-size-s bm_btn"><i class="fa fa-language"></i> Bahasa Malaysia</a>
+      </li>
+       <li>|</li>
+      <li><a>Register</a>     
+      </li>
+      <li>|</li>
+        <li><a>Login</a> 
+     </li>
+    </ul>
+  </div>
+</div>
+<!--Sub Menu starts here-->
+<div [hidden]="edited" class="row conf-bar menu_top" id="confBar">
+  <div class="col-sm-12">
+    <ul class="list-inline hidden-xs font-size-s">
+      <li>Theme Color:
+        <button type="button" class="bgColorBtn bgColor0 colorPaletteActive" value="#00bdbb"><span class="sr-only">00bdbb</span></button>
+        <button class="bgColorBtn bgColor1" value="#5e7899" ><span class="sr-only">5e7899</span></button>
+        <button class="bgColorBtn bgColor2" value="#e06000" ><span class="sr-only">e06000</span></button>
+        <button class="bgColorBtn bgColor3" value="#4f81c5"><span class="sr-only">4f81c5</span></button>
+        <button class="bgColorBtn bgColor4" value="#982d57"><span class="sr-only">982d57</span></button>
+        <span><div id="resetBgColor" class="btn btn-xs btn-default"><i class="fa fa-refresh"></i></div></span>
+      </li>
+      <li class="fontResize" style="margin-left: 70px">
+        Font Size :
+        </li>
+      <li class="fontResize"><button class="btn btn-default fontminus" style="border:1px solid white;padding: 3px; height: 25px; width: 28px; font-size:14px;"><i class="fa fa-minus"></i>A</button></li>
+      <li class="fontResize"><button class="fontplus btn btn-default" style="border:1px solid white;padding: 3px; height: 25px; width: 28px; font-size:14px;"><i class="fa fa-plus"></i>A</button></li>
+      <span><div class="fontreset btn btn-xs btn-default"><i class="fa fa-refresh"></i></div></span>
+      <li style="margin-left: 20px">
+        Font Type :
+           </li>
+        <li>
+            <label class="sr-only" for="fontOpt">Font Type</label>
+            <select id="fontOpt" class="form-control">
+                <option class="fontOpt1" value="Roboto">Roboto</option>
+                <option class="fontOpt2" value="Arial">Arial</option>
+                <option class="fontOpt3" value="Times New Roman">Times New Roman</option>
+            </select>
+        </li>
+        <li>
+            <span><div id="resetFontStyle" class="btn btn-xs btn-default"><i class="fa fa-refresh"></i></div></span>
+        </li>
+     </ul>
+  </div>
+</div>
+  <!--Sub Menu ends here-->
