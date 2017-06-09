@@ -11,13 +11,12 @@ import { SliderComponent } from './slider/slider.component'
 import { TopNavComponent } from './topnav/topnav.component'
 import { ToastrService } from './common/toastr.service'
 import { EventDetailsComponent } from './events/event-details/event-details.component'
-import { CreateEventComponent } from './create-event.component'
+import { CreateEventComponent } from './events/create-event.component'
 import { Error404Component } from './error/404.component'
-import { Error403Component } from './error/403.component'
-import { DummyComponent } from './dummy/dummy.component'
 import { ContactComponent } from './pages/contact.component'
 import { EventRouterActivator } from './events/event-details/event-router-activator.service'
 import { TopNavService } from './topnav/topnav.service'
+import {EventListResolver } from './events/create-list-resolver.service'
 import { appRoutes } from './routes'
 
 @NgModule({
@@ -36,8 +35,6 @@ import { appRoutes } from './routes'
         EventDetailsComponent,
         CreateEventComponent,
         Error404Component,
-        Error403Component,
-        DummyComponent,
         ContactComponent],
     bootstrap: [EventsAppComponent],
     providers: [
@@ -46,6 +43,7 @@ import { appRoutes } from './routes'
         ToastrService,
         EventRouterActivator,
         TopNavService,
+        EventListResolver,
         {provide:'canDeactivateCreateEvent', useValue:checkDirtyState}
         ]
 })

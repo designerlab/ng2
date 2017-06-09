@@ -82,7 +82,6 @@ export class SliderComponent implements AfterViewInit {
 
     ngOnInit(){
          this.slides = this.sliderService.getEvents();
-         console.log(this.slides);
     }
 
 }
