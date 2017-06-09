@@ -8,6 +8,7 @@ import { NavBarComponent } from './nav/navbar.component'
 import { EventService } from './events/shared/event.service'
 import { SliderService } from './slider/shared/slider.service'
 import { SliderComponent } from './slider/slider.component'
+import { TopNavComponent } from './topnav/topnav.component'
 import { ToastrService } from './common/toastr.service'
 import { EventDetailsComponent } from './events/event-details/event-details.component'
 import { CreateEventComponent } from './create-event.component'
@@ -27,6 +28,8 @@ import { appRoutes } from './routes'
         EventThumbnailComponent,
         NavBarComponent,
         SliderComponent,
+        TopNavComponent,
+        EventDetailsComponent,
         EventDetailsComponent,
         CreateEventComponent,
         Error404Component,
