@@ -1,6 +1,7 @@
 <IfModule mod_rewrite.c>
   Options Indexes FollowSymLinks
   RewriteEngine On
+  Header set Access-Control-Allow-Origin "*"
   RewriteBase /public/
   RewriteRule ^index\.html$ - [L]
   RewriteCond %{REQUEST_FILENAME} !-f
