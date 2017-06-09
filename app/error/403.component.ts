@@ -2,7 +2,7 @@ import { Component } from '@angular/core'
 
 @Component({
   template: `
-    <h1 class="errorMessage">404'd now become 403</h1>
+    <h1 class="errorMessage">403'd</h1>
   `,
   styles: [`
     .errorMessage { 
@@ -11,7 +11,7 @@ import { Component } from '@angular/core'
       text-align: center; 
     }`]
 })
-export class Error404Component{
+export class Error403Component{
   constructor() {
 
   }

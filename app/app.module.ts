@@ -13,7 +13,9 @@ import { ToastrService } from './common/toastr.service'
 import { EventDetailsComponent } from './events/event-details/event-details.component'
 import { CreateEventComponent } from './create-event.component'
 import { Error404Component } from './error/404.component'
+import { Error403Component } from './error/403.component'
 import { DummyComponent } from './dummy/dummy.component'
+import { ContactComponent } from './pages/contact.component'
 import { EventRouterActivator } from './events/event-details/event-router-activator.service'
 import { TopNavService } from './topnav/topnav.service'
 import { appRoutes } from './routes'
@@ -34,7 +36,9 @@ import { appRoutes } from './routes'
         EventDetailsComponent,
         CreateEventComponent,
         Error404Component,
-        DummyComponent],
+        Error403Component,
+        DummyComponent,
+        ContactComponent],
     bootstrap: [EventsAppComponent],
     providers: [
         EventService,

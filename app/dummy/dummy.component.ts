@@ -12,8 +12,5 @@ import { Component } from '@angular/core'
     }`]
 })
 export class DummyComponent{
-  constructor() {
-
-  }
 
 }
