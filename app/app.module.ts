@@ -4,18 +4,21 @@ import { RouterModule } from '@angular/router'
 import { EventsAppComponent } from './events-app.component'
 import { EventsListComponent } from './events/events-list.component'
 import { EventThumbnailComponent } from './events/event-thumbnail.component'
-import { NavBarComponent } from './nav/navbar.component'
+import { NavBarComponent } from './header/nav/navbar.component'
 import { EventService } from './events/shared/event.service'
 import { SliderService } from './slider/shared/slider.service'
 import { SliderComponent } from './slider/slider.component'
-import { TopNavComponent } from './topnav/topnav.component'
+import { TopNavComponent } from './header/topnav/topnav.component'
 import { ToastrService } from './common/toastr.service'
 import { EventDetailsComponent } from './events/event-details/event-details.component'
 import { CreateEventComponent } from './events/create-event.component'
 import { Error404Component } from './error/404.component'
-import { ContactComponent } from './pages/contact.component'
+import { ContactComponent } from './header/contact.component'
+import { FaqComponent } from './header/faq.component'
+import { AboutusComponent } from './header/aboutus.component'
+import { ManualComponent } from './header/manual.component'
 import { EventRouterActivator } from './events/event-details/event-router-activator.service'
-import { TopNavService } from './topnav/topnav.service'
+import { TopNavService } from './header/topnav/topnav.service'
 import {EventListResolver } from './events/create-list-resolver.service'
 import { appRoutes } from './routes'
 
@@ -35,7 +38,10 @@ import { appRoutes } from './routes'
         EventDetailsComponent,
         CreateEventComponent,
         Error404Component,
-        ContactComponent],
+        ContactComponent,
+        FaqComponent,
+        AboutusComponent,
+        ManualComponent],
     bootstrap: [EventsAppComponent],
     providers: [
         EventService,

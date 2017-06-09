@@ -4,13 +4,13 @@
     <ul class="list-inline font-size-s">
       <li (click)="showConfBar()"><a >Settings</a></li>
       <li>|</li>
-      <li><a>Contact Us</a> </li>
+      <li><a [routerLink]="['public/contact']" routerLinkActive="active">Contact Us</a> </li>
       <li>|</li>
-      <li><a>FAQ</a></li>
+      <li><a [routerLink]="['public/faq']" >FAQ</a></li>
       <li>|</li>
-      <li><a>Manual</a></li>
+      <li><a [routerLink]="['public/manual']"> Manual</a></li>
       <li>|</li>
-      <li><a>About Us</a></li>
+      <li><a [routerLink]="['public/aboutus']">About Us</a></li>
     </ul>
   </div>
   <div id="menu_login" class="col-sm-6 col-xs-10 text-right">
