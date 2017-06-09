@@ -4,15 +4,7 @@ import { Component } from '@angular/core'
     selector:'top-nav',
     templateUrl:'./app/topnav/topnav.component.html',
     styles:[
-        `.top-bar {
-            margin: 0 4% 0.5% 4%;
-        }
-        .menu_top{
-            margin: 10px 0px 0px 85px;
-        } 
-        .menu_botm{
-            margin: 0px 0px 0px 85px;
-        }
+        `
         a{
             color : #ebebeb;
         }       
@@ -20,13 +12,11 @@ import { Component } from '@angular/core'
         ]
 })
 
-export class TopNavComponent{
-    public edited = true;
-    topNavEvent(){
-        alert('clicked!!')
-    }
+export class TopNavComponent {
+    edited = true;
+  
     showConfBar(){
-        // alert(this.edited +',' + !(this.edited));
         this.edited = !(this.edited);
     }
+
 }

@@ -15,6 +15,7 @@ import { CreateEventComponent } from './create-event.component'
 import { Error404Component } from './error/404.component'
 import { DummyComponent } from './dummy/dummy.component'
 import { EventRouterActivator } from './events/event-details/event-router-activator.service'
+import { TopNavService } from './topnav/topnav.service'
 import { appRoutes } from './routes'
 
 @NgModule({
@@ -40,6 +41,7 @@ import { appRoutes } from './routes'
         SliderService,
         ToastrService,
         EventRouterActivator,
+        TopNavService,
         {provide:'canDeactivateCreateEvent', useValue:checkDirtyState}
         ]
 })
