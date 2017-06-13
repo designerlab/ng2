@@ -14,7 +14,11 @@ import { Component, OnInit } from '@angular/core'
             height:70px;
             background: #1ebebc  !important;
             position: fixed  !important;
-            z-index: 9999;
+            z-index: 10000;
+            -webkit-transition-property: height; /* Safari */
+            -webkit-transition-duration: 1s; /* Safari */
+            transition-property: height;
+            transition-duration: 1s;
         }
 
         .nav-bar-style{
@@ -32,12 +36,12 @@ import { Component, OnInit } from '@angular/core'
 })
 export class EventsAppComponent{
 
-      zIndex = "9999"
+      zIndex = "10000"
       bHeight = "70px"
 
        getExpand(data) {
             if(data) {
-                this.zIndex = "9999"
+                this.zIndex = "10000"
                 this.bHeight = "70px"
                 
             } else {
