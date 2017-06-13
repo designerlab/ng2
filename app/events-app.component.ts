@@ -5,7 +5,14 @@ import { Component, OnInit } from '@angular/core'
     template: `
         <top-nav class="top-nav-style" (topNavClick)="getExpand($event)" [style.z-index]="this.zIndex" [style.height]="this.bHeight"></top-nav>
         <nav-bar class="nav-bar-style" [style.top]="this.bTop"></nav-bar>
-        <div class="xtra-space"></div>
+        <div class="xtra-space container-fluid">
+            <div class="container">
+                <div class="breadCrumb">
+                    <h1>Title</h1>
+                    <span>Home/somepage</span>
+                </div>
+            </div>
+        </div>
         <router-outlet></router-outlet>
 
     `,
@@ -23,7 +30,7 @@ import { Component, OnInit } from '@angular/core'
         }
 
         .nav-bar-style{
-            z-index: 999999;
+            z-index: 10000;
             position: fixed;
             width: 100%;
             top: 30px;
@@ -34,8 +41,14 @@ import { Component, OnInit } from '@angular/core'
         }
 
         .xtra-space{
-            height:70px;
+            min-height:100px;
+            display:block;
             position:relative;
+            background:#a7a495;
+        }
+
+        .xtra-space .breadCrumb{
+            padding-top:120px;
         }
         `]
 })
@@ -51,9 +64,9 @@ export class EventsAppComponent{
                 this.bTop = "30px"
                 
             } else {
-                this.zIndex = "99999"
-                this.bHeight = "90px"
-                this.bTop = "0px"
+                this.zIndex = "10000"
+                this.bHeight = "105px"
+                this.bTop = "85px"
             }
         }
 
