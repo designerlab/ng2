@@ -4,6 +4,7 @@
   Header merge Cache-Control no-cache env=NO_CACHE
   Header merge Cache-Control no-store env=NO_STORE
   Header set Access-Control-Allow-Origin "*"
+  RewriteBase /public/
   RewriteRule ^index\.html$ - [L]
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d

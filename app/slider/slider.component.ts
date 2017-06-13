@@ -41,6 +41,7 @@ declare var jQuery:any
 
                 .sliderContainer:after{
                     background-image: linear-gradient(to bottom, transparent 34%, #a7a495 47%) !important;
+                    background-image: -webkit-linear-gradient(to bottom, transparent 34%, #a7a495 47%) !important;
                     height: 320px !important;
                 }
             }
@@ -55,6 +56,7 @@ declare var jQuery:any
                 display: block;
                 position: relative;
                 background-image: linear-gradient(to right, transparent 30%, #a7a495 58%), linear-gradient(to left, transparent 80%, #a7a495 95%);
+                background-image: -webkit-linear-gradient(to right, transparent 30%, #a7a495 58%), -webkit-linear-gradient(to left, transparent 80%, #a7a495 95%);
                 height: 500px;
                 width: 100%;
                 content: '';

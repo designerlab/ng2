@@ -4,7 +4,7 @@
         <div class="panel-heading padding-bottom-xl">
           <div class="row">
             <div class="col-xs-6 box active-btn" id="login-form-link" style="border-color: rgb(0, 189, 187);">
-              <a href="#"> Warganegara  </a>
+              <a href="#"> Warganegara1  </a>
             </div>
             <div class="col-xs-6 box" id="register-form-link" style="border-color: rgb(0, 189, 187);">
               <a href="#">Bukan Warganegara</a>
@@ -19,17 +19,17 @@
                   <div class="form-group">
                     <label for="kad_pengenalan" class="font-size-s" style="font-family: Roboto;">
                       Nombor Kad Pengenalan <span style="color:red"> *</span></label>
-                      <input (ngModel)="kad_pengenalan_my" type="text" id="kad_pengenalan" tabindex="1" class="form-control ValteleNum gloval" placeholder="Contoh:888888888888" name="kad_pengenalan_my" maxlength="12" data-translate="kad_pengenalan" aria-required="true" aria-invalid="true">
+                      <input (ngModel)="kad_pengenalan_my" type="text" id="kad_pengenalan" tabindex="1" class="form-control ValteleNum gloval" placeholder="Contoh:888888888888" name="kad_pengenalan_my" maxlength="12" data-translate="kad_pengenalan">
                     </div>
                     <div class="form-group">
                       <label for="nama_penuh" class="font-size-s" style="font-family: Roboto;">
                         Nama Pengguna (sama seperti di dalam kad pengenalan) <span style="color:red"> *</span></label>
-                        <input (ngModel)="nama_penuh" type="text" name="nama_penuh" maxlength="80" id="nama_penuh" tabindex="2" class="form-control ValonlyCharwithSpecial gloval" placeholder="Nama Pengguna " data-translate="nama_penuh" aria-required="true" aria-invalid="true">
+                        <input (ngModel)="nama_penuh" type="text" name="nama_penuh" maxlength="80" id="nama_penuh" tabindex="2" class="form-control ValonlyCharwithSpecial gloval" placeholder="Nama Pengguna " data-translate="nama_penuh" >
                       </div>
 
                       <div class="form-group">
                         <label for="emel" class="font-size-s" style="font-family: Roboto;">Emel<span style="color:red"> *</span></label>
-                        <input (ngModel)="emel" type="email" name="emel" id="emel" tabindex="4" class="form-control gloval" placeholder="Emel" style="text-transform: lowercase;" data-translate="email">
+                        <input (ngModel)="emel" type="email" name="emel" id="emel" tabindex="4" class="form-control gloval" style="text-transform: lowercase;" data-translate="email">
                       </div>
                       <div class="form-group">
                         <label for="telefon" class="font-size-s" style="font-family: Roboto;">Telefon<span style="color:red"> *</span></label>
@@ -79,7 +79,7 @@
                       <div class="form-group">
                         <div class="row">
                           <div class="col-md-12" style="text-align: center;">
-                            <button type="submit" id="hantar" class="form-control btn btn-md btn-success btn-outline font-size-s" style="width: 100px; font-family: Roboto;">
+                            <button type="submit" [disabled]="registerCitizenForm.invalid" id="hantar" class="form-control btn btn-md btn-success btn-outline font-size-s" style="width: 100px; font-family: Roboto;">
                               <i class="fa fa-check"></i>  Hantar</button>
                           </div>
                         </div>
