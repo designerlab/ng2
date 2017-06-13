@@ -1,4 +1,4 @@
-import { Component } from '@angular/core'
+import { Component, Input, Output, EventEmitter } from '@angular/core'
 
 @Component({
     selector:'top-nav',
@@ -19,10 +19,17 @@ import { Component } from '@angular/core'
 })
 
 export class TopNavComponent {
-    edited = true;
+ 
+    @Input() edited = true
+    @Output() topNavClick = new EventEmitter()
   
+   
     showConfBar(){
-        this.edited = !(this.edited);
+        this.edited = !(this.edited)
+        this.topNavClick.emit(this.edited);
     }
+ 
+
+ 
 
 }
