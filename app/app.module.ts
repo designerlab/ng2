@@ -19,10 +19,10 @@ import { SliderComponent } from './slider/slider.component'
 import { TopNavComponent } from './header/topnav/topnav.component'
 import { ToastrService } from './common/toastr.service'
 import { Error404Component } from './error/404.component'
-import { ContactComponent } from './header/contact.component'
-import { FaqComponent } from './header/faq.component'
-import { AboutusComponent } from './header/aboutus.component'
-import { ManualComponent } from './header/manual.component'
+// import { ContactComponent } from './header/contact.component'
+// import { FaqComponent } from './header/faq.component'
+// import { AboutusComponent } from './header/aboutus.component'
+// import { ManualComponent } from './header/manual.component'
 import { TopNavService } from './header/topnav/topnav.service'
 import { appRoutes } from './routes'
 
@@ -42,10 +42,11 @@ import { appRoutes } from './routes'
         EventDetailsComponent,
         CreateEventComponent,
         Error404Component,
-        ContactComponent,
-        FaqComponent,
-        AboutusComponent,
-        ManualComponent],
+        // ContactComponent,
+        // FaqComponent,
+        // AboutusComponent,
+        // ManualComponent
+        ],
     bootstrap: [EventsAppComponent],
     providers: [
         EventService,

@@ -16,10 +16,10 @@ import { ManualComponent } from './header/manual.component'
 
 export const appRoutes:Routes = [
     {path: '404', component: Error404Component},
-    {path: 'public/contact', component: ContactComponent},
-    {path: 'public/faq', component: FaqComponent},
-    {path: 'public/aboutus', component: AboutusComponent},
-    {path: 'public/manual', component: ManualComponent},
+    // {path: 'public/contact', component: ContactComponent},
+    // {path: 'public/faq', component: FaqComponent},
+    // {path: 'public/aboutus', component: AboutusComponent},
+    // {path: 'public/manual', component: ManualComponent},
     {path: 'public/new', component: CreateEventComponent, canDeactivate:['canDeactivateCreateEvent'] },
     {path: 'public', component: EventsListComponent, resolve:{events: EventListResolver} },
     {path: 'public/:id', component: EventDetailsComponent, canActivate:[EventRouterActivator] },
