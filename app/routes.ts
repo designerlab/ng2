@@ -13,8 +13,6 @@ import { ContactComponent } from './header/contact.component'
 import { FaqComponent } from './header/faq.component'
 import { AboutusComponent } from './header/aboutus.component'
 import { ManualComponent } from './header/manual.component'
-import { EventListResolver } from './events/create-list-resolver.service'
-import { EventRouterActivator } from './events/event-details/event-router-activator.service'
 
 export const appRoutes:Routes = [
     {path: '404', component: Error404Component},

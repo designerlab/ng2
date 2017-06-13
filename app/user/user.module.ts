@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common'
 import { RouterModule } from '@angular/router'
 import { userRoutes } from './user.routes'
 import { ProfileComponent } from './profile.component'
+import { RegisterComponent } from './register.component'
 
 
 @NgModule({
@@ -12,7 +13,8 @@ import { ProfileComponent } from './profile.component'
 
     ],
     declarations:[
-        ProfileComponent
+        ProfileComponent,
+        RegisterComponent
     ],
     providers:[]
 })

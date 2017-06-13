@@ -13,10 +13,7 @@ import {
 } from './events/index'
 
 import { EventsAppComponent } from './events-app.component'
-import { EventsListComponent } from './events/events-list.component'
-import { EventThumbnailComponent } from './events/esvent-thumbnail.component'
 import { NavBarComponent } from './header/nav/navbar.component'
-import { EventService } from './events/shared/event.service'
 import { SliderService } from './slider/shared/slider.service'
 import { SliderComponent } from './slider/slider.component'
 import { TopNavComponent } from './header/topnav/topnav.component'
@@ -26,9 +23,7 @@ import { ContactComponent } from './header/contact.component'
 import { FaqComponent } from './header/faq.component'
 import { AboutusComponent } from './header/aboutus.component'
 import { ManualComponent } from './header/manual.component'
-import { EventRouterActivator } from './events/event-details/event-router-activator.service'
 import { TopNavService } from './header/topnav/topnav.service'
-import {EventListResolver } from './events/create-list-resolver.service'
 import { appRoutes } from './routes'
 
 @NgModule({
