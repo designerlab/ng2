@@ -7,7 +7,13 @@ import { Component } from '@angular/core'
         `
         a{
             color : #ebebeb;
-        }       
+        }
+        
+        .top-nav{
+            padding-top: 0px;
+        }
+        
+        
         `
         ]
 })

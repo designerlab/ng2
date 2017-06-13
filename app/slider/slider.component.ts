@@ -60,11 +60,6 @@ declare var jQuery:any
                 content: '';
                 margin-top: -43.8%;
             }
-
-            .sliderMain{
-                padding:0px !important;
-            }
-
         `]
 })
 
