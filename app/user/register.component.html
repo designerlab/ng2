@@ -15,21 +15,21 @@
 
             <div id="formRegBg" class="row" style="display:block;">
               <div class="col-lg-12">
-                <form id="login-form" role="form" style="display: block;" novalidate="novalidate">
+                <form #registerCitizenForm="ngForm" (ngSubmit)="citizenReg(registerCitizenForm.value)" id="login-form" role="form" style="display: block;" novalidate="novalidate">
                   <div class="form-group">
                     <label for="kad_pengenalan" class="font-size-s" style="font-family: Roboto;">
                       Nombor Kad Pengenalan <span style="color:red"> *</span></label>
-                      <input type="text" id="kad_pengenalan" tabindex="1" class="form-control ValteleNum gloval" placeholder="Contoh:888888888888" name="kad_pengenalan_my" maxlength="12" data-translate="kad_pengenalan" aria-required="true" aria-invalid="true">
+                      <input (ngModel)="kad_pengenalan_my" type="text" id="kad_pengenalan" tabindex="1" class="form-control ValteleNum gloval" placeholder="Contoh:888888888888" name="kad_pengenalan_my" maxlength="12" data-translate="kad_pengenalan" aria-required="true" aria-invalid="true">
                     </div>
                     <div class="form-group">
                       <label for="nama_penuh" class="font-size-s" style="font-family: Roboto;">
                         Nama Pengguna (sama seperti di dalam kad pengenalan) <span style="color:red"> *</span></label>
-                        <input type="text" name="nama_penuh" maxlength="80" id="nama_penuh" tabindex="2" class="form-control ValonlyCharwithSpecial gloval" placeholder="Nama Pengguna " data-translate="nama_penuh" aria-required="true" aria-invalid="true">
+                        <input (ngModel)="nama_penuh" type="text" name="nama_penuh" maxlength="80" id="nama_penuh" tabindex="2" class="form-control ValonlyCharwithSpecial gloval" placeholder="Nama Pengguna " data-translate="nama_penuh" aria-required="true" aria-invalid="true">
                       </div>
 
                       <div class="form-group">
                         <label for="emel" class="font-size-s" style="font-family: Roboto;">Emel<span style="color:red"> *</span></label>
-                        <input type="email" name="emel" id="emel" tabindex="4" class="form-control gloval" placeholder="Emel" style="text-transform: lowercase;" data-translate="email">
+                        <input (ngModel)="emel" type="email" name="emel" id="emel" tabindex="4" class="form-control gloval" placeholder="Emel" style="text-transform: lowercase;" data-translate="email">
                       </div>
                       <div class="form-group">
                         <label for="telefon" class="font-size-s" style="font-family: Roboto;">Telefon<span style="color:red"> *</span></label>

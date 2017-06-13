@@ -48,7 +48,7 @@ import { Component, OnInit } from '@angular/core'
         }
 
         .xtra-space .breadCrumb{
-            padding-top:120px;
+            padding-top:80px;
         }
         `]
 })

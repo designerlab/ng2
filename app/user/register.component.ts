@@ -5,5 +5,7 @@ import { Component } from '@angular/core'
 })
 
 export class RegisterComponent{
-
+    citizenReg(formValues){
+        console.log(formValues);
+    }
 }
