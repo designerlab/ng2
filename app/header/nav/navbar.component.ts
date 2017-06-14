@@ -1,4 +1,5 @@
 import { Component } from '@angular/core'
+import { AuthService } from '../../user/auth.service'
 
 @Component({
     selector: 'nav-bar',
@@ -15,11 +16,22 @@ import { Component } from '@angular/core'
             background:#fff;
             height:60px;
         }
+        .navbar-default .navbar-nav>li>a{
+            color:#000 !important;
+        }
+
+        .navbar-default .navbar-nav>li>a:hover{
+            color:#fff !important;
+        }
        
     `]
 
 })
 
 export class NavBarComponent{
+    constructor(private auth:AuthService){
+
+    }
+
 
 }

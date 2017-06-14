@@ -1,4 +1,5 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core'
+import { AuthService } from '../../user/auth.service'
 
 @Component({
     selector:'top-nav',
@@ -19,17 +20,18 @@ import { Component, Input, Output, EventEmitter } from '@angular/core'
 })
 
 export class TopNavComponent {
- 
+    
     @Input() edited = true
     @Output() topNavClick = new EventEmitter()
   
-   
+    constructor(private auth:AuthService){
+
+    }
     showConfBar(){
         this.edited = !(this.edited)
         this.topNavClick.emit(this.edited);
     }
- 
-
- 
+    
+    
 
 }
