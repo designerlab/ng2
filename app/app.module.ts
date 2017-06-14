@@ -24,6 +24,7 @@ import { Error404Component } from './error/404.component'
 // import { AboutusComponent } from './header/aboutus.component'
 // import { ManualComponent } from './header/manual.component'
 import { TopNavService } from './header/topnav/topnav.service'
+import { AuthService } from './user/auth.service' 
 import { appRoutes } from './routes'
 
 @NgModule({
@@ -55,6 +56,7 @@ import { appRoutes } from './routes'
         EventRouterActivator,
         TopNavService,
         EventListResolver,
+        AuthService,
         {provide:'canDeactivateCreateEvent', useValue:checkDirtyState}
         ]
 })

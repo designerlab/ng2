@@ -6,11 +6,25 @@ import { IUser } from './user.model'
 export class AuthService{
     currentUser:IUser
     registerCitizenForm(kad_pengenalan_my:string, nama_penuh:string){
-        this.currentUser = {
+     
+    }
+
+    loginUser(userName:string, password:string){
+           this.currentUser = {
             id:1,
-            kad_pengenalan_my: 'helo',
-            nama_penuh: 'hell'
+            userName: userName,
+            firstName: 'Sridhar',
+            lastName: 'Swaminathan'
         }
+    }
+
+    isAuthenticated(){
+        return !!this.currentUser;
+    }
+
+    updateCurrentUser(firstName:string, lastName:string){
+        this.currentUser.firstName = firstName
+        this.currentUser.lastName = lastName
     }
 
 }
