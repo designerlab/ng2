@@ -7,16 +7,23 @@ import { Component } from '@angular/core'
 export class RegisterComponent{
     show = true;
     citizenValue = true;
-    citizenReg(formValues){
+    changeCitizen = true;
+    country_my = '';
+   chgeCitizen(){
+    this.changeCitizen = this.citizenValue;
+   }
+
+    citizenReg(formValues){        
         console.log(formValues);
-    }
+    }   
 
     noncitizenReg(formValues){
         console.log(formValues);
     }
 
-    chgeCitizen(){    
-     //this.citizenValue = !this.citizenValue;
+    isCitizen(){
+        
+        return this.citizenValue;
     }
 
     getDisplay(){
