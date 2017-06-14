@@ -5,7 +5,7 @@ import { Http } from '@angular/http'
 @Injectable()
 
 export class NavService{
-
+    //https://www.malaysia.gov.my/public/cms/service/homepage_menu/en/?format=json
     constructor(private http:Http){
       
     }
