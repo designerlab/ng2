@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core'
-
+import { TranslateService } from './translate/translate.service';
 @Component({
     selector: 'events-app',
     template: `
@@ -9,6 +9,23 @@ import { Component, OnInit } from '@angular/core'
             <div class="container">
                 <div class="breadCrumb">
                     <h1>Title</h1>
+                    <h4>Translate: Hello World</h4>
+                    <div class="btn-group">
+        <button *ngFor="let lang of supportedLanguages" (click)="selectLang(lang.value)" class="btn btn-default" [class.btn-primary]="isCurrentLang(lang.value)">
+            {{ lang.display }}
+        </button>
+    </div>
+    <div>
+        <!--translate with pipe-->
+        <p>
+            Translate With Pipe: <strong>{{ 'title' | translate }}</strong>
+        </p>
+
+        <!--reanslate with service-->
+        <p>
+            Translate with Service: <strong>{{ translatedText }}</strong>
+        </p>
+    </div>
                     <span>Home/somepage</span>
                 </div>
             </div>
@@ -52,10 +69,43 @@ import { Component, OnInit } from '@angular/core'
         }
         `]
 })
-export class EventsAppComponent{
+export class EventsAppComponent implements OnInit {
+
+    translatedText: string
+    supportedLanguages: any[]
+
       zIndex = "10000"
       bHeight = "70px"
-      bTop = "30px"
+      bTop = "30px" 
+
+      constructor(private _translate: TranslateService){
+
+      }
+      ngOnInit() {
+        // standing data
+        this.supportedLanguages = [
+        { display: 'English', value: 'en' },
+        { display: 'Español', value: 'es' },
+        ];
+
+        // set current langage
+        this.selectLang('es');
+    }
+    isCurrentLang(lang: string) {
+        // check if the selected lang is current lang
+        return lang === this._translate.currentLang;
+    }
+
+    selectLang(lang: string) {
+        // set current lang;
+        this._translate.use(lang);
+        this.refreshText();
+    }
+
+    refreshText() {
+        // refresh translation when language change
+        this.translatedText = this._translate.instant('title');
+    }
 
        getExpand(data) {
             if(data) {

@@ -3,6 +3,9 @@ import { BrowserModule } from '@angular/platform-browser'
 import { RouterModule, ActivatedRouteSnapshot } from '@angular/router'
 import { HttpModule } from '@angular/http'
 import { FormsModule, ReactiveFormsModule } from '@angular/forms'
+import { TranslatePipe }   from './translate/translate.pipe';
+import { TRANSLATION_PROVIDERS } from './translate/translation'
+import { TranslateService  } from './translate/translate.service'
 
 import {
     EventsListComponent,
@@ -50,6 +53,7 @@ import { appRoutes } from './routes'
         EventDetailsComponent,
         CreateEventComponent,
         Error404Component,
+        TranslatePipe,
         // ContactComponent,
         // FaqComponent,
         // AboutusComponent,
@@ -64,6 +68,8 @@ import { appRoutes } from './routes'
         MenuListResolver,
         TopNavService,
         EventListResolver,
+        TRANSLATION_PROVIDERS,
+        TranslateService,
         AuthService,
         NavService,
         {provide:'canDeactivateCreateEvent', useValue:checkDirtyState}
