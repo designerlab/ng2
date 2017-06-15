@@ -14,6 +14,7 @@ import {
     EventListResolver
 } from './events/index'
 
+import { MenuListResolver } from './header/nav/menu-list.resolver.service'
 import { EventsAppComponent } from './events-app.component'
 import { NavBarComponent } from './header/nav/navbar.component'
 import { SliderService } from './slider/shared/slider.service'
@@ -26,6 +27,7 @@ import { Error404Component } from './error/404.component'
 // import { AboutusComponent } from './header/aboutus.component'
 // import { ManualComponent } from './header/manual.component'
 import { TopNavService } from './header/topnav/topnav.service'
+import { NavService } from './header/nav/nav.service'
 import { AuthService } from './user/auth.service' 
 import { appRoutes } from './routes'
 
@@ -59,9 +61,11 @@ import { appRoutes } from './routes'
         SliderService,
         ToastrService,
         EventRouterActivator,
+        MenuListResolver,
         TopNavService,
         EventListResolver,
         AuthService,
+        NavService,
         {provide:'canDeactivateCreateEvent', useValue:checkDirtyState}
         ]
 })

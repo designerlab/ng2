@@ -1,5 +1,8 @@
-import { Component } from '@angular/core'
+import { Component, OnInit } from '@angular/core'
 import { AuthService } from '../../user/auth.service'
+import { NavService } from './nav.service'
+import { ToastrService } from '../../common/toastr.service'
+import { ActivatedRoute } from '@angular/router'
 
 @Component({
     selector: 'nav-bar',
@@ -8,7 +11,7 @@ import { AuthService } from '../../user/auth.service'
         .nav.navbar-nav {font-size:15px;}
         li > a.active {color:#F97924;}
         #searchForm { margin-right:100px;}
-        @media (max-width:1200px){#searchForm {display:none;} }\
+        @media (max-width:1200px){#searchForm {display:none;} }
         .top-nav{
             padding-top:0px;
         }
@@ -28,9 +31,14 @@ import { AuthService } from '../../user/auth.service'
 
 })
 
-export class NavBarComponent{
-    constructor(private auth:AuthService){
+export class NavBarComponent implements OnInit{
+    menus:any[]
+    constructor(private navService: NavService, private toastr:ToastrService, private route:ActivatedRoute){
 
+    }
+     ngOnInit(){
+         this.navService.getMenuData()
+            .subscribe(resMenuData => this.menus = resMenuData)
     }
 
 
