@@ -9,18 +9,13 @@ import { TranslateService } from './translate/translate.service';
             <div class="container">
                 <div class="breadCrumb">
                     <h1>Title</h1>
-                    <h4>Translate: Hello World</h4>
                     <div class="btn-group">
-        <button *ngFor="let lang of supportedLanguages" (click)="selectLang(lang.value)" class="btn btn-default" [class.btn-primary]="isCurrentLang(lang.value)">
-            {{ lang.display }}
-        </button>
-    </div>
+                        <button *ngFor="let lang of supportedLanguages" (click)="selectLang(lang.value)" class="btn btn-default" [class.btn-primary]="isCurrentLang(lang.value)">
+                            {{ lang.display }}
+                        </button>
+                    </div>
     <div>
-        <!--translate with pipe-->
-        <p>
-            Translate With Pipe: <strong>{{ 'title' | translate }}</strong>
-        </p>
-
+  
         <!--reanslate with service-->
         <p>
             Translate with Service: <strong>{{ translatedText }}</strong>
@@ -85,11 +80,11 @@ export class EventsAppComponent implements OnInit {
         // standing data
         this.supportedLanguages = [
         { display: 'English', value: 'en' },
-        { display: 'Español', value: 'es' },
+        { display: 'Malay', value: 'ms' },
         ];
 
         // set current langage
-        this.selectLang('es');
+        this.selectLang('ms');
     }
     isCurrentLang(lang: string) {
         // check if the selected lang is current lang
