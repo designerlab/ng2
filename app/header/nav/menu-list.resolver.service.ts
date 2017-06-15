@@ -9,6 +9,6 @@ export class MenuListResolver implements Resolve<any>{
 
     }
     resolve(){
-        return this.navService.getMenus()
+        return this.navService.getMenuData()
     }
 }

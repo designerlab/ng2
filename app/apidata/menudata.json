@@ -1,6 +1,6 @@
 [
-    {
-        "Topic": [
+    {   "title": "Topic",
+        "Data": [
             {
                 "name": "Business",
                 "topic_id": "2",
@@ -93,8 +93,9 @@
             }
         ]
     },
-    {
-        "MyInfo": [
+    {   
+        "title": "MyInfo",
+        "Data": [
             {
                 "name": "Yang di-Pertuan Agong",
                 "topic_id": "28",
@@ -127,8 +128,8 @@
             }
         ]
     },
-    {
-        "MyInitiative": [
+    {   "title": "MyInitiative",
+        "Data": [
             {
                 "name": "Whole of Government",
                 "topic_id": "68",

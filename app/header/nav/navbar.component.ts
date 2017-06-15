@@ -3,6 +3,7 @@ import { AuthService } from '../../user/auth.service'
 import { NavService } from './nav.service'
 import { ToastrService } from '../../common/toastr.service'
 import { ActivatedRoute } from '@angular/router'
+import { IMenu, IUrl } from './nav.model'
 
 @Component({
     selector: 'nav-bar',
@@ -32,7 +33,7 @@ import { ActivatedRoute } from '@angular/router'
 })
 
 export class NavBarComponent implements OnInit{
-    menus:any[]
+    menus:IMenu[]
     constructor(private navService: NavService, private toastr:ToastrService, private route:ActivatedRoute){
 
     }

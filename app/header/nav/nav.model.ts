@@ -1,18 +1,11 @@
 export interface IMenu{
+    title: string,
+    Data: [IUrl]
+}
 
-"Topic": {
-    "name": string;
-    "topic_id": string;
-    "json_url": string;
-    "url": string;
-},
-
- "MyInfo": {
-    "name": string;
-    "topic_id": string;
-    "json_url": string;
-    "url": string;
-}[]
-
-
+export interface IUrl{
+    name: string,
+    topic_id: string,
+    json_url: string,
+    url: string
 }

@@ -23,6 +23,16 @@
                         </li>
                     </ul>
                     </li>
+                    <li *ngFor="let menu of menus">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{menu.title}}
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li *ngFor="let data of menu.Data">
+                                <a href="">{{data.name}}</a>
+                            </li>
+                        </ul>
+                    </li>
                 </ul>
       
                 <form id="searchForm"  class="navbar-form navbar-right"  >
@@ -33,11 +43,6 @@
                     Search
                     </button>
                 </form>
-                </div>
-                 <div class="row">
-                    <div  *ngFor="let menu of menus" class="col-md-5">
-                        <!--{{menu.Topic}}-->
-                    </div>
                 </div>
             </div>
         </div>

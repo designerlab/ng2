@@ -1,7 +1,10 @@
 import { Injectable } from '@angular/core'
 import { Subject, Observable } from 'rxjs/RX'
 import { Http, Response} from '@angular/http'
+import { IMenu, IUrl } from './nav.model'
+// Import RxJs required methods
 import 'rxjs/add/operator/map'
+import 'rxjs/add/operator/catch'
 
 @Injectable()
 
@@ -14,30 +17,11 @@ export class NavService{
       
     }
 
-    getMenuData(){
+    getMenuData():Observable<IMenu[]>{
         return this.http.get(this.menusUrl)
             .map((response:Response) => response.json())
+            .catch((error:any) => Observable.throw(error.json().error || 'Server error'));
+
     }
-    getMenus():Observable<any[]>{
-
-        return this.http.get(this.menusUrl)
-                    .map(this.extractData)
-                    .catch(this.handleError);
-        // let subject = new Subject()
-        // setTimeout(()=>{subject.next(MENUS); subject.complete(); }, 100)
-        // return subject
-    }
-
-  private extractData(res: Response) {
-    let body = res.json();
-    return body.data || { };
-  }
-
-  private handleError (error: Response) {
-    return Observable.throw(error.statusText);
-  }
-
-
-
 
 }
