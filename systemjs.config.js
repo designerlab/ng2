@@ -13,6 +13,8 @@
       // our app is within the app folder
       app: 'app',
       // angular bundles
+      '@ngx-translate/core': 'npm:@ngx-translate/core/bundles/core.umd.js',
+      '@ngx-translate/http-loader': 'npm:@ngx-translate/http-loader/bundles/http-loader.umd.js',
       '@angular/core': 'npm:@angular/core/bundles/core.umd.js',
       '@angular/common': 'npm:@angular/common/bundles/common.umd.js',
       '@angular/compiler': 'npm:@angular/compiler/bundles/compiler.umd.js',

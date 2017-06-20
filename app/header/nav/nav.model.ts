@@ -1,6 +1,6 @@
 export interface IMenu{
     title: string,
-    Data: [IUrl]
+    data: [IUrl]
 }
 
 export interface IUrl{

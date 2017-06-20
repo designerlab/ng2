@@ -1,5 +1,6 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core'
+import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core'
 import { AuthService } from '../../user/auth.service'
+import {TranslateService} from '@ngx-translate/core';
 
 @Component({
     selector:'top-nav',
@@ -20,18 +21,26 @@ import { AuthService } from '../../user/auth.service'
 })
 
 export class TopNavComponent {
-    
+    translatedText: string
+    supportedLanguages: any[]
+
     @Input() edited = true
     @Output() topNavClick = new EventEmitter()
   
-    constructor(private auth:AuthService){
+    constructor(private auth:AuthService, private translate: TranslateService){
 
+        translate.addLangs(["en", "fr"]);
+        translate.setDefaultLang('en');
+
+        let browserLang = translate.getBrowserLang();
+        translate.use(browserLang.match(/en|fr/) ? browserLang : 'en');
     }
+
+
+
     showConfBar(){
         this.edited = !(this.edited)
         this.topNavClick.emit(this.edited);
     }
-    
-    
 
 }

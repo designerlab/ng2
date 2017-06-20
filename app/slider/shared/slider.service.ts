@@ -1,52 +1,26 @@
-import { Injectable } from '@angular/core'
+import { Injectable, Inject } from '@angular/core'
+import { Subject, Observable } from 'rxjs/RX'
+import { Http, Response} from '@angular/http'
+import { ISlider, IResult } from '../slider.model'
+import { APP_CONFIG, IAppConfig } from '../../config/app.config';
+// Import RxJs required methods
+import 'rxjs/add/operator/map'
+import 'rxjs/add/operator/catch'
 
 @Injectable()
 
 export class SliderService{
-    getEvents(){
-        return SLIDES
+    
+    constructor(private http:Http, @Inject(APP_CONFIG) private config: IAppConfig){ 
+    
     }
-}
+    
+    private sliderUrl: string = this.config.urlSlider;
 
-const SLIDES = [
-    {
-      id: 1,
-      name: 'Image 01',
-      imageUrl: '/app/assets/images/image_01.jpg',
-      description: 'Some Description',
-      title: 'Ariff',
-      url: 'http://google.com' 
-    },
-    {
-      id: 2,
-      name: 'Image 02',
-      imageUrl: '/app/assets/images/image_02.jpg',
-      description: 'Some Description',
-      title: 'Some Title 2',
-      url: 'http://google.com' 
-    },
-    {
-      id: 3,
-      name: 'Image 03',
-      imageUrl: '/app/assets/images/image_03.jpg',
-      description: 'Some Description',
-      title: 'Some Title 3',
-      url: 'http://google.com' 
-    },
-    {
-      id: 4,
-      name: 'Image 04',
-      imageUrl: '/app/assets/images/image_04.jpg',
-      description: 'Some Description',
-      title: 'Some Title 4',
-      url: 'http://google.com' 
-    },
-    {
-      id: 5,
-      name: 'Image 05',
-      imageUrl: '/app/assets/images/image_05.jpg',
-      description: 'Some Description',
-      title: 'Some Title 5',
-      url: 'http://google.com' 
+    getSliderData():Observable<ISlider[]>{
+        return this.http.get(this.sliderUrl)
+            .map((response:Response) => response.json())
+            .catch((error:any) => Observable.throw(error.json().error || 'Server error'));
     }
-]
+
+}

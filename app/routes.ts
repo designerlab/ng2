@@ -13,6 +13,7 @@ import { ContactComponent } from './header/contact.component'
 import { FaqComponent } from './header/faq.component'
 import { AboutusComponent } from './header/aboutus.component'
 import { ManualComponent } from './header/manual.component'
+import { TranslateService, TranslateModule } from 'ng2-translate'
 
 export const appRoutes:Routes = [
     {path: '404', component: Error404Component},
