@@ -1,6 +1,7 @@
 {
   "HOME": {
     "TITLE": "test in english",
-    "SELECT": "Change language"
+    "SELECT": "Change language",
+    "SLIDERURL":"./app/apidata/sliderdata.json"
   }
 }

@@ -23,7 +23,7 @@ import {TranslateService} from '@ngx-translate/core';
 export class TopNavComponent {
     translatedText: string
     supportedLanguages: any[]
-
+   
     @Input() edited = true
     @Output() topNavClick = new EventEmitter()
   
@@ -34,6 +34,7 @@ export class TopNavComponent {
 
         let browserLang = translate.getBrowserLang();
         translate.use(browserLang.match(/en|ms/) ? browserLang : 'ms');
+        
     }
 
 
@@ -41,6 +42,10 @@ export class TopNavComponent {
     showConfBar(){
         this.edited = !(this.edited)
         this.topNavClick.emit(this.edited);
+    }
+
+    langEventChange(data){
+        console.log(data)
     }
 
 }

@@ -4,8 +4,8 @@ import { RouterModule, ActivatedRouteSnapshot } from '@angular/router'
 import { HttpModule, Http } from '@angular/http'
 import { FormsModule, ReactiveFormsModule } from '@angular/forms'
 import { APP_CONFIG, AppConfig } from './config/app.config'
-import {TranslateModule, TranslateLoader} from "@ngx-translate/core";
-import {TranslateHttpLoader} from "@ngx-translate/http-loader";
+import {TranslateModule, TranslateLoader} from "@ngx-translate/core"
+import {TranslateHttpLoader} from "@ngx-translate/http-loader"
 
 export function HttpLoaderFactory(http: Http) {
     return new TranslateHttpLoader(http, "./app/i18n/", ".json");
@@ -48,7 +48,7 @@ import { appRoutes } from './routes'
           }
         }),
         ReactiveFormsModule,
-        RouterModule.forRoot(appRoutes),
+        RouterModule.forRoot(appRoutes)
         
         ],
     declarations: [

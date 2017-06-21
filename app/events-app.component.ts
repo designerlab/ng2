@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core'
-//import { TranslateService } from 'ng2-translate'
 import {TranslateService} from '@ngx-translate/core';
 @Component({
     selector: 'events-app',
@@ -9,20 +8,10 @@ import {TranslateService} from '@ngx-translate/core';
         <div class="xtra-space container-fluid">
             <div class="container">
                 <div class="breadCrumb">
-                    <h1>Title</h1>
                 <div>
-  
-        <!--reanslate with service-->
-        <p>
-            Translate with Service: <strong>{{ translatedText }}</strong>
-        </p>
-    </div>
-                    <span>Home/somepage</span>
-                </div>
             </div>
         </div>
         <router-outlet></router-outlet>
-
     `,
     styles:[`
         .top-nav-style{
