@@ -61,7 +61,7 @@ import {TranslateService} from '@ngx-translate/core';
         `]
 })
 export class EventsAppComponent implements OnInit {
-    param = {value: 'world'};
+    
     translatedText: string
     supportedLanguages: any[]
 
@@ -70,28 +70,16 @@ export class EventsAppComponent implements OnInit {
       bTop = "30px" 
 
       constructor(private translate: TranslateService) {
-        translate.addLangs(["en", "fr"]);
-        translate.setDefaultLang('en');
+        translate.addLangs(["en", "ms"]);
+        translate.setDefaultLang('ms');
 
         let browserLang = translate.getBrowserLang();
-        translate.use(browserLang.match(/en|fr/) ? browserLang : 'en');
+        translate.use(browserLang.match(/en|ms/) ? browserLang : 'ms');
     }
 
       ngOnInit() {
-        // standing data
-        // this.translate.addLangs(['en', 'ms'])
-        // this.translate.setDefaultLang('en')
-
-        // let browserlang = this.translate.getBrowserLang();
-        // this.translate.use(browserlang.match(/en|ms/) ? browserlang : 'en')
-
-        this.supportedLanguages = [
-        { display: 'English', value: 'en' },
-        { display: 'Malay', value: 'ms' },
-        ];
-
-        // set current langage
-    }
+        
+        }
        getExpand(data) {
             if(data) {
                 this.zIndex = "10000"

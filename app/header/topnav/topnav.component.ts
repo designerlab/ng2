@@ -29,11 +29,11 @@ export class TopNavComponent {
   
     constructor(private auth:AuthService, private translate: TranslateService){
 
-        translate.addLangs(["en", "fr"]);
-        translate.setDefaultLang('en');
+        translate.addLangs(["en", "ms"]);
+        translate.setDefaultLang('ms');
 
         let browserLang = translate.getBrowserLang();
-        translate.use(browserLang.match(/en|fr/) ? browserLang : 'en');
+        translate.use(browserLang.match(/en|ms/) ? browserLang : 'ms');
     }
 
 
