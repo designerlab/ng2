@@ -23,7 +23,7 @@ import {TranslateService} from '@ngx-translate/core';
 export class TopNavComponent {
     translatedText: string
     supportedLanguages: any[]
-   
+    private switchButtonModel:string = 'English';
     @Input() edited = true
     @Output() topNavClick = new EventEmitter()
   
