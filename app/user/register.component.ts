@@ -1,10 +1,12 @@
-import { Component } from '@angular/core'
+import { Component, Input, Output, EventEmitter } from '@angular/core'
 
 @Component({
     templateUrl:'app/user/register.component.html'
 })
 
 export class RegisterComponent{
+    @Output() langChange = new EventEmitter()
+
     show = true;
     citizenValue = true;
     changeCitizen = true;
@@ -22,11 +24,11 @@ export class RegisterComponent{
     }
 
     isCitizen(){
-        
         return this.citizenValue;
     }
 
     getDisplay(){
         return "hidden"
     }
+    
 }

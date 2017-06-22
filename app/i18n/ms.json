@@ -1,7 +1,6 @@
 {
   "HOME": {
     "TITLE": "test in malay",
-    "SELECT": "Changer la langue",
-    "SLIDERURL":"./app/apidata/sliderdata-ms.json"
+    "SELECT": "Changer la langue"
   }
 }

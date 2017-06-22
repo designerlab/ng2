@@ -1,7 +1,7 @@
-import { Component,  Output, EventEmitter, AfterViewInit, OnInit, AfterViewChecked } from '@angular/core'
+import { Component, Output, EventEmitter, OnInit, AfterViewChecked } from '@angular/core'
 import { SliderService } from './shared/slider.service'
-import { ActivatedRoute } from '@angular/router'
 import { ISlider, IResult } from './slider.model'
+import { Router } from '@angular/router'
 import {TranslateService, LangChangeEvent } from '@ngx-translate/core'
 
 declare var jQuery:any
@@ -10,27 +10,86 @@ declare var jQuery:any
     selector: 'slider',
     templateUrl: './app/slider/slider.component.html',
     styleUrls: ['./app/css/slider.css']
+    
 })
 
 export class SliderComponent implements AfterViewChecked {
     @Output() langChange = new EventEmitter()
     ngAfterViewChecked() {
         jQuery(function(){
-            jQuery('.bxslider').bxSlider();
-        })
+            jQuery('.bxslider').bxSlider({
+                mode: 'fade',
+                auto:true,
+                pause:4000
+            });
+//             jQuery('.bxslider').slick(
+//                 {
+// arrows: true,
+// dots: true,
+// adaptiveHeight: false,
+// speed: 800,
+// fade: true,
+// autoplay: true,
+// autoplaySpeed: 4000,
+// responsive: [
+// {
+// breakpoint: 992,
+// settings: {
+// autoplay: false,
+// adaptiveHeight: true
+// }
+// }
+// ]
+// }
+//             );
+        });
+        jQuery('.bx-wrapper').not(':eq(0)').hide();
     }
 
     slides:ISlider[]
-    constructor(private sliderService: SliderService, private route:ActivatedRoute, private translate:TranslateService){
-      
+    constructor(private sliderService: SliderService, private translate:TranslateService, private router:Router){
+        this.lang = translate.currentLang;
+        translate.onLangChange.subscribe((event: LangChangeEvent) => {
+
+        let myLang = translate.currentLang;
+        
+        if (myLang == "en") {
+            
+            translate.get('HOME').subscribe((res: any) => {
+                this.lang = "en"
+                this.getSlide()
+            });
+            // this.router.navigateByUrl('public')
+        }
+        if (myLang == "ms") {
+            
+            translate.get('HOME').subscribe((res: any) => {
+                this.lang = "ms"
+                this.getSlide()
+            });
+            // this.router.navigateByUrl('public')
+        }
+    });
     }
 
+    lang = this.lang;
     ngOnInit(){
-      this.sliderService.getSliderData()
+      this.sliderService.getSliderData(this.lang)
             .subscribe(resSliderData => {
                 this.slides = resSliderData;
             });
+    
          
+    }
+
+     
+
+     getSlide() {
+        this.sliderService.getSliderData(this.lang)
+        .subscribe(resSliderData => {
+                this.slides = resSliderData;
+            })
+            
     }
 
 
