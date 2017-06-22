@@ -29,9 +29,8 @@
               <div class="form-group" [ngClass]="{'error' : !validateEmail()}" >
                 <label for="emel" >Emel<span style="color:red"> *</span></label>
                 <input formControlName="emel" type="email" id="emel" tabindex="4" class="form-control gloval" style="text-transform: lowercase;" data-translate="email" required>
-                 <em *ngIf="!validateEmail() && citizenFormGrp.controls.nama_penuh.errors.required">Required</em>
-                 <em *ngIf="!validateEmail() && citizenFormGrp.controls.nama_penuh.errors.pattern">Must be a valid 
-                  Email Address</em>
+                 <em *ngIf="!validateEmail() && citizenFormGrp.controls.emel.errors.required">Required</em>
+                 <em *ngIf="!validateEmail()">Must be a valid Email Address</em>
               </div>
                 <div class="form-group">
                   <label for="telefon">Telefon<span style="color:red"> *</span></label>

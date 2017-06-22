@@ -62,7 +62,7 @@ export class RegisterComponent{
         return this.citizenFormGrp.controls.nama_penuh.valid || this.citizenFormGrp.controls.nama_penuh.untouched
     }
     validateEmail(){
-        return this.citizenFormGrp.controls.nama_penuh.valid || this.citizenFormGrp.controls.nama_penuh.untouched
+        return this.citizenFormGrp.controls.emel.valid || this.citizenFormGrp.controls.emel.untouched
     }
     
 }
