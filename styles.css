@@ -1,5 +1,13 @@
 /* app css stylesheet */
-@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700');
+/*@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700');*/
+
+
+@font-face {
+ font-family: 'Roboto';
+ src: url('./app/fonts/Roboto/Roboto-Light.ttf');
+}
+
+
 body{
   font-family: 'Roboto', sans-serif !important;
 }

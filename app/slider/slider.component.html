@@ -1,0 +1,15 @@
+<div class="container sliderMain">
+    <ul class="bxslider" *ngFor="let slide of slides">
+        
+            <li class="sliderContainer" *ngFor="let data of slide.results">
+            
+            <img [src]="data.image">
+                <span class="sliderBox">
+                    <h3>{{data.title}}</h3>
+                    <p>{{data.description}}</p>
+        
+                </span>
+            </li>
+        
+    </ul>
+</div>

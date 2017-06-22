@@ -1,11 +1,15 @@
 import { NgModule } from '@angular/core'
 import { BrowserModule } from '@angular/platform-browser'
 import { RouterModule, ActivatedRouteSnapshot } from '@angular/router'
-import { HttpModule } from '@angular/http'
+import { HttpModule, Http } from '@angular/http'
 import { FormsModule, ReactiveFormsModule } from '@angular/forms'
-import { TranslatePipe }   from './translate/translate.pipe';
-import { TRANSLATION_PROVIDERS } from './translate/translation'
-import { TranslateService  } from './translate/translate.service'
+import { APP_CONFIG, AppConfig } from './config/app.config'
+import {TranslateModule, TranslateLoader} from "@ngx-translate/core"
+import {TranslateHttpLoader} from "@ngx-translate/http-loader"
+
+export function HttpLoaderFactory(http: Http) {
+    return new TranslateHttpLoader(http, "./app/i18n/", ".json");
+}
 
 import {
     EventsListComponent,
@@ -25,22 +29,27 @@ import { SliderComponent } from './slider/slider.component'
 import { TopNavComponent } from './header/topnav/topnav.component'
 import { ToastrService } from './common/toastr.service'
 import { Error404Component } from './error/404.component'
-// import { ContactComponent } from './header/contact.component'
-// import { FaqComponent } from './header/faq.component'
-// import { AboutusComponent } from './header/aboutus.component'
-// import { ManualComponent } from './header/manual.component'
 import { TopNavService } from './header/topnav/topnav.service'
 import { NavService } from './header/nav/nav.service'
 import { AuthService } from './user/auth.service' 
 import { appRoutes } from './routes'
+
 
 @NgModule({
     imports: [
         BrowserModule,
         FormsModule,
         HttpModule,
+        TranslateModule.forRoot({
+          loader: {
+            provide: TranslateLoader,
+            useFactory: HttpLoaderFactory,
+            deps: [Http]
+          }
+        }),
         ReactiveFormsModule,
         RouterModule.forRoot(appRoutes)
+        
         ],
     declarations: [
         EventsAppComponent,
@@ -53,7 +62,8 @@ import { appRoutes } from './routes'
         EventDetailsComponent,
         CreateEventComponent,
         Error404Component,
-        TranslatePipe,
+        
+      
         // ContactComponent,
         // FaqComponent,
         // AboutusComponent,
@@ -68,11 +78,10 @@ import { appRoutes } from './routes'
         MenuListResolver,
         TopNavService,
         EventListResolver,
-        TRANSLATION_PROVIDERS,
-        TranslateService,
         AuthService,
         NavService,
-        {provide:'canDeactivateCreateEvent', useValue:checkDirtyState}
+        {provide:'canDeactivateCreateEvent', useValue:checkDirtyState},
+        { provide: APP_CONFIG, useValue: AppConfig }
         ]
 })
 export class AppModule{

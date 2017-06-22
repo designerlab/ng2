@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core'
-import { TranslateService } from './translate/translate.service';
+import {TranslateService} from '@ngx-translate/core';
 @Component({
     selector: 'events-app',
     template: `
@@ -8,25 +8,10 @@ import { TranslateService } from './translate/translate.service';
         <div class="xtra-space container-fluid">
             <div class="container">
                 <div class="breadCrumb">
-                    <h1>Title</h1>
-                    <div class="btn-group">
-                        <button *ngFor="let lang of supportedLanguages" (click)="selectLang(lang.value)" class="btn btn-default" [class.btn-primary]="isCurrentLang(lang.value)">
-                            {{ lang.display }}
-                        </button>
-                    </div>
-    <div>
-  
-        <!--reanslate with service-->
-        <p>
-            Translate with Service: <strong>{{ translatedText }}</strong>
-        </p>
-    </div>
-                    <span>Home/somepage</span>
-                </div>
+                <div>
             </div>
         </div>
         <router-outlet></router-outlet>
-
     `,
     styles:[`
         .top-nav-style{
@@ -65,7 +50,7 @@ import { TranslateService } from './translate/translate.service';
         `]
 })
 export class EventsAppComponent implements OnInit {
-
+    
     translatedText: string
     supportedLanguages: any[]
 
@@ -73,35 +58,17 @@ export class EventsAppComponent implements OnInit {
       bHeight = "70px"
       bTop = "30px" 
 
-      constructor(private _translate: TranslateService){
+      constructor(private translate: TranslateService) {
+        translate.addLangs(["en", "ms"]);
+        translate.setDefaultLang('ms');
 
-      }
+        let browserLang = translate.getBrowserLang();
+        translate.use(browserLang.match(/en|ms/) ? browserLang : 'ms');
+    }
+
       ngOnInit() {
-        // standing data
-        this.supportedLanguages = [
-        { display: 'English', value: 'en' },
-        { display: 'Malay', value: 'ms' },
-        ];
-
-        // set current langage
-        this.selectLang('ms');
-    }
-    isCurrentLang(lang: string) {
-        // check if the selected lang is current lang
-        return lang === this._translate.currentLang;
-    }
-
-    selectLang(lang: string) {
-        // set current lang;
-        this._translate.use(lang);
-        this.refreshText();
-    }
-
-    refreshText() {
-        // refresh translation when language change
-        this.translatedText = this._translate.instant('title');
-    }
-
+        
+        }
        getExpand(data) {
             if(data) {
                 this.zIndex = "10000"

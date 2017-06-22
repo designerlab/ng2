@@ -3,11 +3,13 @@ import { EventService } from './shared/event.service'
 import { ToastrService } from '../common/toastr.service'
 import { ActivatedRoute } from '@angular/router'
 import { IEvent } from './shared/event.model'
+import {TranslateService} from '@ngx-translate/core';
 
 @Component({
     template: `
     <slider></slider>
     <div class="container">
+    <h1>{{ 'HOME.TITLE' | translate }}</h1>
      <h1>Upcoming Angular 2 Events</h1>
      <hr/>
      <div class="row">
