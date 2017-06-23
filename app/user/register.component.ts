@@ -1,4 +1,4 @@
-import { Component, OnInit  } from '@angular/core'
+import { Component, Input, Output, EventEmitter } from '@angular/core'
 import { FormControl, FormGroup, Validators } from '@angular/forms'
 
 @Component({
@@ -18,6 +18,9 @@ import { FormControl, FormGroup, Validators } from '@angular/forms'
 })
 
 export class RegisterComponent{
+
+    @Output() langChange = new EventEmitter()
+
       public citizenFormGrp:FormGroup
       public noncitizenFormGrp:FormGroup
       private kad_pengenalan:FormControl
@@ -53,6 +56,9 @@ export class RegisterComponent{
        }
 
 
+    
+
+    show = true;
    chgeCitizen(){
     this.changeCitizen = this.citizenValue
    }
@@ -88,5 +94,6 @@ export class RegisterComponent{
     validatePassport(){
         return this.passport.valid || this.passport.untouched
     }
+
 
 }

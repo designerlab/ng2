@@ -10,6 +10,6 @@ export interface IAppConfig {
 
 export const AppConfig: IAppConfig = {    
     apiEndpoint: "",
-    urlMenu: "./app/apidata/menudata.json",
-    urlSlider: "./app/apidata/sliderdata.json"   
+    urlMenu: "./app/apidata/menudata",
+    urlSlider: "./app/apidata/sliderdata"   
 };
