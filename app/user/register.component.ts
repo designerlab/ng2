@@ -19,20 +19,34 @@ import { FormControl, FormGroup, Validators } from '@angular/forms'
 
 export class RegisterComponent{
       public citizenFormGrp:FormGroup
+      public noncitizenFormGrp:FormGroup
       private kad_pengenalan:FormControl
       private nama_penuh:FormControl
+      private emel:FormControl
+      private telefon:FormControl
+      private country:FormControl
+      private passport:FormControl
 
 
     citizenValue = true
     changeCitizen = true
     country_my = ''
     ngOnInit(){
-          
+          this.kad_pengenalan = new FormControl('',[Validators.required, Validators.pattern('^[0-9]{15}$')]),
+          this.nama_penuh = new FormControl('',[Validators.required, Validators.pattern('^[a-zA-Z ]{1,30}$')]),
+          this.emel = new FormControl('',[Validators.required, Validators.email]),
+          this.telefon = new FormControl('',[Validators.required, Validators.pattern('^[0-9]{14}$')]),
+          this.country = new FormControl('',[Validators.required]),
+          this.passport = new FormControl('', [Validators.required, Validators.pattern('^[0-9a-zA-Z]{8,12}$')]),
           this.citizenFormGrp = new FormGroup({
-            kad_pengenalan: new FormControl('',[Validators.required, Validators.pattern('^[0-9]{15}$')]),
-            nama_penuh: new FormControl('',[Validators.required, Validators.pattern('^[a-zA-Z ]{1,30}$')]),
-            emel: new FormControl('',[Validators.required, Validators.email]),
-            telefon: new FormControl('',[Validators.required])
+            kad_pengenalan: this.kad_pengenalan,
+            nama_penuh: this.nama_penuh,
+            emel: this.emel,
+            telefon: this.telefon
+          })
+          this.noncitizenFormGrp = new FormGroup({
+              country : this.country,
+              passport : this.passport
           })
         //   this.kad_pengenalan = new FormControl([this.kad_pengenalan, Validators.required, Validators.pattern('[a-zA-Z].*')])
         //   this.nama_penuh = new FormControl(this.nama_penuh, Validators.required)
@@ -56,13 +70,23 @@ export class RegisterComponent{
     }
 
     validateIC(){
-        return this.citizenFormGrp.controls.kad_pengenalan.valid || this.citizenFormGrp.controls.kad_pengenalan.untouched
+        return this.kad_pengenalan.valid || this.kad_pengenalan.untouched
     }
     validateName(){
-        return this.citizenFormGrp.controls.nama_penuh.valid || this.citizenFormGrp.controls.nama_penuh.untouched
+        return this.nama_penuh.valid || this.nama_penuh.untouched
     }
     validateEmail(){
-        return this.citizenFormGrp.controls.emel.valid || this.citizenFormGrp.controls.emel.untouched
+        return this.emel.valid || this.emel.untouched
     }
-    
+    validateTelefon(){
+        return this.telefon.valid || this.telefon.untouched
+    }
+    validateCountry(){
+        debugger
+        return this.country.valid || this.country.untouched
+    }
+    validatePassport(){
+        return this.passport.valid || this.passport.untouched
+    }
+
 }
