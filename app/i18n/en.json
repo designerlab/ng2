@@ -1,5 +1,9 @@
 {
-  "HOME": {
+  "home": {
+    "menu":{
+      "register":"Register",
+      "setting": "Settings"
+    },
     "TITLE": "test in english",
     "SELECT": "Change language"
   }

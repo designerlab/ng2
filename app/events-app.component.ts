@@ -61,10 +61,12 @@ export class EventsAppComponent implements OnInit {
       constructor(private translate: TranslateService) {
         translate.addLangs(["en", "ms"]);
         translate.setDefaultLang('ms');
-
-        let browserLang = translate.getBrowserLang();
-        translate.use(browserLang.match(/en|ms/) ? browserLang : 'ms');
+        translate.use('ms');
+        // let browserLang = translate.getBrowserLang();
+        // translate.use(browserLang.match(/en|ms/) ? browserLang : 'ms');
     }
+
+ 
 
       ngOnInit() {
         

@@ -1,6 +1,10 @@
 {
-  "HOME": {
+  "home": {
+    "menu":{
+      "register":"Daftar",
+      "setting": "Tetapan"
+    },
     "TITLE": "test in malay",
-    "SELECT": "Changer la langue"
+    "SELECT": "Change language"
   }
 }

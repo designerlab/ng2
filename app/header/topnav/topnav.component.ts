@@ -15,6 +15,9 @@ import {TranslateService} from '@ngx-translate/core';
             padding-top: 0px;
         }
         
+        .top-menu-list li a{
+            cursor:pointer;
+        }
         
         `
         ]
@@ -23,7 +26,6 @@ import {TranslateService} from '@ngx-translate/core';
 export class TopNavComponent {
     translatedText: string
     supportedLanguages: any[]
-    private switchButtonModel:string = 'English';
     @Input() edited = true
     @Output() topNavClick = new EventEmitter()
   
@@ -31,11 +33,31 @@ export class TopNavComponent {
 
         translate.addLangs(["en", "ms"]);
         translate.setDefaultLang('ms');
+        translate.use('ms');
 
-        let browserLang = translate.getBrowserLang();
-        translate.use(browserLang.match(/en|ms/) ? browserLang : 'ms');
-        
+         if(translate.getDefaultLang() == "ms"){
+             this.currlang = "English"
+         }else{
+             this.currlang = "Bahasa Malaysia"
+         }
     }
+
+    isActive: boolean = true;
+    
+    currlang:string = this.currlang
+   
+    toggle() {
+        this.isActive = !this.isActive;
+        if(this.isActive){
+            this.currlang = "English"
+            this.translate.use('ms')
+        }
+        else{
+            this.currlang = "Bahasa Malaysia"
+            this.translate.use('en')
+        }
+            
+     }
 
 
 
