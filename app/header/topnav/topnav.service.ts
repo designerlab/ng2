@@ -14,7 +14,7 @@ export class TopNavService{
     getFonts(){
         return FONTS
     }
-
+  
 }
 
 

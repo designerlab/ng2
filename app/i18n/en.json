@@ -1,7 +1,10 @@
 {
-  "HOME": {
+  "home": {
+    "menu":{
+      "register":"Register",
+      "setting": "Settings"
+    },
     "TITLE": "test in english",
-    "SELECT": "Change language",
-    "SLIDERURL":"./app/apidata/sliderdata.json"
+    "SELECT": "Change language"
   }
 }

@@ -6,7 +6,8 @@
   padding: 10px 0px; }
 
 li > a.active {
-  color: #e6436e; }
+  color: #fff !important;
+  background: #00bdbb !important; }
 
 .nav > li {
   position: static;
@@ -33,17 +34,16 @@ li > a.active {
   background: #00bdbb; }
 
 .navbar-default .navbar-nav > li > a {
-  color: #000 !important;
   padding: 20px;
-  color: #333333;
   display: block;
+  color: #000;
   padding: 0px 40px;
   text-decoration: none;
   height: 60px;
   line-height: 60px; }
 
 .navbar-default .navbar-nav > li > a:hover {
-  color: #fff !important; }
+  color: #fff; }
 
 .navbar-brand {
   float: left;
@@ -66,9 +66,9 @@ li > a.active {
   background: -moz-linear-gradient(top, #ffffff, #d6d6d6);
   background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#ffffff), to(#d6d6d6));
   /* Rounded Corners  
-            -moz-border-radius: 0px 5px 5px 5px;  
-            -webkit-border-radius: 0px 5px 5px 5px;  
-            border-radius: 0px 5px 5px 5px; */ }
+    -moz-border-radius: 0px 5px 5px 5px;  
+    -webkit-border-radius: 0px 5px 5px 5px;  
+    border-radius: 0px 5px 5px 5px; */ }
 
 #main-menu li:hover .dropdown_5columns {
   left: 0px;
@@ -109,12 +109,12 @@ li > a.active {
 #main-menu li .align_right {
   /* Rounded Corners */
   /*-moz-border-radius: 5px 0px 5px 5px;  
-            -webkit-border-radius: 5px 0px 5px 5px;  
-            border-radius: 5px 0px 5px 5px;*/ }
+    -webkit-border-radius: 5px 0px 5px 5px;  
+    border-radius: 5px 0px 5px 5px;*/ }
 
 #main-menu li:hover .align_right {
   /* left:auto;
-            right:-1px;*/
+    right:-1px;*/
   top: auto; }
 
 #main-menu p, #main-menu h2, #main-menu h3, #main-menu ul li {

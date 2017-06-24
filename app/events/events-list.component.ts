@@ -9,7 +9,7 @@ import {TranslateService} from '@ngx-translate/core';
     template: `
     <slider></slider>
     <div class="container">
-    <h1>{{ 'HOME.TITLE' | translate }}</h1>
+    <h1>{{ 'home.TITLE' | translate }}</h1>
      <h1>Upcoming Angular 2 Events</h1>
      <hr/>
      <div class="row">
@@ -29,7 +29,7 @@ import {TranslateService} from '@ngx-translate/core';
 })
 export class EventsListComponent implements OnInit{
     events:IEvent[]
-    constructor(private eventService: EventService, private toastr:ToastrService, private route:ActivatedRoute){
+    constructor(private eventService: EventService, private toastr:ToastrService, private route:ActivatedRoute, private translate:TranslateService){
     
     }
 

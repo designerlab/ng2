@@ -1,7 +1,10 @@
 {
-  "HOME": {
+  "home": {
+    "menu":{
+      "register":"Daftar",
+      "setting": "Tetapan"
+    },
     "TITLE": "test in malay",
-    "SELECT": "Changer la langue",
-    "SLIDERURL":"./app/apidata/sliderdata-ms.json"
+    "SELECT": "Change language"
   }
 }
