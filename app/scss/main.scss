@@ -1,13 +1,21 @@
 /* below style added by sri */
 
-.font-size-s{ font-size:14px}
-.font-size-m{ font-size:18px }
-.font-size-l{ font-size:24px }
-.font-size-xl{ font-size:38px }
-.font-size-xxl{ font-size:52px }
+.font-size-l, .font-size-m, .font-size-s, .font-size-xl, .font-size-xxl {
+     font-weight: 400;
+}
+
+.font-size-s{ font-size:14px; }
+.font-size-m{ font-size:18px; }
+.font-size-l{ font-size:24px; }
+.font-size-xl{ font-size:38px; }
+.font-size-xxl{ font-size:52px; }
 
 $bgColor: #00bdbb;
 
 .themeColor{
     background:$bgColor
+}
+
+.search_header{
+    font-weight: 100; margin: 0px; padding: 20px;
 }

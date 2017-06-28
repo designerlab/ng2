@@ -12,6 +12,7 @@ import {TranslateService} from '@ngx-translate/core';
             </div>
         </div>
         <router-outlet></router-outlet>
+        <footer></footer>
     `,
     styles:[`
         .top-nav-style{
@@ -25,7 +26,9 @@ import {TranslateService} from '@ngx-translate/core';
             transition-property: height;
             transition-duration: 1s;
         }
-
+        footer{
+            background:#666666;
+        }
         .nav-bar-style{
             z-index: 10000;
             position: fixed;

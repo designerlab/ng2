@@ -6,10 +6,13 @@ export interface IAppConfig {
     apiEndpoint: string;
     urlMenu:string;
     urlSlider:string;
+    urlFooter: string;
 }
 
 export const AppConfig: IAppConfig = {    
     apiEndpoint: "",
     urlMenu: "./app/apidata/menudata",
-    urlSlider: "./app/apidata/sliderdata"   
+    urlSlider: "./app/apidata/sliderdata",
+    urlFooter: "./app/apidata/footer"
+
 };
