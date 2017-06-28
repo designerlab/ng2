@@ -22,26 +22,6 @@ export class SliderComponent implements AfterViewChecked {
                 auto:true,
                 pause:4000
             });
-//             jQuery('.bxslider').slick(
-//                 {
-// arrows: true,
-// dots: true,
-// adaptiveHeight: false,
-// speed: 800,
-// fade: true,
-// autoplay: true,
-// autoplaySpeed: 4000,
-// responsive: [
-// {
-// breakpoint: 992,
-// settings: {
-// autoplay: false,
-// adaptiveHeight: true
-// }
-// }
-// ]
-// }
-//             );
         });
         jQuery('.bx-wrapper').not(':eq(0)').hide();
     }

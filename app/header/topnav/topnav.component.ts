@@ -18,6 +18,10 @@ import {TranslateService} from '@ngx-translate/core';
         .top-menu-list li a{
             cursor:pointer;
         }
+
+        .container {
+            padding-top: 10px;
+        }
         
         `
         ]

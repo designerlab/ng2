@@ -1,4 +1,7 @@
 /* below style added by sri */
+.font-size-l, .font-size-m, .font-size-s, .font-size-xl, .font-size-xxl {
+  font-weight: 400; }
+
 .font-size-s {
   font-size: 14px; }
 
@@ -16,3 +19,8 @@
 
 .themeColor {
   background: #00bdbb; }
+
+.search_header {
+  font-weight: 100;
+  margin: 0px;
+  padding: 20px; }

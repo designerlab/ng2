@@ -6,6 +6,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms'
 import { APP_CONFIG, AppConfig } from './config/app.config'
 import {TranslateModule, TranslateLoader} from "@ngx-translate/core"
 import {TranslateHttpLoader} from "@ngx-translate/http-loader"
+import { FooterComponent } from "./footer/footer.component"
 
 export function HttpLoaderFactory(http: Http) {
     return new TranslateHttpLoader(http, "./app/i18n/", ".json");
@@ -26,6 +27,7 @@ import { MenuListResolver } from './header/nav/menu-list.resolver.service'
 import { EventsAppComponent } from './events-app.component'
 import { NavBarComponent } from './header/nav/navbar.component'
 import { SliderService } from './slider/shared/slider.service'
+import { FooterService } from './footer/footer.service'
 import { SliderComponent } from './slider/slider.component'
 import { TopNavComponent } from './header/topnav/topnav.component'
 import { ToastrService } from './common/toastr.service'
@@ -64,6 +66,7 @@ import { appRoutes } from './routes'
         CreateEventComponent,
         Error404Component,
         SearchComponent,
+        FooterComponent,
         
       
         // ContactComponent,
@@ -75,6 +78,7 @@ import { appRoutes } from './routes'
     providers: [
         EventService,
         SliderService,
+        FooterService,
         ToastrService,
         EventRouterActivator,
         MenuListResolver,

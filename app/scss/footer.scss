@@ -1,0 +1,64 @@
+$bgColor: #00bdbb;
+
+.footer-heading {
+    color: $bgColor;
+    font-weight: 700;
+    font-size: 18px;
+    text-align: left;
+    margin-left: -30px;
+}
+
+.footer-title-underline {
+    margin-top: 21px;
+    margin-bottom: 0%;
+    border: 0;
+    border-top: 2px solid $bgColor;
+    width: 15%;
+    left: 3.5%;
+    position: absolute;
+}
+
+.address p {
+    position: relative;
+    margin-left: 30px;
+}
+
+.address p span {
+    border-radius: 50%;
+    padding: 5px;
+    background-color: $bgColor;
+    position: absolute;
+    left: -30px;
+    top: -2px;
+}
+
+.footer-link ul {
+    list-style: none;
+}
+
+.footer-link ul li {
+    margin-left: -40px;
+    padding-bottom: 5px;
+}
+
+.footer-link ul li a {
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.info-box {
+    background-color: #9d9d9d;
+    border-radius: 5px;
+    text-align: center;
+    padding: 5px;
+    color: #fff;
+    margin: 0 15px 5px 0px;
+    height: 60px;
+    width: 60px;
+}

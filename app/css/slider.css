@@ -1,13 +1,12 @@
 .sliderBox {
   position: absolute;
-  top: 0px;
   right: 5%;
   min-width: 470px;
   margin-right: 20px;
   background: rgba(102, 102, 102, 0.65);
   z-index: 999;
   padding: 10px;
-  top: 17%; }
+  top: 30%; }
 
 @media screen and (max-width: 760px) and (min-width: 320px) {
   .sliderBox {
