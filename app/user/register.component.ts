@@ -95,5 +95,26 @@ export class RegisterComponent{
         return this.passport.valid || this.passport.untouched
     }
 
+    _numbersOnly(event: any) {
+        debugger
+        let pattern = /^[0-9]{15}$/
+        let inputChar = String.fromCharCode(event.charCode)
+
+        if (!pattern.test(inputChar)) {
+        // invalid character, prevent input
+        event.preventDefault();
+        }
+    }
+    _namesOnly(event: any) {
+        debugger
+        let pattern = /^[a-zA-Z ]{1,30}$/
+        let inputChar = String.fromCharCode(event.charCode)
+
+        if (!pattern.test(inputChar)) {
+        // invalid character, prevent input
+        event.preventDefault();
+        }
+    }
+
 
 }
