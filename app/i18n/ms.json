@@ -1,6 +1,7 @@
 {
   "home": {
     "menu":{
+      "home": "Laman Utama",
       "register":"Daftar",
       "setting": "Tetapan"
     },

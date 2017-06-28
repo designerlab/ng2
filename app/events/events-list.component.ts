@@ -8,6 +8,7 @@ import {TranslateService} from '@ngx-translate/core';
 @Component({
     template: `
     <slider></slider>
+    <search></search>
     <div class="container">
     <h1>{{ 'home.TITLE' | translate }}</h1>
      <h1>Upcoming Angular 2 Events</h1>

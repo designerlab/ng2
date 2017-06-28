@@ -21,6 +21,7 @@ import {
     EventListResolver
 } from './events/index'
 
+import { SearchComponent } from './search/search.component'
 import { MenuListResolver } from './header/nav/menu-list.resolver.service'
 import { EventsAppComponent } from './events-app.component'
 import { NavBarComponent } from './header/nav/navbar.component'
@@ -62,6 +63,7 @@ import { appRoutes } from './routes'
         EventDetailsComponent,
         CreateEventComponent,
         Error404Component,
+        SearchComponent,
         
       
         // ContactComponent,
