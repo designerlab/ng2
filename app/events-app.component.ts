@@ -8,7 +8,7 @@ import {TranslateService} from '@ngx-translate/core';
         <div class="xtra-space container-fluid">
             <div class="container">
                 <div class="breadCrumb">
-                <div>
+                </div>
             </div>
         </div>
         <router-outlet></router-outlet>
@@ -56,7 +56,7 @@ export class EventsAppComponent implements OnInit {
 
       zIndex = "10000"
       bHeight = "70px"
-      bTop = "30px" 
+      bTop = "35px" 
 
       constructor(private translate: TranslateService) {
         translate.addLangs(["en", "ms"]);
@@ -75,7 +75,7 @@ export class EventsAppComponent implements OnInit {
             if(data) {
                 this.zIndex = "10000"
                 this.bHeight = "70px"
-                this.bTop = "30px"
+                this.bTop = "35px"
                 
             } else {
                 this.zIndex = "10000"
