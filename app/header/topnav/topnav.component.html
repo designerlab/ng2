@@ -43,15 +43,10 @@
         <ul class="list-inline hidden-xs font-size-s">
           <li>
             Theme Color:
-               <input *ngFor="let color of colors" type="radio" name="bgColor" [(ngModel)]="bgColor" [ngStyle]="{'background': color.bgColor, 'border': '1px solid', 'border-color': color.bgColor}"  class="bgColorBtn bgColor" value="{{color.bgColor}}">
+               <input *ngFor="let color of colors; let i = index; let firstItem = first" (click)="setClickedColor(i)" [ngClass]="{'colorPaletteActive': true}"  [class.colorPaletteActive]="i == selectedRow" type="radio" name="bgColor" [(ngModel)]="bgColor" [ngStyle]="{'background': color.bgColor, 'border': '1px solid', 'border-color': color.bgColor}"  class="bgColorBtn bgColor" value="{{color.bgColor}}">
                 <span><div id="resetBgColor" class="btn btn-xs btn-default"><i class="fa fa-refresh"></i></div></span>
           </li>
-          {{bgColor}}
-          <li>
-          <input type="radio" name="bgColor" [(ngModel)]="bgColor" class="bgColorBtn bgColor0 colorPaletteActive" value="#00bdbb"><span class="sr-only">00bdbb</span>
-          </li>
-
-         
+          
           
           <li class="fontResize" style="margin-left: 70px">
             Font Size :

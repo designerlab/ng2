@@ -49,7 +49,10 @@ import { TopNavService } from './topnav.service'
         width: 20px;
         height: 20px;
         margin: 0px 5px;
-        padding: 0px; }
+        padding: 0px;
+        top:6px;
+        position:relative
+         }
 
         .bgColor2 {
         width: 20px;
@@ -83,6 +86,8 @@ export class TopNavComponent {
     translatedText: string
     supportedLanguages: any[]
     colors:any[]
+    selectedRow : Number
+    firstItem: boolean
 
     @Input() edited = true
     @Output() topNavClick = new EventEmitter()
@@ -110,6 +115,7 @@ export class TopNavComponent {
     
     ngOnInit(){
         this.colors = this.topNavService.getColors()
+        
     }
 
     toggle() {
@@ -135,5 +141,12 @@ export class TopNavComponent {
     langEventChange(data){
         console.log(data)
     }
+
+    setClickedColor(index){
+            this.selectedRow = index;
+            this.firstItem = false;
+        }
+
+     
 
 }
