@@ -15,14 +15,14 @@
               <div class="form-group" [ngClass]="{'error' : !validateIC()}">
                 <label for="kad_pengenalan">
                   Nombor Kad Pengenalan <span style="color:red"> *</span></label>
-                <input formControlName="kad_pengenalan" id="kad_pengenalan" tabindex="1" class="form-control" placeholder="Contoh:888888888888" maxlength="15" data-translate="kad_pengenalan">
+                <input (keyup)="_numbersOnly($event)" formControlName="kad_pengenalan" id="kad_pengenalan" tabindex="1" class="form-control" placeholder="Contoh:888888888888" maxlength="15" data-translate="kad_pengenalan">
                 <em *ngIf="!validateIC() && citizenFormGrp.controls.kad_pengenalan.errors.required">Required</em>
                 <em *ngIf="!validateIC() && citizenFormGrp.controls.kad_pengenalan.errors.pattern">Must be a valid IC number</em>
               </div>
               <div class="form-group" [ngClass]="{'error' : !validateName()}">
                 <label for="nama_penuh">
                   Nama Pengguna (sama seperti di dalam kad pengenalan) <span style="color:red"> *</span></label>
-                  <input formControlName="nama_penuh" type="text" maxlength="80" id="nama_penuh" tabindex="2" class="form-control ValonlyCharwithSpecial " placeholder="Nama Pengguna " data-translate="nama_penuh">
+                  <input (keypress)="_namesOnly($event)" formControlName="nama_penuh" type="text" maxlength="80" id="nama_penuh" tabindex="2" class="form-control ValonlyCharwithSpecial " placeholder="Nama Pengguna " data-translate="nama_penuh">
                    <em *ngIf="!validateName() && citizenFormGrp.controls.nama_penuh.errors.required">Required</em>
                    <em *ngIf="!validateName() && citizenFormGrp.controls.nama_penuh.errors.pattern">Must be a valid name</em>
               </div>

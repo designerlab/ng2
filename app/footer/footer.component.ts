@@ -8,12 +8,44 @@ import {TranslateService, LangChangeEvent } from '@ngx-translate/core'
     selector: 'footer',
     templateUrl:'./app/footer/footer.component.html',
     styles:[`
+        .primary {
+            background-color: #1ebebc;
+            color: #fff;
+        }
+        .icon-social {
+            position: inherit;
+            display: inline-block;
+            z-index: 1;
+            background-color: #ffffff;
+            font-size: 1em;
+            color: #1ebebc;
+            width: 29px;
+            height: 28px;
+
+            text-align: center;
+            margin: 0;
+            border-radius: 50%;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            -o-border-radius: 50%;
+            transition: all 0.4s ease-in-out;
+            -moz-transition: all 0.4s ease-in-out;
+            -webkit-transition: all 0.4s ease-in-out;
+            -o-transition: all 0.4s ease-in-out;
+        }
         
+        .social_icon_bg {
+            font-size: 20px;
+            color: white;
+            cursor: pointer;
+        }
     `]
 })
 
 export class FooterComponent{
      footer:any[]
+     ftsociallink:any[]
+
     constructor(private footerService: FooterService, private translate:TranslateService, private router:Router){
         this.lang = translate.currentLang;
         translate.onLangChange.subscribe((event: LangChangeEvent) => {
@@ -37,13 +69,16 @@ export class FooterComponent{
             // this.router.navigateByUrl('public')
         }
     });
+        
 }
 
   lang = this.lang;
     ngOnInit(){
+        // debugger
       this.footerService.getFooterData(this.lang)
             .subscribe(resFooterData => {
                 this.footer = resFooterData;
+                this.ftsociallink = resFooterData[0].sociallink;
             });
     
          
@@ -55,8 +90,11 @@ export class FooterComponent{
          this.footerService.getFooterData(this.lang)
         .subscribe(resFooterData => {
                 this.footer = resFooterData;
+                this.ftsociallink = resFooterData[0].sociallink;
             })
             
+            
     }
+    
 }
 
