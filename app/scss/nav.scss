@@ -217,4 +217,58 @@ li > a.active {
     border:1px solid #aaaaaa;  
     padding:4px 6px 4px 6px;  
     margin:0px 0px 4px 0px;  
-}  
+}
+
+button.bgColorBtn {
+    padding: 5px 0px;
+    margin: 0px 2px;
+}
+
+.bgColor0 {
+    width: 20px;
+    height: 20px;
+    background: #00bdbb;
+    border: 1px solid #00bdbb;
+    margin: 0px;
+    padding: 0px;
+}
+
+.colorPaletteActive {
+    border-color: #fff !important;
+}
+
+.bgColor1 {
+    width: 20px;
+    height: 20px;
+    background: #5e7899;
+    border: 1px solid #5e7899;
+    margin: 0px;
+    padding: 0px;
+}
+
+.bgColor2 {
+    width: 20px;
+    height: 20px;
+    background: #e06000;
+    border: 1px solid #e06000;
+    margin: 0px;
+    padding: 0px;
+}
+
+.bgColor3 {
+    width: 20px;
+    height: 20px;
+    background: #4f81c5;
+    border: 1px solid #4f81c5;
+    margin: 0px;
+    padding: 0px;
+}
+
+.bgColor4 {
+    width: 20px;
+    height: 20px;
+    background: #982d57;
+    border: 1px solid #982d57;
+    margin: 0px;
+    padding: 0px;
+}
