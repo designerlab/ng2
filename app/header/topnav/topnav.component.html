@@ -41,14 +41,18 @@
     <div class="row menu_botm container" id="confBar">
       <div class="col-sm-12">
         <ul class="list-inline hidden-xs font-size-s">
-          <li>Theme Color:
-            <button type="button" class="bgColorBtn bgColor0 colorPaletteActive" value="#00bdbb"><span class="sr-only">00bdbb</span></button>
-            <button class="bgColorBtn bgColor1" value="#5e7899"><span class="sr-only">5e7899</span></button>
-            <button class="bgColorBtn bgColor2" value="#e06000" ><span class="sr-only">e06000</span></button>
-            <button class="bgColorBtn bgColor3" value="#4f81c5"><span class="sr-only">4f81c5</span></button>
-            <button class="bgColorBtn bgColor4" value="#982d57"><span class="sr-only">982d57</span></button>
-            <span><div id="resetBgColor" class="btn btn-xs btn-default"><i class="fa fa-refresh"></i></div></span>
+          <li>
+            Theme Color:
+               <input *ngFor="let color of colors" type="radio" name="bgColor" [(ngModel)]="bgColor" [ngStyle]="{'background': color.bgColor, 'border': '1px solid', 'border-color': color.bgColor}"  class="bgColorBtn bgColor" value="{{color.bgColor}}">
+                <span><div id="resetBgColor" class="btn btn-xs btn-default"><i class="fa fa-refresh"></i></div></span>
           </li>
+          {{bgColor}}
+          <li>
+          <input type="radio" name="bgColor" [(ngModel)]="bgColor" class="bgColorBtn bgColor0 colorPaletteActive" value="#00bdbb"><span class="sr-only">00bdbb</span>
+          </li>
+
+         
+          
           <li class="fontResize" style="margin-left: 70px">
             Font Size :
             </li>
