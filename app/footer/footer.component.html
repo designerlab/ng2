@@ -1,3 +1,30 @@
+<!--<div *ngFor="let data of footer">
+
+        {{data.title}}
+        
+</div>-->
+<div class="primary">
+                <div class="row" id="social-area">
+                        <div class="col-sm-12" style="padding-bottom:10px;padding-top: 10px;text-align: center;" id="social-icons">
+                                <div class="row">
+                                        <div class="col-md-12 footersocial">
+                                                <div class="row">
+                                                        <span *ngFor="let data of ftsociallink">
+                                                                <span class="social_icon_bg" title="{{data.title}}" data-placement="top" data-toggle="tooltip"
+                                                                        data-original-title="Tooltip on top">
+                                                                        <span class="icon-social">
+                                                                                <i [ngClass]= data.icon style="padding:5px 2px 0px 0px"></i>
+                                                                        </span>
+                                                                </span> 
+                                                                <!--<i [ngClass]=data.icon style="padding:5px 2px 0px 0px"></i>-->
+                                                        </span>                                                       
+                                                        
+                                                </div>
+                                        </div>
+                                </div>
+                        </div>
+                </div>
+        </div>
 <div class="container footer" style="padding:0px;">
     <div class="row footer-left"> 				
         <div class="col-sm-4">
