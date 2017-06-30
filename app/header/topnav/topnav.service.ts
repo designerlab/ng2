@@ -30,11 +30,20 @@ const USERMENU = [{
     }
 ]
 
-const COLORS = [
-        '5e7899',
-        'e06000',
-        '4f81c5',
-        '982d57'
+const COLORS = [ 
+    {
+        bgColor:"#00bdbb"
+    },{
+        bgColor:"#5e7899"
+    },
+    {
+        bgColor:"#e06000"
+    },
+    {
+        bgColor:"#4f81c5"
+    },
+     {   bgColor:"#982d57"
+    }
     ]
 
 const FONTS = [

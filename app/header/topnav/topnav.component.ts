@@ -1,6 +1,7 @@
 import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core'
 import { AuthService } from '../../user/auth.service'
 import {TranslateService} from '@ngx-translate/core';
+import { TopNavService } from './topnav.service'
 
 @Component({
     selector:'top-nav',
@@ -23,9 +24,15 @@ import {TranslateService} from '@ngx-translate/core';
             padding-top: 10px;
         }
 
-        button.bgColorBtn {
-        padding: 5px 0px;
-        margin: 0px 2px; }
+        .bgColorBtn {
+            padding: 5px 0px;
+            margin: 0px 2px;
+            -webkit-appearance: button; /* WebKit */
+            -moz-appearance: button; /* Mozilla */
+            -o-appearance: button; /* Opera */
+            -ms-appearance: button; /* Internet Explorer */
+            appearance: button; /* CSS3 */
+        }
 
         .bgColor0 {
         width: 20px;
@@ -38,13 +45,14 @@ import {TranslateService} from '@ngx-translate/core';
         .colorPaletteActive {
         border-color: #fff !important; }
 
-        .bgColor1 {
+        .bgColor{
         width: 20px;
         height: 20px;
-        background: #5e7899;
-        border: 1px solid #5e7899;
-        margin: 0px;
-        padding: 0px; }
+        margin: 0px 5px;
+        padding: 0px;
+        top:6px;
+        position:relative
+         }
 
         .bgColor2 {
         width: 20px;
@@ -77,10 +85,14 @@ import {TranslateService} from '@ngx-translate/core';
 export class TopNavComponent {
     translatedText: string
     supportedLanguages: any[]
+    colors:any[]
+    selectedRow : Number
+    firstItem: boolean
+
     @Input() edited = true
     @Output() topNavClick = new EventEmitter()
   
-    constructor(private auth:AuthService, private translate: TranslateService){
+    constructor(private auth:AuthService, private translate: TranslateService, private topNavService:TopNavService){
 
         translate.addLangs(["en", "ms"]);
         translate.setDefaultLang('ms');
@@ -91,12 +103,21 @@ export class TopNavComponent {
          }else{
              this.currlang = "Bahasa Malaysia"
          }
+
+         
     }
+
+    
 
     isActive: boolean = true;
     
     currlang:string = this.currlang
-   
+    
+    ngOnInit(){
+        this.colors = this.topNavService.getColors()
+        
+    }
+
     toggle() {
         this.isActive = !this.isActive;
         if(this.isActive){
@@ -120,5 +141,12 @@ export class TopNavComponent {
     langEventChange(data){
         console.log(data)
     }
+
+    setClickedColor(index){
+            this.selectedRow = index;
+            this.firstItem = false;
+        }
+
+     
 
 }
