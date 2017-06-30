@@ -43,7 +43,7 @@
         <ul class="list-inline hidden-xs font-size-s">
           <li>
             Theme Color:
-               <input *ngFor="let color of colors; let i = index; let firstItem = first" (click)="setClickedColor(i)"  [class.colorPaletteActive]="firstItem" type="radio" name="bgColor" [(ngModel)]="bgColor" [ngStyle]="{'background': color.bgColor, 'border': '1px solid', 'border-color': color.bgColor}"  class="bgColorBtn bgColor" value="{{color.bgColor}}">
+               <input #colorPanel *ngFor="let color of colors; let i = index; let firstItem = first" (click)="setClickedColor(i)"  [class.colorPaletteActive]="i == selectedRow ? true: i == 0 ? true : false" type="radio" name="bgColor" [(ngModel)]="bgColor" [ngStyle]="{'background': color.bgColor, 'border': '1px solid', 'border-color': color.bgColor}"  class="bgColorBtn bgColor" value="{{color.bgColor}}">
                 <span><div id="resetBgColor" class="btn btn-xs btn-default"><i class="fa fa-refresh"></i></div></span>
           </li>
           

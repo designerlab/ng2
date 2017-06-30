@@ -3,6 +3,7 @@ import { AuthService } from '../../user/auth.service'
 import {TranslateService} from '@ngx-translate/core';
 import { TopNavService } from './topnav.service'
 
+
 @Component({
     selector:'top-nav',
     templateUrl:'./app/header/topnav/topnav.component.html',
@@ -143,10 +144,13 @@ export class TopNavComponent {
     }
 
     setClickedColor(index){
+        debugger;
             this.selectedRow = index;
-            this.firstItem = false;
+            this.firstItem = index;
         }
 
-     
+     status(i){
+        debugger;
+     }
 
 }
