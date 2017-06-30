@@ -1,367 +1,404 @@
-<!--<div *ngFor="let data of footer">
-
-        {{data.title}}
-        
-</div>-->
-<div class="primary">
-                <div class="row" id="social-area">
-                        <div class="col-sm-12" style="padding-bottom:10px;padding-top: 10px;text-align: center;" id="social-icons">
-                                <div class="row">
-                                        <div class="col-md-12 footersocial">
-                                                <div class="row">
-                                                        <span *ngFor="let data of ftsociallink">
-                                                                <span class="social_icon_bg" title="{{data.title}}" data-placement="top" data-toggle="tooltip"
-                                                                        data-original-title="Tooltip on top">
-                                                                        <span class="icon-social">
-                                                                                <i [ngClass]= data.icon style="padding:5px 2px 0px 0px"></i>
-                                                                        </span>
-                                                                </span> 
-                                                                <!--<i [ngClass]=data.icon style="padding:5px 2px 0px 0px"></i>-->
-                                                        </span>                                                       
-                                                        
-                                                </div>
-                                        </div>
-                                </div>
-                        </div>
-                </div>
-        </div>
-<div class="container footer" style="padding:0px;">
-    <div class="row footer-left"> 				
-        <div class="col-sm-4">
-            <div class="row" style="margin-top: 0%">
-                <div class="col-md-12">
-                    <div class="address footer">
-                            <button class="btn footer-toggle fa fa-angle-down pull-right visible-xs" onclick="showFooterAddress()"><span class="sr-only">Footer Toggle Button</span></button>
-                            
-                            <h4 class="footer-heading font-size-m warna_title_color" style="padding-left: 30px; font-family: Roboto; color: rgb(0, 189, 187);">
-                                
-                                    CONTACT US
-                                
-                            <span class="footer-title-underline warna_border_color" style="border-color: rgb(0, 189, 187);"></span>
-                            </h4>
+<div *ngFor="let data of footer">
+   <div class="primary" *ngIf="data.title=='sociallink'">
+      <div class="row" id="social-area">
+         <div class="col-sm-12" style="padding-bottom:10px;padding-top: 10px;text-align: center;" id="social-icons">
+            <div class="row">
+               <div class="col-md-12 footersocial">
+                  <div class="row">
+                     <span *ngFor="let social_data of data.footer">
+                        <a href="{{ social_data.link }}" target="_blank">
+                           <span class="social_icon_bg" title="{{social_data.title}}" data-toggle="tooltip" data-original-title="Tooltip on top">
+                              <span class="icon-social">
+                                       <i ngClass= "fa {{social_data.icon}}" style="padding:5px 2px 0px 0px"></i>
+                              </span>
+                           </span>
+                        </a>
+                     </span>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   
+      <div class="container footer" style="padding:0px;" *ngIf="data.title!='sociallink'">
+         <!--<div class="row footer-left">-->
+            <div class="col-md-4" *ngFor="let eachitm of data.footer">
+               <div class="row" style="margin-top: 0%" >
+                  <div class="col-md-12" >
+                     <div class="address footer">
+                        <button class="btn footer-toggle fa fa-angle-down pull-right visible-xs" onclick="showFooterAddress()"><span class="sr-only">Footer Toggle Button</span></button>
+                        <h4 *ngIf="eachitm.id==1" class="footer-heading font-size-m warna_title_color" style="padding-left: 30px; font-family: Roboto; color: rgb(0, 189, 187);">
+                           {{data.title}}
+                           <span class="footer-title-underline warna_border_color" style="border-color: rgb(0, 189, 187);"></span>
+                        </h4>
 
                         <div class="sub-add">
-                            <p style="margin-left: 0px; font-family: Roboto;" class="font-size-s">
-                            
-                                THE MALAYSIAN ADMINISTRATIVE MODERNISATION AND  MANAGEMENT PLANNING UNIT
-                            
-                            </p>
-
-                            <p class="font-size-s" style="font-family: Roboto;"><span class="glyphicon glyphicon-home primary warna_bg" style="background-color: rgb(0, 189, 187);"></span>
-                            
-                                </p><p>Level 6, Block B2<br>Prime Minister's Department Complex<br>Federal Government Administrative Centre<br>62502 Putrajaya, Malaysia</p>
-                            
-                            <p></p>
-
-                            <p class="font-size-s" style="font-family: Roboto;"><span class="glyphicon glyphicon-map-marker primary warna_bg" style="background-color: rgb(0, 189, 187);"></span>
-                            
-                                </p><p><a title="2.937855, 101.65420" href="https://www.google.com/maps/place/2%C2%B056'16.3%22N+101%C2%B039'15.1%22E/@2.937855,101.6542,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d2.937855!4d101.6542" target="_blank">2.937855, 101.65420</a></p>
-                            
-                            <p></p>
-                    
-                            <p class="font-size-s" style="font-family: Roboto;"><span class="glyphicon glyphicon-phone-alt primary warna_bg" style="background-color: rgb(0, 189, 187);"></span>
-                            
-                                </p><p>603 8000 8000</p>
-                            
-                            <p></p>
-                            <p class="font-size-s" style="font-family: Roboto;"><span class="glyphicon glyphicon-print primary warna_bg" style="background-color: rgb(0, 189, 187);"></span>
-                            
-                                </p><p>603 8888 3721</p>
-                            
-                            <p></p>
-
-                            <p class="font-size-s" style="font-family: Roboto;"><span class="glyphicon glyphicon-envelope primary warna_bg" style="background-color: rgb(0, 189, 187);"></span>
-                            
-                                </p><p>admin[at]portal[dot]gov[dot]my</p>
-                            
-
-                            <p></p>
+                              <p *ngIf="eachitm.icon" class="font-size-s" style="font-family: Roboto;">
+                                 <span ngClass= "glyphicon {{eachitm.icon}}" style="background-color: rgb(0, 189, 187);"></span>
+                              </p>
+                              <div [innerHtml]="eachitm.title">
+                              </div>
                         </div>
-                    </div>
-                </div>
+
+                     </div>
+                  </div>
+               </div>
             </div>
-        </div>
-        <div class="col-sm-4">
-                <div class="row" style="margin-top: 0%">
-                        <div class="col-md-12">
-                                <button class="btn footer-toggle fa fa-angle-down pull-right visible-xs" onclick="showFooterAccess()"><span class="sr-only">Footer Toggle Button</span></button>
-                                <h4 class="footer-heading font-size-m warna_title_color" style="padding-left: 30px; font-family: Roboto; color: rgb(0, 189, 187);">
-                                        
-                                            
-                                                ACCESS PAGE
-                                            
-                                        
-                                        <span class="footer-title-underline warna_border_color" style="border-color: rgb(0, 189, 187);"></span>
-                                        </h4>
-                        </div>
-                </div>
-                <div class="row" style="margin-top: 0%" id="footer-access">
-                        <div class="col-xs-6 footer-link font-size-s" style="font-family: Roboto;">
-                                <ul>
-                                        <li><a href="/public/cms/calendar/">
+         <!--</div>-->
+      </div>
+   
+   
+
+</div>
+<div class="container footer" style="padding:0px; display:none;">
+   <div class="row footer-left">
+      <div class="col-sm-4">
+         <div class="row" style="margin-top: 0%">
+            <div class="col-md-12">
+               <div class="address footer">
+                  <button class="btn footer-toggle fa fa-angle-down pull-right visible-xs" onclick="showFooterAddress()"><span class="sr-only">Footer Toggle Button</span></button>
+
+                  <h4 class="footer-heading font-size-m warna_title_color" style="padding-left: 30px; font-family: Roboto; color: rgb(0, 189, 187);">
+
+                     CONTACT US
+
+                     <span class="footer-title-underline warna_border_color" style="border-color: rgb(0, 189, 187);"></span>
+                  </h4>
+
+                  <div class="sub-add">
+                     <p style="margin-left: 0px; font-family: Roboto;" class="font-size-s">
+
+                        THE MALAYSIAN ADMINISTRATIVE MODERNISATION AND MANAGEMENT PLANNING UNIT
+
+                     </p>
+
+                     <p class="font-size-s" style="font-family: Roboto;">
+                        <span class="glyphicon glyphicon-home primary warna_bg" style="background-color: rgb(0, 189, 187);"></span>
+
+                     </p>
+                     <p>Level 6, Block B2<br>Prime Minister's Department Complex<br>Federal Government Administrative Centre<br>62502
+                        Putrajaya, Malaysia</p>
+
+                     <p></p>
+
+                     <p class="font-size-s" style="font-family: Roboto;"><span class="glyphicon glyphicon-map-marker primary warna_bg" style="background-color: rgb(0, 189, 187);"></span>
+
+                     </p>
+                     <p><a title="2.937855, 101.65420" href="https://www.google.com/maps/place/2%C2%B056'16.3%22N+101%C2%B039'15.1%22E/@2.937855,101.6542,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d2.937855!4d101.6542"
+                           target="_blank">2.937855, 101.65420</a></p>
+
+                     <p></p>
+
+                     <p class="font-size-s" style="font-family: Roboto;"><span class="glyphicon glyphicon-phone-alt primary warna_bg" style="background-color: rgb(0, 189, 187);"></span>
+
+                     </p>
+                     <p>603 8000 8000</p>
+
+                     <p></p>
+                     <p class="font-size-s" style="font-family: Roboto;"><span class="glyphicon glyphicon-print primary warna_bg" style="background-color: rgb(0, 189, 187);"></span>
+
+                     </p>
+                     <p>603 8888 3721</p>
+
+                     <p></p>
+
+                     <p class="font-size-s" style="font-family: Roboto;"><span class="glyphicon glyphicon-envelope primary warna_bg" style="background-color: rgb(0, 189, 187);"></span>
+
+                     </p>
+                     <p>admin[at]portal[dot]gov[dot]my</p>
+
+
+                     <p></p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="col-sm-4">
+         <div class="row" style="margin-top: 0%">
+            <div class="col-md-12">
+               <button class="btn footer-toggle fa fa-angle-down pull-right visible-xs" onclick="showFooterAccess()"><span class="sr-only">Footer Toggle Button</span></button>
+               <h4 class="footer-heading font-size-m warna_title_color" style="padding-left: 30px; font-family: Roboto; color: rgb(0, 189, 187);">
+
+
+                  ACCESS PAGE
+
+
+                  <span class="footer-title-underline warna_border_color" style="border-color: rgb(0, 189, 187);"></span>
+               </h4>
+            </div>
+         </div>
+         <div class="row" style="margin-top: 0%" id="footer-access">
+            <div class="col-xs-6 footer-link font-size-s" style="font-family: Roboto;">
+               <ul>
+                  <li><a href="/public/cms/calendar/">
                                             
                                                 My Calendar
                                             
                                         </a></li>
-                                        
-                                    
-                                        
-                                        <li><a href="/public/cms/epenyertaan/">
+
+
+
+                  <li><a href="/public/cms/epenyertaan/">
                                             
                                                 E-Participation
                                             
                                         </a></li>
-                                        
-                                    
-                                        
-                                        <li><a href="/public/cms/direktori/">
+
+
+
+                  <li><a href="/public/cms/direktori/">
                                             
                                                 Agencies Directory
                                             
                                         </a></li>
-                                        
-                                    
-                                        
-                                        <li><a href="/public/cms/article/page/726/">
+
+
+
+                  <li><a href="/public/cms/article/page/726/">
                                             
                                                 Chief Information Officer(CIO)
                                             
                                         </a></li>
-                                        
-                                    
-                                        
-                                        <li><a href="/public/cms/feedback/">
+
+
+
+                  <li><a href="/public/cms/feedback/">
                                             
                                                 Complaints and Queries
                                             
                                         </a></li>
-                                        
-                                    
-                                        
-                                        <li><a href="/public/cms/archive/">
+
+
+
+                  <li><a href="/public/cms/archive/">
                                             
                                                 Archives
                                             
                                         </a></li>
-                                        
-                                    
-                                        
-                                        <li><a href="/public/cms/publication/">
+
+
+
+                  <li><a href="/public/cms/publication/">
                                             
                                                 Publication
                                             
                                         </a></li>
-                                        
-                                    
-                                        
-                                        <li><a href="/public/dservice/?cc=business/dservis/statistic">
+
+
+
+                  <li><a href="/public/dservice/?cc=business/dservis/statistic">
                                             
                                                 Online Statistic
                                             
                                         </a></li>
-                                </ul>
-                        </div>
-                        <div class="col-xs-6 footer-link font-size-s" style="font-family: Roboto;">
-                                <ul>
-                                    
-                                        
-                                        <li><a href="/public/cms/subscription/">
+               </ul>
+            </div>
+            <div class="col-xs-6 footer-link font-size-s" style="font-family: Roboto;">
+               <ul>
+
+
+                  <li><a href="/public/cms/subscription/">
                                             
                                                 Subscription
                                             
                                         </a></li>
-                                        
-                                    
-                                        
-                                        <li><a href="/public/cms/onlineservices/">
+
+
+
+                  <li><a href="/public/cms/onlineservices/">
                                             
                                                 Online Services
                                             
                                         </a></li>
-                                        
-                                    
-                                        
-                                        <li><a href="/public/cms/article/page/349/">
+
+
+
+                  <li><a href="/public/cms/article/page/349/">
                                             
                                                 Personal Data Protection Act
                                             
                                         </a></li>
-                                        
-                                    
-                                        
-                                        <li><a href="/public/cms/article/page/725/">
+
+
+
+                  <li><a href="/public/cms/article/page/725/">
                                             
                                                 Freedom of Information
                                             
                                         </a></li>
-                                        
-                                        <li><a href="/public/cms/sitemap/">
+
+                  <li><a href="/public/cms/sitemap/">
                                             
                                                 Site Map
                                             
                                         </a></li>
-                                        
-                                    
-                                        
-                                        <li><a href="/public/cms/rss/">
+
+
+
+                  <li><a href="/public/cms/rss/">
                                             
                                                 RSS Feeds
                                             
                                         </a></li>
-                                        
-                                    
-                                        
-                                        <li><a href="/public/cms/photologue/gallery/">
+
+
+
+                  <li><a href="/public/cms/photologue/gallery/">
                                             
                                                 Gallery
                                             
                                         </a></li>
-                                        
-                                    
 
-                                </ul>
-                        </div>
-                </div>
-        </div>
-        <div class="col-sm-4">
-                <div class="row" style="margin-top: 0%">
-                        <div class="col-xs-12">
-                                <button class="btn footer-toggle fa fa-angle-down pull-right visible-xs" onclick="showFooterStat()"><span class="sr-only">Footer Toggle Button</span></button>
-                                <h4 class="footer-heading font-size-m warna_title_color" style="padding-left: 30px; font-family: Roboto; color: rgb(0, 189, 187);">
-                                        
-                                            
-                                                NUMBER OF VISITOR
-                                            
-                                        
-                                        <span class="footer-title-underline warna_border_color" style="border-color: rgb(0, 189, 187);"></span>
-                                        </h4>
-                        </div>
-                </div>
-                <div class="row" style="margin-top: 0%" id="footer-stat">
-                        <div class="col-xs-4">
-                                <p class="font-size-s" style="font-family: Roboto;">
-                                    
-                                        
-                                            Today
-                                        
-                                    
-                                </p>
-                                <h4 class="font-size-m" style="margin-top: -12px; font-family: Roboto;"><b><span class="ga_today">147</span></b></h4>
-                        </div>
-                        <div class="col-xs-4">
-                                <p class="font-size-s" style="font-family: Roboto;">
-                                    
-                                        
-                                            This month
-                                        
-                                    
-                                    </p>
-                                <h4 class="font-size-m" style="margin-top: -12px; font-family: Roboto;"><b><span class="ga_month">23,830</span></b></h4>
-                        </div>
-                        <div class="col-xs-4">
-                                <p class="font-size-s" style="font-family: Roboto;">
-                                    
-                                        
-                                            Total Visitors
-                                        
-                                    
-                                </p>
-                                <h4 class="font-size-m" style="margin-top: -12px; font-family: Roboto;"><b><span class="ga_overall">59,281</span></b></h4>
-                        </div>
-                </div>
-                <div class="row" style="margin-top: 0%">
-                        <div class="col-xs-12">
-                                <button class="btn footer-toggle fa fa-angle-down pull-right visible-xs" onclick="showFooterExternal()"><span class="sr-only">Footer Toggle Button</span></button>
-                                <h4 class="footer-heading font-size-m warna_title_color" style="margin-left: auto; font-family: Roboto; color: rgb(0, 189, 187);">
-                                        
-                                            
-                                                EXTERNAL LINKS
-                                            
-                                        
-                                        <span class="footer-title-underline warna_border_color" style="border-color: rgb(0, 189, 187);"></span>
-                                        </h4>
-                        </div>
-                </div>
 
-                <div class="row footer-external-link" style="margin-left:0px">
-                    
-                    
 
-                        <a href="http://www.kpwkm.gov.my/" target="_blank" class="col-xs-3 info-box" data-toggle="tooltip" title="MINISTRY OF WOMEN, FAMILY AND COMMUNITY DEVELOPMENT"><img src="https://www.malaysia.gov.my/public/static/media/KPWKM.png" alt="MINISTRY OF WOMEN, FAMILY AND COMMUNITY DEVELOPMENT" style="max-width:100%;"></a>
-                    
-                    
-                    
+               </ul>
+            </div>
+         </div>
+      </div>
+      <div class="col-sm-4">
+         <div class="row" style="margin-top: 0%">
+            <div class="col-xs-12">
+               <button class="btn footer-toggle fa fa-angle-down pull-right visible-xs" onclick="showFooterStat()"><span class="sr-only">Footer Toggle Button</span></button>
+               <h4 class="footer-heading font-size-m warna_title_color" style="padding-left: 30px; font-family: Roboto; color: rgb(0, 189, 187);">
 
-                        <a href="http://www.mohr.gov.my/index.php/en/" target="_blank" class="col-xs-3 info-box" data-toggle="tooltip" title="MINISTRY OF HUMAN RESOURCES"><img src="https://www.malaysia.gov.my/public/static/media/Kementerian-Sumber-Manusia.png" alt="MINISTRY OF HUMAN RESOURCES" style="max-width:100%;"></a>
-                    
-                    
-                    
 
-                        <a href="http://www.moe.gov.my/index.php/en/" target="_blank" class="col-xs-3 info-box" data-toggle="tooltip" title="MINISTRY OF EDUCATION MALAYSIA"><img src="https://www.malaysia.gov.my/public/static/media/Kementerian-Pendidikan.png" alt="MINISTRY OF EDUCATION MALAYSIA" style="max-width:100%;"></a>
-                    
-                    
-                    
+                  NUMBER OF VISITOR
 
-                        <a href="http://www.treasury.gov.my/index.php/en/" target="_blank" class="col-xs-3 info-box" data-toggle="tooltip" title="MINISTRY OF FINANCE MALAYSIA"><img src="https://www.malaysia.gov.my/public/static/media/Kementerian-Kewangan.png" alt="MINISTRY OF FINANCE MALAYSIA" style="max-width:100%;"></a>
-                    
-                    
-                    
 
-                        <a href="http://www.moh.gov.my/english.php" target="_blank" class="col-xs-3 info-box" data-toggle="tooltip" title="MINISTRY OF HEALTH MALAYSIA"><img src="https://www.malaysia.gov.my/public/static/media/Kementerian-kesihatan.png" alt="MINISTRY OF HEALTH MALAYSIA" style="max-width:100%;"></a>
-                    
-                    
-                    
+                  <span class="footer-title-underline warna_border_color" style="border-color: rgb(0, 189, 187);"></span>
+               </h4>
+            </div>
+         </div>
+         <div class="row" style="margin-top: 0%" id="footer-stat">
+            <div class="col-xs-4">
+               <p class="font-size-s" style="font-family: Roboto;">
 
-                        <a href="http://www.nre.gov.my/en-my/Pages/default.aspx" target="_blank" class="col-xs-3 info-box" data-toggle="tooltip" title="MINISTRY OF NATURAL RESOURCES AND ENVIRONMENT"><img src="https://www.malaysia.gov.my/public/static/media/NRE-logo.png" alt="MINISTRY OF NATURAL RESOURCES AND ENVIRONMENT" style="max-width:100%;"></a>
-                    
-                    
-                    
 
-                        <a href="https://www.mohe.gov.my/" target="_blank" class="col-xs-3 info-box" data-toggle="tooltip" title="MINISTRY OF HIGHER EDUCATION"><img src="https://www.malaysia.gov.my/public/static/media/Kementerian-pengajian-tinggi.png" alt="MINISTRY OF HIGHER EDUCATION" style="max-width:100%;"></a>
-                    
-                    
-                    
+                  Today
 
-                        <a href="http://www.pcb.gov.my/en" target="_blank" class="col-xs-3 info-box" data-toggle="tooltip" title="PUBLIC COMPLAINTS BUREAU"><img src="https://www.malaysia.gov.my/public/static/media/Logo_BPA.png" alt="PUBLIC COMPLAINTS BUREAU" style="max-width:100%;"></a>
-                    
-                    
-                    
 
-                        <a href="http://www.rmp.gov.my/" target="_blank" class="col-xs-3 info-box" data-toggle="tooltip" title="ROYAL MALAYSIA POLICE"><img src="https://www.malaysia.gov.my/public/static/media/Logo_polis.png" alt="ROYAL MALAYSIA POLICE" style="max-width:100%;"></a>
-                    
-                    
-                    
+               </p>
+               <h4 class="font-size-m" style="margin-top: -12px; font-family: Roboto;"><b><span class="ga_today">147</span></b></h4>
+            </div>
+            <div class="col-xs-4">
+               <p class="font-size-s" style="font-family: Roboto;">
 
-                        <a href="https://mybayar.gov.my/ms/registration/frmlogins.aspx" target="_blank" class="col-xs-3 info-box" data-toggle="tooltip" title="MYBAYAR"><img src="https://www.malaysia.gov.my/public/static/media/Logo_mybayar.png" alt="MYBAYAR" style="max-width:100%;"></a>
-                    
-                    
-                    
 
-                        <a href="http://www.jobsmalaysia.gov.my/jcs/index.faces" target="_blank" class="col-xs-3 info-box" data-toggle="tooltip" title="JOBS MALAYSIA"><img src="https://www.malaysia.gov.my/public/static/media/Logo_jobsmalaysia.png" alt="JOBS MALAYSIA" style="max-width:100%;"></a>
-                    
-                    
-                    
+                  This month
 
-                        <a href="http://publicinfobanjir.water.gov.my/" target="_blank" class="col-xs-3 info-box" data-toggle="tooltip" title="PUBLIC INFO BANJIR"><img src="https://www.malaysia.gov.my/public/static/media/Logo_Infobanjir.png" alt="PUBLIC INFO BANJIR" style="max-width:100%;"></a>
-                    
-                    
-                    
 
-                        <a href="https://www.myeg.com.my/" target="_blank" class="col-xs-3 info-box" data-toggle="tooltip" title="MALAYSIA'S E-GOVERNMENT SERVICES"><img src="https://www.malaysia.gov.my/public/static/media/MyEG_logo.png" alt="MALAYSIA'S E-GOVERNMENT SERVICES" style="max-width:100%;"></a>
-                    
-                    
-                    
+               </p>
+               <h4 class="font-size-m" style="margin-top: -12px; font-family: Roboto;"><b><span class="ga_month">23,830</span></b></h4>
+            </div>
+            <div class="col-xs-4">
+               <p class="font-size-s" style="font-family: Roboto;">
 
-                        <a href="http://www.spa.gov.my/" target="_blank" class="col-xs-3 info-box" data-toggle="tooltip" title="PUBLIC SERVICES COMMISSION OF MALAYSIA"><img src="https://www.malaysia.gov.my/public/static/media/Logo_SPA_ghPgwg8.png" alt="PUBLIC SERVICES COMMISSION OF MALAYSIA" style="max-width:100%;"></a>
-                    
-                    
-                    
 
-                        <a href="http://upu.mohe.gov.my/web/" target="_blank" class="col-xs-3 info-box" data-toggle="tooltip" title="UNIVERSITY CENTER UNIT"><img src="https://www.malaysia.gov.my/public/static/media/Logo_UPU.png" alt="UNIVERSITY CENTER UNIT" style="max-width:100%;"></a>
-                    
-                    
+                  Total Visitors
 
-                </div>
-        </div>
-    </div>
-	</div>
+
+               </p>
+               <h4 class="font-size-m" style="margin-top: -12px; font-family: Roboto;"><b><span class="ga_overall">59,281</span></b></h4>
+            </div>
+         </div>
+         <div class="row" style="margin-top: 0%">
+            <div class="col-xs-12">
+               <button class="btn footer-toggle fa fa-angle-down pull-right visible-xs" onclick="showFooterExternal()"><span class="sr-only">Footer Toggle Button</span></button>
+               <h4 class="footer-heading font-size-m warna_title_color" style="margin-left: auto; font-family: Roboto; color: rgb(0, 189, 187);">
+
+
+                  EXTERNAL LINKS
+
+
+                  <span class="footer-title-underline warna_border_color" style="border-color: rgb(0, 189, 187);"></span>
+               </h4>
+            </div>
+         </div>
+
+         <div class="row footer-external-link" style="margin-left:0px">
+
+
+
+            <a href="http://www.kpwkm.gov.my/" target="_blank" class="col-xs-3 info-box" data-toggle="tooltip" title="MINISTRY OF WOMEN, FAMILY AND COMMUNITY DEVELOPMENT"><img src="https://www.malaysia.gov.my/public/static/media/KPWKM.png" alt="MINISTRY OF WOMEN, FAMILY AND COMMUNITY DEVELOPMENT" style="max-width:100%;"></a>
+
+
+
+
+            <a href="http://www.mohr.gov.my/index.php/en/" target="_blank" class="col-xs-3 info-box" data-toggle="tooltip" title="MINISTRY OF HUMAN RESOURCES"><img src="https://www.malaysia.gov.my/public/static/media/Kementerian-Sumber-Manusia.png" alt="MINISTRY OF HUMAN RESOURCES" style="max-width:100%;"></a>
+
+
+
+
+            <a href="http://www.moe.gov.my/index.php/en/" target="_blank" class="col-xs-3 info-box" data-toggle="tooltip" title="MINISTRY OF EDUCATION MALAYSIA"><img src="https://www.malaysia.gov.my/public/static/media/Kementerian-Pendidikan.png" alt="MINISTRY OF EDUCATION MALAYSIA" style="max-width:100%;"></a>
+
+
+
+
+            <a href="http://www.treasury.gov.my/index.php/en/" target="_blank" class="col-xs-3 info-box" data-toggle="tooltip" title="MINISTRY OF FINANCE MALAYSIA"><img src="https://www.malaysia.gov.my/public/static/media/Kementerian-Kewangan.png" alt="MINISTRY OF FINANCE MALAYSIA" style="max-width:100%;"></a>
+
+
+
+
+            <a href="http://www.moh.gov.my/english.php" target="_blank" class="col-xs-3 info-box" data-toggle="tooltip" title="MINISTRY OF HEALTH MALAYSIA"><img src="https://www.malaysia.gov.my/public/static/media/Kementerian-kesihatan.png" alt="MINISTRY OF HEALTH MALAYSIA" style="max-width:100%;"></a>
+
+
+
+
+            <a href="http://www.nre.gov.my/en-my/Pages/default.aspx" target="_blank" class="col-xs-3 info-box" data-toggle="tooltip"
+               title="MINISTRY OF NATURAL RESOURCES AND ENVIRONMENT"><img src="https://www.malaysia.gov.my/public/static/media/NRE-logo.png" alt="MINISTRY OF NATURAL RESOURCES AND ENVIRONMENT" style="max-width:100%;"></a>
+
+
+
+
+            <a href="https://www.mohe.gov.my/" target="_blank" class="col-xs-3 info-box" data-toggle="tooltip" title="MINISTRY OF HIGHER EDUCATION"><img src="https://www.malaysia.gov.my/public/static/media/Kementerian-pengajian-tinggi.png" alt="MINISTRY OF HIGHER EDUCATION" style="max-width:100%;"></a>
+
+
+
+
+            <a href="http://www.pcb.gov.my/en" target="_blank" class="col-xs-3 info-box" data-toggle="tooltip" title="PUBLIC COMPLAINTS BUREAU"><img src="https://www.malaysia.gov.my/public/static/media/Logo_BPA.png" alt="PUBLIC COMPLAINTS BUREAU" style="max-width:100%;"></a>
+
+
+
+
+            <a href="http://www.rmp.gov.my/" target="_blank" class="col-xs-3 info-box" data-toggle="tooltip" title="ROYAL MALAYSIA POLICE"><img src="https://www.malaysia.gov.my/public/static/media/Logo_polis.png" alt="ROYAL MALAYSIA POLICE" style="max-width:100%;"></a>
+
+
+
+
+            <a href="https://mybayar.gov.my/ms/registration/frmlogins.aspx" target="_blank" class="col-xs-3 info-box" data-toggle="tooltip"
+               title="MYBAYAR"><img src="https://www.malaysia.gov.my/public/static/media/Logo_mybayar.png" alt="MYBAYAR" style="max-width:100%;"></a>
+
+
+
+
+            <a href="http://www.jobsmalaysia.gov.my/jcs/index.faces" target="_blank" class="col-xs-3 info-box" data-toggle="tooltip"
+               title="JOBS MALAYSIA"><img src="https://www.malaysia.gov.my/public/static/media/Logo_jobsmalaysia.png" alt="JOBS MALAYSIA" style="max-width:100%;"></a>
+
+
+
+
+            <a href="http://publicinfobanjir.water.gov.my/" target="_blank" class="col-xs-3 info-box" data-toggle="tooltip" title="PUBLIC INFO BANJIR"><img src="https://www.malaysia.gov.my/public/static/media/Logo_Infobanjir.png" alt="PUBLIC INFO BANJIR" style="max-width:100%;"></a>
+
+
+
+
+            <a href="https://www.myeg.com.my/" target="_blank" class="col-xs-3 info-box" data-toggle="tooltip" title="MALAYSIA'S E-GOVERNMENT SERVICES"><img src="https://www.malaysia.gov.my/public/static/media/MyEG_logo.png" alt="MALAYSIA'S E-GOVERNMENT SERVICES" style="max-width:100%;"></a>
+
+
+
+
+            <a href="http://www.spa.gov.my/" target="_blank" class="col-xs-3 info-box" data-toggle="tooltip" title="PUBLIC SERVICES COMMISSION OF MALAYSIA"><img src="https://www.malaysia.gov.my/public/static/media/Logo_SPA_ghPgwg8.png" alt="PUBLIC SERVICES COMMISSION OF MALAYSIA" style="max-width:100%;"></a>
+
+
+
+
+            <a href="http://upu.mohe.gov.my/web/" target="_blank" class="col-xs-3 info-box" data-toggle="tooltip" title="UNIVERSITY CENTER UNIT"><img src="https://www.malaysia.gov.my/public/static/media/Logo_UPU.png" alt="UNIVERSITY CENTER UNIT" style="max-width:100%;"></a>
+
+
+
+         </div>
+      </div>
+   </div>
+</div>

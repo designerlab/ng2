@@ -78,23 +78,13 @@ export class FooterComponent{
       this.footerService.getFooterData(this.lang)
             .subscribe(resFooterData => {
                 this.footer = resFooterData;
-                this.ftsociallink = resFooterData[0].sociallink;
-            });
-    
-         
+            });   
     }
-
-     
-
      getFooter() {
          this.footerService.getFooterData(this.lang)
         .subscribe(resFooterData => {
-                this.footer = resFooterData;
-                this.ftsociallink = resFooterData[0].sociallink;
-            })
-            
-            
+                this.footer = resFooterData                
+            }); 
     }
-    
 }
 
