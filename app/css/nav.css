@@ -6,8 +6,8 @@
   padding: 10px 0px; }
 
 li > a.active {
-  color: #fff !important;
-  background: #00bdbb !important; }
+  color: #fff;
+  background: #00bdbb; }
 
 .nav > li {
   position: static;

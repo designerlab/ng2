@@ -1,8 +1,8 @@
-import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core'
+import { Component, Input, Output, EventEmitter, OnInit, AfterViewChecked } from '@angular/core'
 import { AuthService } from '../../user/auth.service'
 import {TranslateService} from '@ngx-translate/core';
 import { TopNavService } from './topnav.service'
-
+declare var jQuery:any
 
 @Component({
     selector:'top-nav',
@@ -83,13 +83,23 @@ import { TopNavService } from './topnav.service'
         ]
 })
 
-export class TopNavComponent {
+export class TopNavComponent implements AfterViewChecked {
     translatedText: string
     supportedLanguages: any[]
     colors:any[]
     selectedRow : Number
     firstItem: boolean
-
+    ngAfterViewChecked() {
+        
+        jQuery(function(){
+            if(localStorage.getItem('themeColor') == "" || localStorage.getItem('themeColor') == null || localStorage.getItem('themeColor') == "#00bdbb"){
+                jQuery('#confBar li > input.bgColorBtn:nth(0)').addClass('colorPaletteActive');
+            }else{
+                jQuery('#confBar li > input.bgColorBtn:nth(0)').removeClass('colorPaletteActive');
+            }
+        });
+        
+    }
     @Input() edited = true
     @Output() topNavClick = new EventEmitter()
   
@@ -104,7 +114,6 @@ export class TopNavComponent {
          }else{
              this.currlang = "Bahasa Malaysia"
          }
-
          
     }
 
@@ -116,6 +125,8 @@ export class TopNavComponent {
     
     ngOnInit(){
         this.colors = this.topNavService.getColors()
+        
+        
         
     }
 
@@ -144,13 +155,8 @@ export class TopNavComponent {
     }
 
     setClickedColor(index, firstItem){
-        debugger;
-            this.selectedRow = index;
-            this.firstItem = firstItem;
-        }
-
-     status(i){
-        debugger;
-     }
-
+        localStorage.setItem('themeColor', this.colors[index].bgColor)
+        this.selectedRow = index;
+        this.firstItem = firstItem;
+    }
 }
