@@ -39,6 +39,7 @@ import {TranslateService, LangChangeEvent } from '@ngx-translate/core'
             color: white;
             cursor: pointer;
         }
+       
     `]
 })
 

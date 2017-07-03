@@ -21,32 +21,112 @@
       </div>
    </div>
    
-      <div class="container footer" style="padding:0px;" *ngIf="data.title!='sociallink'">
-         <!--<div class="row footer-left">-->
-            <div class="col-md-4" *ngFor="let eachitm of data.footer">
-               <div class="row" style="margin-top: 0%" >
-                  <div class="col-md-12" >
-                     <div class="address footer">
-                        <button class="btn footer-toggle fa fa-angle-down pull-right visible-xs" onclick="showFooterAddress()"><span class="sr-only">Footer Toggle Button</span></button>
-                        <h4 *ngIf="eachitm.id==1" class="footer-heading font-size-m warna_title_color" style="padding-left: 30px; font-family: Roboto; color: rgb(0, 189, 187);">
-                           {{data.title}}
-                           <span class="footer-title-underline warna_border_color" style="border-color: rgb(0, 189, 187);"></span>
-                        </h4>
-
-                        <div class="sub-add">
-                              <p *ngIf="eachitm.icon" class="font-size-s" style="font-family: Roboto;">
-                                 <span ngClass= "glyphicon {{eachitm.icon}}" style="background-color: rgb(0, 189, 187);"></span>
-                              </p>
-                              <div [innerHtml]="eachitm.title">
-                              </div>
-                        </div>
-
-                     </div>
+   <div class="container footer form-group" *ngIf="data.title=='otherlink'">   <!--class="col-md-4" style="padding:0px;"-->
+      <div class="footer-left">
+         <div *ngFor="let otherlink of data.items" class="col-md-4 loop1">
+            <button class="btn footer-toggle fa fa-angle-down pull-right visible-xs" onclick="showFooterAddress()">
+               <span class="sr-only">Footer Toggle Button</span>
+            </button>
+            <h4 class="footer-heading font-size-m warna_title_color" style="padding-left: 30px; font-family: Roboto; color: rgb(0, 189, 187);">
+                     {{otherlink.title}}
+               <span class="footer-title-underline warna_border_color" style="border-color: rgb(0, 189, 187);"></span>
+            </h4> 
+            <div *ngFor="let eachitm of otherlink.footer" class="each loop2">                                    
+               <div class="address footer" style="margin-top: 0%">
+                  <div class="sub-add" *ngIf="eachitm.icon && !eachitm.link">
+                     <p  class="font-size-s" style="font-family: Roboto;">
+                        <span ngClass= "glyphicon {{eachitm.icon}}" style="background-color: rgb(0, 189, 187);"></span>
+                     </p>
+                     
+                     <div [innerHtml]="eachitm.title" class="font-size-s" >
+                     </div> 
                   </div>
+                  <div class="sub-add" *ngIf="eachitm.link && !eachitm.icon">
+                        <a href="{{ eachitm.link }}" >
+                           <div [innerHtml]="eachitm.title" class="font-size-s">
+                           </div> 
+                        </a> 
+                  </div> 
+                  <div class="sub-add" *ngIf="eachitm.link && eachitm.icon">
+                     <a href="{{ eachitm.link }}" target="_blank" class="col-xs-3 info-box" 
+                        data-toggle="tooltip" title="eachitm.name">
+                        <img src="{{ eachitm.src }}" alt="eachitm.name" 
+                        style="max-width:100%;">
+                     </a>
+                  </div> 
+                  <div class="col-xs-4" *ngIf="eachitm.today">
+                     <div class="font-size-s">{{eachitm.today}}</div>
+                     <h4 class="font-size-m">{{eachitm.todayval}}</h4>
+                  </div>
+                  <div class="col-xs-4" *ngIf="eachitm.month">
+                     <div class="font-size-s">{{eachitm.month}}</div>
+                     <h4 class="font-size-m">{{eachitm.monthval}}</h4>
+                  </div>
+                  <div class="col-xs-4" *ngIf="eachitm.total">
+                     <div class="font-size-s">{{eachitm.total}}</div>
+                     <h4 class="font-size-m">{{eachitm.totalval}}</h4>
+                  </div>                        
+               </div>
+            </div>               
+         </div>
+      </div>
+   </div>
+   <div class="copyright padding-m" *ngIf="data.title=='bottom'">
+    <div class="container" style="padding:0px;">
+      <div class="row">
+         <div *ngFor="let btmlink of data.items" class="loop1">
+            <div *ngFor="let eachitm of btmlink.bottom" class="each loop2">
+               <div  class="col-md-4">
+                  <p class="font-size-s" style="margin-top: 4%; font-family: Roboto;">
+                     {{eachitm.copyright}}
+                  </p>
+               </div>
+               <div class="col-md-8 text-right hidden-xs">
+                  <p class="font-size-s" style="font-family: Roboto;">
+                        Tarikh Kemaskini : 01.05.2017
+                  </p>
                </div>
             </div>
-         <!--</div>-->
+         </div>
+        
+        <div class="col-md-8 text-right hidden-xs">
+           <p class="font-size-s" style="font-family: Roboto;">
+                Tarikh Kemaskini : 01.05.2017
+           </p>
+           <p class="font-size-s" style="margin-top: -10px; font-family: Roboto;">
+                Paparan terbaik menggunakan pelayar Google Chrome Version 57.0, Mozilla Firefox Version 52.0
+            </p>
+                <ul class="list-inline hidden-xs font-size-s" style="font-family: Roboto;">
+                    <li>
+                    <a href="/public/cms/article/page/221/">
+                     Piagam Pelanggan
+                    </a></li>|
+                    <li>
+                    <a href="/public/cms/article/page/203/">
+                     Dasar Keselamatan
+                    </a></li>|
+                    <li>
+                    <a href="/public/cms/article/page/220/">
+                     Dasar Privasi
+                    </a></li>|
+                    <li>
+                    <a href="/public/cms/article/page/219/">
+                     Notis Hakcipta
+                    </a></li>|
+                    <li>
+                    <a href="/public/cms/article/page/289/">
+                     Penafian
+                    </a></li>|
+                    <li>
+                    <a href="/public/cms/article/page/217/">
+                     Bantuan
+                    </a></li>
+                </ul>
       </div>
+    </div>
+  </div>
+</div>
+     
    
    
 
