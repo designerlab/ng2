@@ -143,10 +143,10 @@ export class TopNavComponent {
         console.log(data)
     }
 
-    setClickedColor(index){
+    setClickedColor(index, firstItem){
         debugger;
             this.selectedRow = index;
-            this.firstItem = index;
+            this.firstItem = firstItem;
         }
 
      status(i){
