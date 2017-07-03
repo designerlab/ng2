@@ -8,13 +8,20 @@ import {TranslateService, LangChangeEvent } from '@ngx-translate/core'
 @Component({
     selector: 'nav-bar',
     templateUrl: './app/header/nav/navbar.component.html',
-    styleUrls:['./app/css/nav.css']
+    styleUrls:['./app/css/nav.css'],
+    styles:[`
+        .activeLink{
+            background:{themeColor} !important;
+            color: #fff !important;
+        }
+    `]
 
 })
 
 export class NavBarComponent implements OnInit{
     menus:IMenu[]
     lang = "en"
+    themeColor = "#ff0"
     constructor(private navService: NavService, private toastr:ToastrService, private translate:TranslateService){
         translate.onLangChange.subscribe((event: LangChangeEvent) => {
 
@@ -45,6 +52,10 @@ export class NavBarComponent implements OnInit{
     getMenu(){
         this.navService.getMenuData(this.lang)
             .subscribe(resMenuData => this.menus = resMenuData)
+    }
+
+    getTheme(){
+        return localStorage.getItem('themeColor')
     }
 
 

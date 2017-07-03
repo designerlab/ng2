@@ -6,7 +6,7 @@
   padding: 10px 0px; }
 
 li > a.active {
-  color: #fff;
+  color: #fff !important;
   background: #00bdbb; }
 
 .nav > li {
