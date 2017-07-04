@@ -11,13 +11,14 @@ import {TranslateService} from '@ngx-translate/core';
     <search></search>
     <div class="container">
         <h1>{{ 'home.TITLE' | translate }}</h1>
-        <h1>Upcoming Angular 2 Events</h1>
+        <!-- <h1>Upcoming Angular 2 Events</h1>
         <hr/>
         <div class="row">
             <div  *ngFor="let event of events" class="col-md-5">
                 <event-thumbnail #thumbnail (click)="handleEventClicked(this.event)" (eventClick)="handleEventClicked($event)" [event]="event"></event-thumbnail>
             </div>
         </div>
+        -->
     </div>
     `,
     styles:[`
