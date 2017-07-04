@@ -5,6 +5,9 @@
       "register":"Register",
       "setting": "Settings"
     },
+    "search":{
+      "label":"How Can We Help You?"
+    },
     "TITLE": "test in english",
     "SELECT": "Change language"
   }
