@@ -12,5 +12,7 @@ import { Component } from '@angular/core'
 })
 
 export class SearchComponent{
-    
+     getTheme(){
+            return localStorage.getItem('themeColor')
+        }
 }

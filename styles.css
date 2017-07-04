@@ -21,10 +21,6 @@ body{
   cursor: pointer;
 }
 
-button {
-  color: #555;
-}
-
 [hidden] {
   display: none !important;
 }

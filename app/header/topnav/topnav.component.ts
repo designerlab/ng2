@@ -90,12 +90,20 @@ export class TopNavComponent implements AfterViewChecked {
     selectedRow : Number
     firstItem: boolean
     ngAfterViewChecked() {
-        
+    
         jQuery(function(){
             if(localStorage.getItem('themeColor') == "" || localStorage.getItem('themeColor') == null || localStorage.getItem('themeColor') == "#00bdbb"){
                 jQuery('#confBar li > input.bgColorBtn:nth(0)').addClass('colorPaletteActive');
             }else{
                 jQuery('#confBar li > input.bgColorBtn:nth(0)').removeClass('colorPaletteActive');
+            }
+
+            if(localStorage.getItem('themeIndex') == "" || localStorage.getItem('themeIndex') == null || localStorage.getItem('themeIndex') == "0"){
+                jQuery('#confBar li > input.bgColorBtn').removeClass('colorPaletteActive');
+                jQuery('#confBar li > input.bgColorBtn:nth(0)').addClass('colorPaletteActive');
+            }else{
+                jQuery('#confBar li > input.bgColorBtn').removeClass('colorPaletteActive');
+                jQuery('#confBar li > input.bgColorBtn:nth('+localStorage.getItem('themeIndex')+')').addClass('colorPaletteActive');
             }
         });
         
@@ -156,6 +164,7 @@ export class TopNavComponent implements AfterViewChecked {
 
     setClickedColor(index, firstItem){
         localStorage.setItem('themeColor', this.colors[index].bgColor)
+        localStorage.setItem('themeIndex', index);
         this.selectedRow = index;
         this.firstItem = firstItem;
     }
