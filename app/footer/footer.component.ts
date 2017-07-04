@@ -94,5 +94,9 @@ export class FooterComponent{
                 this.footer = resFooterData                
             }); 
     }
+
+    getTheme(){
+        return localStorage.getItem('themeColor')
+    }
 }
 

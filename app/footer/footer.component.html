@@ -1,5 +1,5 @@
 <div *ngFor="let data of footer">
-   <div class="primary" *ngIf="data.title=='sociallink'">
+   <div class="primary" *ngIf="data.title=='sociallink'" [style.background]="getTheme()">
       <div class="row" id="social-area">
          <div class="col-sm-12" style="padding-bottom:10px;padding-top: 10px;text-align: center;" id="social-icons">
             <div class="row">
@@ -8,7 +8,7 @@
                      <span *ngFor="let social_data of data.footer">
                         <a href="{{ social_data.link }}" target="_blank">
                            <span class="social_icon_bg" title="{{social_data.title}}" data-toggle="tooltip" data-original-title="Tooltip on top">
-                              <span class="icon-social">
+                              <span class="icon-social" [style.color]="getTheme()">
                                        <i ngClass= "fa {{social_data.icon}}" style="padding:5px 2px 0px 0px"></i>
                               </span>
                            </span>

@@ -3,7 +3,7 @@ import {TranslateService} from '@ngx-translate/core';
 @Component({
     selector: 'events-app',
     template: `
-        <top-nav class="top-nav-style" (topNavClick)="getExpand($event)" [style.z-index]="this.zIndex" [style.height]="this.bHeight"></top-nav>
+        <top-nav class="top-nav-style" (topNavClick)="getExpand($event)" [style.background]="getTheme()" [style.z-index]="this.zIndex" [style.height]="this.bHeight"></top-nav>
         <nav-bar class="nav-bar-style" [style.top]="this.bTop"></nav-bar>
         <div class="xtra-space container-fluid">
             <div class="container">
@@ -18,7 +18,7 @@ import {TranslateService} from '@ngx-translate/core';
         .top-nav-style{
             width: 100% !important;
             height:70px;
-            background: #1ebebc  !important;
+            background: #1ebebc;
             position: fixed  !important;
             z-index: 10000;
             -webkit-transition-property: height; /* Safari */
@@ -85,6 +85,10 @@ export class EventsAppComponent implements OnInit {
                 this.bHeight = "105px"
                 this.bTop = "85px"
             }
+        }
+
+        getTheme(){
+            return localStorage.getItem('themeColor')
         }
 
 }

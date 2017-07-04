@@ -8,7 +8,7 @@ $redColor: #e6436e;
 .nav.navbar-nav {font-size:15px; padding:10px 0px;}
 li > a.active {
     color:$activeColor !important;
-    background: $activeBg !important;
+    background: $activeBg;
     }
 .nav > li{
     position: static;
@@ -16,6 +16,8 @@ li > a.active {
     margin-top: -10px;
     height: 60px;
 }
+
+
 #searchForm { margin-right:100px;}
 @media (max-width:1200px){#searchForm {display:none;} }
 .top-nav{
