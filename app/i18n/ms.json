@@ -5,6 +5,9 @@
       "register":"Daftar",
       "setting": "Tetapan"
     },
+    "search":{
+      "label":"Bagaimana Kami Boleh Membantu Anda?"
+    },
     "TITLE": "test in malay",
     "SELECT": "Change language"
   }
