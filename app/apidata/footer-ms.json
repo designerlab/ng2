@@ -49,426 +49,459 @@
                 "date_modified": "2017-05-19 04:08:44.142662+00:00"
             }
         ]
-    },
-    {
-        "title": "HUBUNGI KAMI",
-        "seqno": "1",
-        "footer": [
+    },{
+        "title": "otherlink",
+        "items":[
             {
-                "id": "1",
-                "title": "UNIT PEMODENAN TADBIRAN DAN PERANCANGAN PENGURUSAN MALAYSIA",
-                "icon": "",
-                "date_insert": "2017-05-09 11:04:12.578840+00:00",
-                "date_modified": "2017-05-09 11:04:12.645160+00:00",
-                "sort": "1000"
+                "title": "HUBUNGI KAMI",
+                "seqno": "1",
+                "footer": [
+                    {
+                        "id": "1",
+                        "title": "UNIT PEMODENAN TADBIRAN DAN PERANCANGAN PENGURUSAN MALAYSIA",
+                        "icon": "",
+                        "date_insert": "2017-05-09 11:04:12.578840+00:00",
+                        "date_modified": "2017-05-09 11:04:12.645160+00:00",
+                        "sort": "1000"
+                    },
+                    {
+                        "id": "2",
+                        "title": "<p>Aras 6, Blok B2&nbsp;<br />Kompleks Jabatan Perdana Menteri&nbsp;<br />Pusat Pentadbiran Kerajaan Persekutuan&nbsp;<br />62502 Putrajaya Malaysia</p>",
+                        "icon": "glyphicon-home",
+                        "date_insert": "2017-05-09 11:04:12.578840+00:00",
+                        "date_modified": "2017-05-09 11:04:12.645160+00:00",
+                        "sort": "1000"
+                    },
+                    {
+                        "id": "3",
+                        "title": "<p><a href= https:www.google.com/maps/place/Mampu+@+Unit+Pemodenan+Tadbiran+dan+Perancangan+Pengurusan+Malaysia/@2.937334,101.6534303,17z/data=!4m12!1m6!3m5!1s0x31cdb68b61e3c2c3:0x6c85c297f606dda2!2sMAMPU,+Persiaran+Teknokrat+2!8m2!3d2.937334!4d101.655619!3m4!1s0x0:0x90ddafceb3c4781e!8m2!3d2.9378764!4d101.6543698 >2.937898, 101.654380</a></p>",
+                        "icon": "glyphicon-map-marker",
+                        "date_insert": "2017-05-09 11:04:12.578840+00:00",
+                        "date_modified": "2017-05-09 11:04:12.645160+00:00",
+                        "sort": "1000"
+                    },
+                    {
+                        "id": "4",
+                        "title": "<p>603 8000 8000</p>",
+                        "icon": "glyphicon-phone-alt",
+                        "date_insert": "2017-05-09 11:04:12.578840+00:00",
+                        "date_modified": "2017-05-09 11:04:12.645160+00:00",
+                        "sort": "1000"
+                    },
+                    {
+                        "id": "5",
+                        "title": "<p>603 8888 3721</p>",
+                        "icon": "glyphicon-print",
+                        "date_insert": "2017-05-09 11:04:12.578840+00:00",
+                        "date_modified": "2017-05-09 11:04:12.645160+00:00",
+                        "sort": "1000"
+                    },
+                    {
+                        "id": "6",
+                        "title": "<p>admin[at]mampu[dot]gov[dot]my</p>",
+                        "icon": "glyphicon-envelope",
+                        "date_insert": "2017-05-09 11:04:12.578840+00:00",
+                        "date_modified": "2017-05-09 11:04:12.645160+00:00",
+                        "sort": "1000"
+                    }
+                ]
             },
             {
-                "id": "2",
-                "title": "<p>Aras 6, Blok B2&nbsp;<br />Kompleks Jabatan Perdana Menteri&nbsp;<br />Pusat Pentadbiran Kerajaan Persekutuan&nbsp;<br />62502 Putrajaya Malaysia</p>",
-                "icon": "glyphicon-home",
-                "date_insert": "2017-05-09 11:04:12.578840+00:00",
-                "date_modified": "2017-05-09 11:04:12.645160+00:00",
-                "sort": "1000"
+                "title": "CAPAIAN",
+                "footer": [
+                    {
+                        "id": "1",
+                        "title": "Penerbitan",
+                        "name": "Penerbitan",
+                        "link": "https:gosgstg.malaysia.gov.my/public/cms/publication",
+                        "position": "1",
+                        "date_insert": "2017-05-09 11:04:12.578840+00:00",
+                        "date_modified": "2017-05-09 11:04:12.645160+00:00",
+                        "sort": "1000"
+                    },
+                    {
+                        "id": "2",
+                        "title": "Arkib",
+                        "name": "Arkib",
+                        "link": "https:gosgstg.malaysia.gov.my/public/cms/archive",
+                        "position": "1",
+                        "date_insert": "2017-05-09 11:04:12.578840+00:00",
+                        "date_modified": "2017-05-09 11:04:12.645160+00:00",
+                        "sort": "1000"
+                    },
+                    {
+                        "id": "3",
+                        "title": "Aduan dan Pertanyaan",
+                        "name": "Aduan dan Pertanyaan",
+                        "link": "https:gosgstg.malaysia.gov.my/public/cms/feedback",
+                        "position": "1",
+                        "date_insert": "2017-05-09 11:04:12.578840+00:00",
+                        "date_modified": "2017-05-09 11:04:12.645160+00:00",
+                        "sort": "1000"
+                    },
+                    {
+                        "id": "5",
+                        "title": "Direktori Agensi",
+                        "name": "Direktori Agensi",
+                        "link": "https:gosgstg.malaysia.gov.my/public/cms/direktori",
+                        "position": "1",
+                        "date_insert": "2017-05-09 11:04:12.578840+00:00",
+                        "date_modified": "2017-05-09 11:04:12.645160+00:00",
+                        "sort": "1000"
+                    },
+                    {
+                        "id": "6",
+                        "title": "Statistik Dalam Talian",
+                        "name": "Statistik Dalam Talian",
+                        "link": "https:gosgstg.malaysia.gov.my/public/dservice/?cc=business/dservis/statistic",
+                        "position": "1",
+                        "date_insert": "2017-05-09 11:04:12.578840+00:00",
+                        "date_modified": "2017-05-09 11:04:12.645160+00:00",
+                        "sort": "1000"
+                    },
+                    {
+                        "id": "7",
+                        "title": "E-Penyertaan",
+                        "name": "E-Penyertaan",
+                        "link": "https:gosgstg.malaysia.gov.my/public/cms/epenyertaan",
+                        "position": "1",
+                        "date_insert": "2017-05-09 11:04:12.578840+00:00",
+                        "date_modified": "2017-05-09 11:04:12.645160+00:00",
+                        "sort": "1000"
+                    },
+                    {
+                        "id": "8",
+                        "title": "My Kalendar",
+                        "name": "My Kalendar",
+                        "link": "https:gosgstg.malaysia.gov.my/public/cms/calendar",
+                        "position": "1",
+                        "date_insert": "2017-05-09 11:04:12.578840+00:00",
+                        "date_modified": "2017-05-09 11:04:12.645160+00:00",
+                        "sort": "1000"
+                    },
+                    {
+                        "id": "9",
+                        "title": "Galeri",
+                        "name": "Galeri",
+                        "link": "https:gosgstg.malaysia.gov.my/public/cms/photologue/gallery",
+                        "position": "2",
+                        "date_insert": "2017-05-09 11:04:12.578840+00:00",
+                        "date_modified": "2017-05-09 11:04:12.645160+00:00",
+                        "sort": "1000"
+                    },
+                    {
+                        "id": "10",
+                        "title": "Perlindungan Data Peribadi",
+                        "name": "Perlindungan Data Peribadi",
+                        "link": "https:gosgstg.malaysia.gov.my/public/cms/article/page/349",
+                        "position": "2",
+                        "date_insert": "2017-05-09 11:04:12.578840+00:00",
+                        "date_modified": "2017-05-09 11:04:12.645160+00:00",
+                        "sort": "1000"
+                    },
+                    {
+                        "id": "11",
+                        "title": "Enakmen Kebebasan Maklumat",
+                        "name": "Enakmen Kebebasan Maklumat",
+                        "link": "https:gosgstg.malaysia.gov.my/public/cms/article/page/725",
+                        "position": "2",
+                        "date_insert": "2017-05-09 11:04:12.578840+00:00",
+                        "date_modified": "2017-05-09 11:04:12.645160+00:00",
+                        "sort": "1000"
+                    },
+                    {
+                        "id": "12",
+                        "title": "Perkhidmatan Dalam Talian",
+                        "name": "Perkhidmatan Dalam Talian",
+                        "link": "https:gosgstg.malaysia.gov.my/public/cms/onlineservices",
+                        "position": "2",
+                        "date_insert": "2017-05-09 11:04:12.578840+00:00",
+                        "date_modified": "2017-05-09 11:04:12.645160+00:00",
+                        "sort": "1000"
+                    },
+                    {
+                        "id": "13",
+                        "title": "Langganan",
+                        "name": "Langganan",
+                        "link": "https:gosgstg.malaysia.gov.my/public/cms/subscription",
+                        "position": "2",
+                        "date_insert": "2017-05-09 11:04:12.578840+00:00",
+                        "date_modified": "2017-05-09 11:04:12.645160+00:00",
+                        "sort": "1000"
+                    },
+                    {
+                        "id": "14",
+                        "title": "Suapan RSS",
+                        "name": "Suapan RSS",
+                        "link": "https:gosgstg.malaysia.gov.my/public/cms/rss",
+                        "position": "2",
+                        "date_insert": "2017-05-09 11:04:12.578840+00:00",
+                        "date_modified": "2017-05-09 11:04:12.645160+00:00",
+                        "sort": "1000"
+                    },
+                    {
+                        "id": "15",
+                        "title": "Peta Laman",
+                        "name": "Peta Laman",
+                        "link": "https:gosgstg.malaysia.gov.my/public/cms/sitemap",
+                        "position": "2",
+                        "date_insert": "2017-05-09 11:04:12.578840+00:00",
+                        "date_modified": "2017-05-09 11:04:12.645160+00:00",
+                        "sort": "1000"
+                    },
+                    {
+                        "id": "4",
+                        "title": "Ketua Pegawai Maklumat(CIO)",
+                        "name": "Ketua Pegawai Maklumat(CIO)",
+                        "link": "https:gosgstg.malaysia.gov.my/public/cms/article/page/726",
+                        "position": "1",
+                        "date_insert": "2017-05-09 11:04:12.578840+00:00",
+                        "date_modified": "2017-05-09 11:04:12.645160+00:00",
+                        "sort": "1000"
+                    }
+                ]
             },
             {
-                "id": "3",
-                "title": "<p><a href= https:www.google.com/maps/place/Mampu+@+Unit+Pemodenan+Tadbiran+dan+Perancangan+Pengurusan+Malaysia/@2.937334,101.6534303,17z/data=!4m12!1m6!3m5!1s0x31cdb68b61e3c2c3:0x6c85c297f606dda2!2sMAMPU,+Persiaran+Teknokrat+2!8m2!3d2.937334!4d101.655619!3m4!1s0x0:0x90ddafceb3c4781e!8m2!3d2.9378764!4d101.6543698 >2.937898, 101.654380</a></p>",
-                "icon": "glyphicon-map-marker",
-                "date_insert": "2017-05-09 11:04:12.578840+00:00",
-                "date_modified": "2017-05-09 11:04:12.645160+00:00",
-                "sort": "1000"
+                "title": "JUMLAH PELAWAT",
+                "footer": [
+                    {
+                        "id": "1",
+                        "today": "Hari ini",
+                        "todayval": "274",
+                        "month": "Bulan ini",
+                        "monthval": "1,700",
+                        "total": "Jumlah Pelawat",
+                        "totalval": "63,750",
+                        "date_insert": "2017-05-09 11:04:12.822230+00:00",
+                        "date_modified": "2017-05-09 11:04:12.841853+00:00"
+                    }
+                ]
             },
             {
-                "id": "4",
-                "title": "<p>603 8000 8000</p>",
-                "icon": "glyphicon-phone-alt",
-                "date_insert": "2017-05-09 11:04:12.578840+00:00",
-                "date_modified": "2017-05-09 11:04:12.645160+00:00",
-                "sort": "1000"
-            },
-            {
-                "id": "5",
-                "title": "<p>603 8888 3721</p>",
-                "icon": "glyphicon-print",
-                "date_insert": "2017-05-09 11:04:12.578840+00:00",
-                "date_modified": "2017-05-09 11:04:12.645160+00:00",
-                "sort": "1000"
-            },
-            {
-                "id": "6",
-                "title": "<p>admin[at]mampu[dot]gov[dot]my</p>",
-                "icon": "glyphicon-envelope",
-                "date_insert": "2017-05-09 11:04:12.578840+00:00",
-                "date_modified": "2017-05-09 11:04:12.645160+00:00",
-                "sort": "1000"
-            }
+                "title": "PAUTAN LUAR",
+                "footer": [
+                    {
+                        "id": "1",
+                        "name": "BIRO PENGADUAN AWAM",
+                        "link": "https://www.pcb.gov.my/bm",
+                        "sort": "1000",
+                        "src" : "https://www.malaysia.gov.my/public/static/media/Kementerian-kesihatan.png",
+                        "icon": "Logo_BPA.png",
+                        "date_insert": "2017-05-09 11:04:12.347960+00:00",
+                        "date_modified": "2017-05-09 11:04:12.385982+00:00"
+                    },
+                    {
+                        "id": "10",
+                        "name": "MYBAYAR",
+                        "link": "https://mybayar.gov.my/ms/registration/frmlogins.aspx",
+                        "sort": "1000",
+                        "src" : "https://www.malaysia.gov.my/public/static/media/Kementerian-kesihatan.png",
+                        "icon": "Logo_mybayar.png",
+                        "date_insert": "2017-05-09 11:04:12.347960+00:00",
+                        "date_modified": "2017-05-09 11:04:12.385982+00:00"
+                    },
+                    {
+                        "id": "9",
+                        "name": "JOBS MALAYSIA",
+                        "link": "https://www.jobsmalaysia.gov.my/jcs/index.faces",
+                        "sort": "1000",
+                        "src" : "https://www.malaysia.gov.my/public/static/media/Kementerian-kesihatan.png",
+                        "icon": "Logo_jobsmalaysia.png",
+                        "date_insert": "2017-05-09 11:04:12.347960+00:00",
+                        "date_modified": "2017-05-09 11:04:12.385982+00:00"
+                    },
+                    {
+                        "id": "8",
+                        "name": "INFO BANJIR AWAM",
+                        "link": "https://publicinfobanjir.water.gov.my",
+                        "sort": "1000",
+                        "src" : "https://www.malaysia.gov.my/public/static/media/Kementerian-kesihatan.png",
+                        "icon": "Logo_Infobanjir.png",
+                        "date_insert": "2017-05-09 11:04:12.347960+00:00",
+                        "date_modified": "2017-05-09 11:04:12.385982+00:00"
+                    },
+                    {
+                        "id": "7",
+                        "name": "SERVIS E-KERAJAAN MALAYSIA",
+                        "link": "https://www.myeg.com.my",
+                        "sort": "1000",
+                        "src" : "https://www.malaysia.gov.my/public/static/media/Kementerian-kesihatan.png",
+                        "icon": "MyEG_logo.png",
+                        "date_insert": "2017-05-09 11:04:12.347960+00:00",
+                        "date_modified": "2017-05-09 11:04:12.385982+00:00"
+                    },
+                    {
+                        "id": "5",
+                        "name": "SURUHANJAYA PERKHIDMATAN AWAM",
+                        "link": "https://www.spa.gov.my",
+                        "sort": "1000",
+                        "src" : "https://www.malaysia.gov.my/public/static/media/Kementerian-kesihatan.png",
+                        "icon": "Logo_SPA_ghPgwg8.png",
+                        "date_insert": "2017-05-09 11:04:12.347960+00:00",
+                        "date_modified": "2017-05-09 11:04:12.385982+00:00"
+                    },
+                    {
+                        "id": "6",
+                        "name": "UNIT PUSAT UNIVESITI",
+                        "link": "https://upu.mohe.gov.my/web",
+                        "sort": "1000",
+                        "src" : "https://www.malaysia.gov.my/public/static/media/Kementerian-kesihatan.png",
+                        "icon": "Logo_UPU.png",
+                        "date_insert": "2017-05-09 11:04:12.347960+00:00",
+                        "date_modified": "2017-05-09 11:04:12.385982+00:00"
+                    },
+                    {
+                        "id": "2",
+                        "name": "POLIS DIRAJA MALAYSIA",
+                        "link": "https://www.rmp.gov.my",
+                        "sort": "1000",
+                        "src" : "https://www.malaysia.gov.my/public/static/media/Kementerian-kesihatan.png",
+                        "icon": "Logo_polis.png",
+                        "date_insert": "2017-05-09 11:04:12.347960+00:00",
+                        "date_modified": "2017-05-09 11:04:12.385982+00:00"
+                    },
+                    {
+                        "id": "15",
+                        "name": "KEMENTERIAN PEMBANGUNAN WANITA KELUARGA DAN MASYARAKAT",
+                        "link": "https://www.kpwkm.gov.my",
+                        "sort": "1",
+                        "src" : "https://www.malaysia.gov.my/public/static/media/KPWKM.png",
+                        "icon": "KPWKM.png",
+                        "date_insert": "2017-05-09 11:04:12.347960+00:00",
+                        "date_modified": "2017-05-09 11:04:12.385982+00:00"
+                    },
+                    {
+                        "id": "14",
+                        "name": "KEMENTERIAN SUMBER MANUSIA",
+                        "link": "https://www.mohr.gov.my/bm/index.php/en",
+                        "sort": "2",
+                        "src" : "https://www.malaysia.gov.my/public/static/media/Kementerian-Sumber-Manusia.png",
+                        "icon": "Kementerian-Sumber-Manusia.png",
+                        "date_insert": "2017-05-09 11:04:12.347960+00:00",
+                        "date_modified": "2017-05-09 11:04:12.385982+00:00"
+                    },
+                    {
+                        "id": "13",
+                        "name": "KEMENTERIAN PENDIDIKAN MALAYSIA",
+                        "link": "https://www.moe.gov.my/index.php/my",
+                        "sort": "3",
+                        "src" : "https://www.malaysia.gov.my/public/static/media/Kementerian-Pendidikan.png",
+                        "icon": "Kementerian-Pendidikan.png",
+                        "date_insert": "2017-05-09 11:04:12.347960+00:00",
+                        "date_modified": "2017-05-09 11:04:12.385982+00:00"
+                    },
+                    {
+                        "id": "12",
+                        "name": "KEMENTERIAN KEWANGAN MALAYSIA",
+                        "link": "https://www.treasury.gov.my/index.php",
+                        "src" : "https://www.malaysia.gov.my/public/static/media/Kementerian-Kewangan.png",
+                        "sort": "4",
+                        "icon": "Kementerian-Kewangan.png",
+                        "date_insert": "2017-05-09 11:04:12.347960+00:00",
+                        "date_modified": "2017-05-09 11:04:12.385982+00:00"
+                    },
+                    {
+                        "id": "11",
+                        "name": "KEMENTERIAN KESIHATAN MALAYSIA",
+                        "link": "https://www.moh.gov.my",
+                        "sort": "5",
+                        "src" : "https://www.malaysia.gov.my/public/static/media/Kementerian-kesihatan.png",
+                        "icon": "Kementerian-kesihatan.png",
+                        "date_insert": "2017-05-09 11:04:12.347960+00:00",
+                        "date_modified": "2017-05-09 11:04:12.385982+00:00"
+                    },
+                    {
+                        "id": "3",
+                        "name": "KEMENTERIAN SUMBER ASLI DAN ALAM SEKITAR",
+                        "link": "https://www.nre.gov.my/ms-my/Pages/default.aspx",
+                        "sort": "6",
+                        "src" : "https://www.malaysia.gov.my/public/static/media/Kementerian-kesihatan.png",
+                        "icon": "NRE-logo.png",
+                        "date_insert": "2017-05-09 11:04:12.347960+00:00",
+                        "date_modified": "2017-05-09 11:04:12.385982+00:00"
+                    },
+                    {
+                        "id": "4",
+                        "name": "KEMENTERIAN PENGAJIAN TINGGI",
+                        "link": "https://www.mohe.gov.my",
+                        "sort": "7",
+                        "src" : "https://www.malaysia.gov.my/public/static/media/Kementerian-kesihatan.png",
+                        "icon": "Kementerian-pengajian-tinggi.png",
+                        "date_insert": "2017-05-09 11:04:12.347960+00:00",
+                        "date_modified": "2017-05-09 11:04:12.385982+00:00"
+                    }
+                ]
+            }            
         ]
     },
     {
-        "title": "CAPAIAN",
-        "footer": [
+        "title": "bottom",
+        "items":[
             {
-                "id": "1",
-                "title": "Penerbitan",
-                "name": "Penerbitan",
-                "link": "https:gosgstg.malaysia.gov.my/public/cms/publication",
-                "position": "1",
-                "date_insert": "2017-05-09 11:04:12.578840+00:00",
-                "date_modified": "2017-05-09 11:04:12.645160+00:00",
-                "sort": "1000"
-            },
-            {
-                "id": "2",
-                "title": "Arkib",
-                "name": "Arkib",
-                "link": "https:gosgstg.malaysia.gov.my/public/cms/archive",
-                "position": "1",
-                "date_insert": "2017-05-09 11:04:12.578840+00:00",
-                "date_modified": "2017-05-09 11:04:12.645160+00:00",
-                "sort": "1000"
-            },
-            {
-                "id": "3",
-                "title": "Aduan dan Pertanyaan",
-                "name": "Aduan dan Pertanyaan",
-                "link": "https:gosgstg.malaysia.gov.my/public/cms/feedback",
-                "position": "1",
-                "date_insert": "2017-05-09 11:04:12.578840+00:00",
-                "date_modified": "2017-05-09 11:04:12.645160+00:00",
-                "sort": "1000"
-            },
-            {
-                "id": "5",
-                "title": "Direktori Agensi",
-                "name": "Direktori Agensi",
-                "link": "https:gosgstg.malaysia.gov.my/public/cms/direktori",
-                "position": "1",
-                "date_insert": "2017-05-09 11:04:12.578840+00:00",
-                "date_modified": "2017-05-09 11:04:12.645160+00:00",
-                "sort": "1000"
-            },
-            {
-                "id": "6",
-                "title": "Statistik Dalam Talian",
-                "name": "Statistik Dalam Talian",
-                "link": "https:gosgstg.malaysia.gov.my/public/dservice/?cc=business/dservis/statistic",
-                "position": "1",
-                "date_insert": "2017-05-09 11:04:12.578840+00:00",
-                "date_modified": "2017-05-09 11:04:12.645160+00:00",
-                "sort": "1000"
-            },
-            {
-                "id": "7",
-                "title": "E-Penyertaan",
-                "name": "E-Penyertaan",
-                "link": "https:gosgstg.malaysia.gov.my/public/cms/epenyertaan",
-                "position": "1",
-                "date_insert": "2017-05-09 11:04:12.578840+00:00",
-                "date_modified": "2017-05-09 11:04:12.645160+00:00",
-                "sort": "1000"
-            },
-            {
-                "id": "8",
-                "title": "My Kalendar",
-                "name": "My Kalendar",
-                "link": "https:gosgstg.malaysia.gov.my/public/cms/calendar",
-                "position": "1",
-                "date_insert": "2017-05-09 11:04:12.578840+00:00",
-                "date_modified": "2017-05-09 11:04:12.645160+00:00",
-                "sort": "1000"
-            },
-            {
-                "id": "9",
-                "title": "Galeri",
-                "name": "Galeri",
-                "link": "https:gosgstg.malaysia.gov.my/public/cms/photologue/gallery",
-                "position": "2",
-                "date_insert": "2017-05-09 11:04:12.578840+00:00",
-                "date_modified": "2017-05-09 11:04:12.645160+00:00",
-                "sort": "1000"
-            },
-            {
-                "id": "10",
-                "title": "Perlindungan Data Peribadi",
-                "name": "Perlindungan Data Peribadi",
-                "link": "https:gosgstg.malaysia.gov.my/public/cms/article/page/349",
-                "position": "2",
-                "date_insert": "2017-05-09 11:04:12.578840+00:00",
-                "date_modified": "2017-05-09 11:04:12.645160+00:00",
-                "sort": "1000"
-            },
-            {
-                "id": "11",
-                "title": "Enakmen Kebebasan Maklumat",
-                "name": "Enakmen Kebebasan Maklumat",
-                "link": "https:gosgstg.malaysia.gov.my/public/cms/article/page/725",
-                "position": "2",
-                "date_insert": "2017-05-09 11:04:12.578840+00:00",
-                "date_modified": "2017-05-09 11:04:12.645160+00:00",
-                "sort": "1000"
-            },
-            {
-                "id": "12",
-                "title": "Perkhidmatan Dalam Talian",
-                "name": "Perkhidmatan Dalam Talian",
-                "link": "https:gosgstg.malaysia.gov.my/public/cms/onlineservices",
-                "position": "2",
-                "date_insert": "2017-05-09 11:04:12.578840+00:00",
-                "date_modified": "2017-05-09 11:04:12.645160+00:00",
-                "sort": "1000"
-            },
-            {
-                "id": "13",
-                "title": "Langganan",
-                "name": "Langganan",
-                "link": "https:gosgstg.malaysia.gov.my/public/cms/subscription",
-                "position": "2",
-                "date_insert": "2017-05-09 11:04:12.578840+00:00",
-                "date_modified": "2017-05-09 11:04:12.645160+00:00",
-                "sort": "1000"
-            },
-            {
-                "id": "14",
-                "title": "Suapan RSS",
-                "name": "Suapan RSS",
-                "link": "https:gosgstg.malaysia.gov.my/public/cms/rss",
-                "position": "2",
-                "date_insert": "2017-05-09 11:04:12.578840+00:00",
-                "date_modified": "2017-05-09 11:04:12.645160+00:00",
-                "sort": "1000"
-            },
-            {
-                "id": "15",
-                "title": "Peta Laman",
-                "name": "Peta Laman",
-                "link": "https:gosgstg.malaysia.gov.my/public/cms/sitemap",
-                "position": "2",
-                "date_insert": "2017-05-09 11:04:12.578840+00:00",
-                "date_modified": "2017-05-09 11:04:12.645160+00:00",
-                "sort": "1000"
-            },
-            {
-                "id": "4",
-                "title": "Ketua Pegawai Maklumat(CIO)",
-                "name": "Ketua Pegawai Maklumat(CIO)",
-                "link": "https:gosgstg.malaysia.gov.my/public/cms/article/page/726",
-                "position": "1",
-                "date_insert": "2017-05-09 11:04:12.578840+00:00",
-                "date_modified": "2017-05-09 11:04:12.645160+00:00",
-                "sort": "1000"
-            }
-        ]
+                "bottom": [
+                    {
+                        "id": "1",
+                        "copyright": "2016 MAMPU Hak Cipta Terpelihara",
+                        "update": "Tarikh Kemaskini :",
+                        "update_date": "2017-04-12",
+                        "note": "Paparan terbaik menggunakan pelayar Google Chrome Version 57.0, Internet Mozilla Firefox Version 53.",
+                        "date_insert": "2017-05-09 11:04:12.253890+00:00",
+                        "date_modified": "2017-05-09 11:04:12.294535+00:00"
+                    }
+                ]
+            }        
+        ]        
     },
     {
-        "title": "JUMLAH PELAWAT",
-        "footer": [
-            {
-                "id": "1",
-                "today": "Hari ini",
-                "month": "Bulan ini",
-                "total": "Jumlah Pelawat",
-                "date_insert": "2017-05-09 11:04:12.822230+00:00",
-                "date_modified": "2017-05-09 11:04:12.841853+00:00"
-            }
-        ]
-    },
-    {
-        "title": "PAUTAN LUAR",
-        "footer": [
-            {
-                "id": "1",
-                "name": "BIRO PENGADUAN AWAM",
-                "link": "http:www.pcb.gov.my/bm",
-                "sort": "1000",
-                "icon": "Logo_BPA.png",
-                "date_insert": "2017-05-09 11:04:12.347960+00:00",
-                "date_modified": "2017-05-09 11:04:12.385982+00:00"
-            },
-            {
-                "id": "10",
-                "name": "MYBAYAR",
-                "link": "https:mybayar.gov.my/ms/registration/frmlogins.aspx",
-                "sort": "1000",
-                "icon": "Logo_mybayar.png",
-                "date_insert": "2017-05-09 11:04:12.347960+00:00",
-                "date_modified": "2017-05-09 11:04:12.385982+00:00"
-            },
-            {
-                "id": "9",
-                "name": "JOBS MALAYSIA",
-                "link": "http:www.jobsmalaysia.gov.my/jcs/index.faces",
-                "sort": "1000",
-                "icon": "Logo_jobsmalaysia.png",
-                "date_insert": "2017-05-09 11:04:12.347960+00:00",
-                "date_modified": "2017-05-09 11:04:12.385982+00:00"
-            },
-            {
-                "id": "8",
-                "name": "INFO BANJIR AWAM",
-                "link": "http:publicinfobanjir.water.gov.my",
-                "sort": "1000",
-                "icon": "Logo_Infobanjir.png",
-                "date_insert": "2017-05-09 11:04:12.347960+00:00",
-                "date_modified": "2017-05-09 11:04:12.385982+00:00"
-            },
-            {
-                "id": "7",
-                "name": "SERVIS E-KERAJAAN MALAYSIA",
-                "link": "https:www.myeg.com.my",
-                "sort": "1000",
-                "icon": "MyEG_logo.png",
-                "date_insert": "2017-05-09 11:04:12.347960+00:00",
-                "date_modified": "2017-05-09 11:04:12.385982+00:00"
-            },
-            {
-                "id": "5",
-                "name": "SURUHANJAYA PERKHIDMATAN AWAM",
-                "link": "http:www.spa.gov.my",
-                "sort": "1000",
-                "icon": "Logo_SPA_ghPgwg8.png",
-                "date_insert": "2017-05-09 11:04:12.347960+00:00",
-                "date_modified": "2017-05-09 11:04:12.385982+00:00"
-            },
-            {
-                "id": "6",
-                "name": "UNIT PUSAT UNIVESITI",
-                "link": "http:upu.mohe.gov.my/web",
-                "sort": "1000",
-                "icon": "Logo_UPU.png",
-                "date_insert": "2017-05-09 11:04:12.347960+00:00",
-                "date_modified": "2017-05-09 11:04:12.385982+00:00"
-            },
-            {
-                "id": "2",
-                "name": "POLIS DIRAJA MALAYSIA",
-                "link": "http:www.rmp.gov.my",
-                "sort": "1000",
-                "icon": "Logo_polis.png",
-                "date_insert": "2017-05-09 11:04:12.347960+00:00",
-                "date_modified": "2017-05-09 11:04:12.385982+00:00"
-            },
-            {
-                "id": "15",
-                "name": "KEMENTERIAN PEMBANGUNAN WANITA KELUARGA DAN MASYARAKAT",
-                "link": "http:www.kpwkm.gov.my",
-                "sort": "1",
-                "icon": "KPWKM.png",
-                "date_insert": "2017-05-09 11:04:12.347960+00:00",
-                "date_modified": "2017-05-09 11:04:12.385982+00:00"
-            },
-            {
-                "id": "14",
-                "name": "KEMENTERIAN SUMBER MANUSIA",
-                "link": "http:www.mohr.gov.my/bm/index.php/en",
-                "sort": "2",
-                "icon": "Kementerian-Sumber-Manusia.png",
-                "date_insert": "2017-05-09 11:04:12.347960+00:00",
-                "date_modified": "2017-05-09 11:04:12.385982+00:00"
-            },
-            {
-                "id": "13",
-                "name": "KEMENTERIAN PENDIDIKAN MALAYSIA",
-                "link": "http:www.moe.gov.my/index.php/my",
-                "sort": "3",
-                "icon": "Kementerian-Pendidikan.png",
-                "date_insert": "2017-05-09 11:04:12.347960+00:00",
-                "date_modified": "2017-05-09 11:04:12.385982+00:00"
-            },
-            {
-                "id": "12",
-                "name": "KEMENTERIAN KEWANGAN MALAYSIA",
-                "link": "http:www.treasury.gov.my/index.php",
-                "sort": "4",
-                "icon": "Kementerian-Kewangan.png",
-                "date_insert": "2017-05-09 11:04:12.347960+00:00",
-                "date_modified": "2017-05-09 11:04:12.385982+00:00"
-            },
-            {
-                "id": "11",
-                "name": "KEMENTERIAN KESIHATAN MALAYSIA",
-                "link": "http:www.moh.gov.my",
-                "sort": "5",
-                "icon": "Kementerian-kesihatan.png",
-                "date_insert": "2017-05-09 11:04:12.347960+00:00",
-                "date_modified": "2017-05-09 11:04:12.385982+00:00"
-            },
-            {
-                "id": "3",
-                "name": "KEMENTERIAN SUMBER ASLI DAN ALAM SEKITAR",
-                "link": "http:www.nre.gov.my/ms-my/Pages/default.aspx",
-                "sort": "6",
-                "icon": "NRE-logo.png",
-                "date_insert": "2017-05-09 11:04:12.347960+00:00",
-                "date_modified": "2017-05-09 11:04:12.385982+00:00"
-            },
-            {
-                "id": "4",
-                "name": "KEMENTERIAN PENGAJIAN TINGGI",
-                "link": "https:www.mohe.gov.my",
-                "sort": "7",
-                "icon": "Kementerian-pengajian-tinggi.png",
-                "date_insert": "2017-05-09 11:04:12.347960+00:00",
-                "date_modified": "2017-05-09 11:04:12.385982+00:00"
-            }
-        ]
-    },
-    {
-        "bottom": [
-            {
-                "id": "1",
-                "copyright": "2016 MAMPU Hak Cipta Terpelihara",
-                "update": "Tarikh Kemaskini :",
-                "update_date": "2017-04-12",
-                "note": "Paparan terbaik menggunakan pelayar Google Chrome Version 57.0, Internet Mozilla Firefox Version 53.",
-                "date_insert": "2017-05-09 11:04:12.253890+00:00",
-                "date_modified": "2017-05-09 11:04:12.294535+00:00"
-            }
-        ]
-    },
-    {
-        "bottomlinks": [
-            {
-                "id": "1",
-                "name": "Bantuan",
-                "link": "https:gosgstg.malaysia.gov.my/public/cms/article/page/217",
-                "date_insert": "2017-05-09 11:04:12.445408+00:00",
-                "date_modified": "2017-05-09 11:04:12.504948+00:00"
-            },
-            {
-                "id": "2",
-                "name": "Penafian",
-                "link": "https:gosgstg.malaysia.gov.my/public/cms/article/page/289",
-                "date_insert": "2017-05-09 11:04:12.445408+00:00",
-                "date_modified": "2017-05-09 11:04:12.504948+00:00"
-            },
-            {
-                "id": "3",
-                "name": "Notis Hakcipta",
-                "link": "https:gosgstg.malaysia.gov.my/public/cms/article/page/219",
-                "date_insert": "2017-05-09 11:04:12.445408+00:00",
-                "date_modified": "2017-05-09 11:04:12.504948+00:00"
-            },
-            {
-                "id": "4",
-                "name": "Dasar Privasi",
-                "link": "https:gosgstg.malaysia.gov.my/public/cms/article/page/220",
-                "date_insert": "2017-05-09 11:04:12.445408+00:00",
-                "date_modified": "2017-05-09 11:04:12.504948+00:00"
-            },
-            {
-                "id": "5",
-                "name": "Dasar Keselamatan",
-                "link": "https:gosgstg.malaysia.gov.my/public/cms/article/page/203",
-                "date_insert": "2017-05-09 11:04:12.445408+00:00",
-                "date_modified": "2017-05-09 11:04:12.504948+00:00"
-            },
-            {
-                "id": "6",
-                "name": "Piagam Pelanggan",
-                "link": "https:gosgstg.malaysia.gov.my/public/cms/article/page/221",
-                "date_insert": "2017-05-09 11:04:12.445408+00:00",
-                "date_modified": "2017-05-09 11:04:12.504948+00:00"
-            }
+        "title": "bottomlink",
+        "items":[
+            {                
+                "bottomlinks": [
+                    {
+                        "id": "1",
+                        "name": "Bantuan",
+                        "link": "https:gosgstg.malaysia.gov.my/public/cms/article/page/217",
+                        "date_insert": "2017-05-09 11:04:12.445408+00:00",
+                        "date_modified": "2017-05-09 11:04:12.504948+00:00"
+                    },
+                    {
+                        "id": "2",
+                        "name": "Penafian",
+                        "link": "https:gosgstg.malaysia.gov.my/public/cms/article/page/289",
+                        "date_insert": "2017-05-09 11:04:12.445408+00:00",
+                        "date_modified": "2017-05-09 11:04:12.504948+00:00"
+                    },
+                    {
+                        "id": "3",
+                        "name": "Notis Hakcipta",
+                        "link": "https:gosgstg.malaysia.gov.my/public/cms/article/page/219",
+                        "date_insert": "2017-05-09 11:04:12.445408+00:00",
+                        "date_modified": "2017-05-09 11:04:12.504948+00:00"
+                    },
+                    {
+                        "id": "4",
+                        "name": "Dasar Privasi",
+                        "link": "https:gosgstg.malaysia.gov.my/public/cms/article/page/220",
+                        "date_insert": "2017-05-09 11:04:12.445408+00:00",
+                        "date_modified": "2017-05-09 11:04:12.504948+00:00"
+                    },
+                    {
+                        "id": "5",
+                        "name": "Dasar Keselamatan",
+                        "link": "https:gosgstg.malaysia.gov.my/public/cms/article/page/203",
+                        "date_insert": "2017-05-09 11:04:12.445408+00:00",
+                        "date_modified": "2017-05-09 11:04:12.504948+00:00"
+                    },
+                    {
+                        "id": "6",
+                        "name": "Piagam Pelanggan",
+                        "link": "https:gosgstg.malaysia.gov.my/public/cms/article/page/221",
+                        "date_insert": "2017-05-09 11:04:12.445408+00:00",
+                        "date_modified": "2017-05-09 11:04:12.504948+00:00"
+                    }
+                ]
+            }           
         ]
     }
+    
 ]
