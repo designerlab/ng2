@@ -78,7 +78,7 @@ let num = 0
         border: 1px solid #982d57;
         margin: 0px;
         padding: 0px; }
-        
+      
         `
         ]
 })
@@ -108,6 +108,15 @@ export class TopNavComponent implements AfterViewChecked {
                 jQuery('#confBar li > input.bgColorBtn:nth('+localStorage.getItem('themeIndex')+')').addClass('colorPaletteActive');
             }
         });
+
+                
+        if(localStorage.getItem('customFontType')){
+            jQuery("body, .font-size-s, .font-size-m, .font-size-l, .font-size-xl, .font-size-xxl").css('font-family',  localStorage.getItem('customFontType'));
+            jQuery('#fontOpt option[value="'+localStorage.getItem('customFontType')+'"]').attr("selected", "selected");
+        }else{
+            jQuery("body, .font-size-s, .font-size-m, .font-size-l, .font-size-xl, .font-size-xxl").css('font-family', 'Roboto');
+            jQuery('#fontOpt option[value="Roboto"]').attr("selected", "selected");
+        }
         
     }
     @Input() edited = true
@@ -135,8 +144,7 @@ export class TopNavComponent implements AfterViewChecked {
     
     ngOnInit(){
         this.colors = this.topNavService.getColors()
-        
-        
+
         
     }
 
@@ -215,4 +223,13 @@ export class TopNavComponent implements AfterViewChecked {
      fn_changeFont(dynum){
         jQuery('.font-size-s').css('font-size', 14+dynum+'px')
      }
+
+     onChange($event, deviceValue){
+        jQuery("body, .font-size-s, .font-size-m, .font-size-l, .font-size-xl, .font-size-xxl").css('font-family', deviceValue);
+        localStorage.setItem('customFontType', deviceValue);
+     }
+
+
+
+     
 }

@@ -40,7 +40,7 @@
     </div>
     <div class="row menu_botm container" id="confBar">
       <div class="col-sm-12">
-        <ul class="list-inline hidden-xs font-size-s">
+        <ul class="list-inline hidden-xs font-size-s" id="themeContainer">
           <li>
             Theme Color:
                <input #colorPanel *ngFor="let color of colors; let i = index; let firstItem = first" (click)="setClickedColor(i, firstItem)"  [class.colorPaletteActive]="i == selectedRow ? true: false" type="radio" name="bgColor" [(ngModel)]="bgColor" [ngStyle]="{'background': color.bgColor, 'border': '1px solid', 'border-color': color.bgColor}"  class="bgColorBtn bgColor" value="{{color.bgColor}}">
@@ -59,7 +59,7 @@
               </li>
             <li>
                 <label class="sr-only" for="fontOpt">Font Type</label>
-                <select id="fontOpt" class="form-control">
+                <select #fontTy (change)="onChange($event, fontTy.value)" id="fontOpt" class="form-control">
                     <option class="fontOpt1" value="Roboto">Roboto</option>
                     <option class="fontOpt2" value="Arial">Arial</option>
                     <option class="fontOpt3" value="Times New Roman">Times New Roman</option>
