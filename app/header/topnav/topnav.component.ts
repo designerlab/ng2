@@ -3,7 +3,7 @@ import { AuthService } from '../../user/auth.service'
 import {TranslateService} from '@ngx-translate/core';
 import { TopNavService } from './topnav.service'
 declare var jQuery:any
-
+let num = 0
 @Component({
     selector:'top-nav',
     templateUrl:'./app/header/topnav/topnav.component.html',
@@ -89,6 +89,8 @@ export class TopNavComponent implements AfterViewChecked {
     colors:any[]
     selectedRow : Number
     firstItem: boolean
+    minusBtn = false
+    plusBtn = false
     ngAfterViewChecked() {
     
         jQuery(function(){
@@ -168,4 +170,49 @@ export class TopNavComponent implements AfterViewChecked {
         this.selectedRow = index;
         this.firstItem = firstItem;
     }
+
+    resetBgColor(){
+        localStorage.setItem('themeColor', '#00bdbb')
+        localStorage.setItem('themeIndex', '0');
+        jQuery('#confBar li > input.bgColorBtn').removeClass('colorPaletteActive');
+        jQuery('#confBar li > input.bgColorBtn:nth(0)').addClass('colorPaletteActive');
+        
+    }
+
+    fontminus(){
+        this.plusBtn = false
+        num = num - 1;
+        this.fn_changeFont(num)
+        if(num < -3 ){
+             this.minusBtn = true
+             this.plusBtn = false
+        }else if(num > -3 ){
+            this.minusBtn = false
+            //this.plusBtn = true
+        }
+    }
+
+    fontplus(){
+        this.minusBtn = false
+        num = num + 1;
+        this.fn_changeFont(num)
+        if(num > 3 ){
+            this.plusBtn = true
+            this.minusBtn = false
+        }else if(num < 3){
+            this.plusBtn = false
+            //this.minusBtn = true
+        }
+    }
+
+    fontreset(){
+        this.minusBtn = false
+        this.plusBtn = false
+        num = 0;
+        this.fn_changeFont(num);
+    }
+
+     fn_changeFont(dynum){
+        jQuery('.font-size-s').css('font-size', 14+dynum+'px')
+     }
 }

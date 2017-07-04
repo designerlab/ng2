@@ -44,16 +44,16 @@
           <li>
             Theme Color:
                <input #colorPanel *ngFor="let color of colors; let i = index; let firstItem = first" (click)="setClickedColor(i, firstItem)"  [class.colorPaletteActive]="i == selectedRow ? true: false" type="radio" name="bgColor" [(ngModel)]="bgColor" [ngStyle]="{'background': color.bgColor, 'border': '1px solid', 'border-color': color.bgColor}"  class="bgColorBtn bgColor" value="{{color.bgColor}}">
-                <span><div id="resetBgColor" class="btn btn-xs btn-default"><i class="fa fa-refresh"></i></div></span>
+                <span><div (click)="resetBgColor()" class="btn btn-xs btn-default"><i class="fa fa-refresh"></i></div></span>
           </li>
           
           
           <li class="fontResize" style="margin-left: 70px">
             Font Size :
             </li>
-          <li class="fontResize"><button class="btn btn-default fontminus" style="border:1px solid white;padding: 3px; height: 25px; width: 28px; font-size:14px;"><i class="fa fa-minus"></i>A</button></li>
-          <li class="fontResize"><button class="fontplus btn btn-default" style="border:1px solid white;padding: 3px; height: 25px; width: 28px; font-size:14px;"><i class="fa fa-plus"></i>A</button></li>
-          <span><div class="fontreset btn btn-xs btn-default"><i class="fa fa-refresh"></i></div></span>
+          <li class="fontResize"><button  [disabled]="minusBtn" class="btn btn-default fontminus" (click)="fontminus()" style="border:1px solid white;padding: 3px; height: 25px; width: 28px; font-size:14px;"><i class="fa fa-minus"></i>A</button></li>
+          <li class="fontResize"><button  [disabled]="plusBtn" class="fontplus btn btn-default"  (click)="fontplus()" style="border:1px solid white;padding: 3px; height: 25px; width: 28px; font-size:14px;"><i class="fa fa-plus"></i>A</button></li>
+          <span><div class="fontreset btn btn-xs btn-default" (click)="fontreset()"><i class="fa fa-refresh"></i></div></span>
           <li style="margin-left: 20px">
             Font Type :
               </li>
