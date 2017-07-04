@@ -39,6 +39,13 @@ import {TranslateService, LangChangeEvent } from '@ngx-translate/core'
             color: white;
             cursor: pointer;
         }
+        .copyright {
+            background-color: #333;
+            color: #fff;
+        }
+        .padding-m{
+            padding: 10px;
+        }
        
     `]
 })

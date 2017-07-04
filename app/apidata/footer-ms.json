@@ -52,7 +52,7 @@
     },{
         "title": "otherlink",
         "items":[
-                    {
+            {
                 "title": "HUBUNGI KAMI",
                 "seqno": "1",
                 "footer": [
@@ -436,7 +436,7 @@
     },
     {
         "title": "bottom",
-        "itmes":[
+        "items":[
             {
                 "bottom": [
                     {
@@ -449,7 +449,7 @@
                         "date_modified": "2017-05-09 11:04:12.294535+00:00"
                     }
                 ]
-            }            
+            }        
         ]        
     },
     {
