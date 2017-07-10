@@ -13,7 +13,7 @@
                     </li>
                     <li><a [routerLink]="['public/new']" routerLinkActive="active">Create Event</a></li>
                     <li *ngFor="let menu of menus">
-                        <a class="drop">{{menu.title}}
+                        <a routerLinkActive="active" class="drop">{{menu.title}}
                             <span class="caret"></span>
                         </a>
 
@@ -21,7 +21,7 @@
                             <div class="col_6">
                                 <ul>  
                                     <li class="col-md-4" *ngFor="let data of menu.data">
-                                        <a class="font-size-s" href=""><i class="fa fa-arrow-circle-right"></i> {{data.name}}</a>
+                                        <a class="font-size-s" href="" [routerLink]="['public/topic', data.topic_id]" ><i class="fa fa-arrow-circle-right"></i> {{data.name}}</a>
                                     </li>
                                 </ul>  
                             </div>  

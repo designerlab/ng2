@@ -1,5 +1,6 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core'
+import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core'
 import { FormControl, FormGroup, Validators } from '@angular/forms'
+import { BreadcrumbService } from '../header/breadcrumb/breadcrumb.service'
 
 @Component({
     templateUrl:'app/user/register.component.html',
@@ -14,12 +15,12 @@ import { FormControl, FormGroup, Validators } from '@angular/forms'
       .error :-moz-placeholder { color: #999; } 
       .error :-ms-input-placeholder { color: #999; } 
     `
-  ]
+  ],
+  outputs:[`childEvent`]
 })
 
-export class RegisterComponent{
-
-    @Output() langChange = new EventEmitter()
+export class RegisterComponent implements OnInit{
+    breadcrumb:any
 
       public citizenFormGrp:FormGroup
       public noncitizenFormGrp:FormGroup
@@ -29,12 +30,16 @@ export class RegisterComponent{
       private telefon:FormControl
       private country:FormControl
       private passport:FormControl
-
-
     citizenValue = true
     changeCitizen = true
     country_my = ''
+
+    constructor(private breadcrumbService:BreadcrumbService){
+
+    }
     ngOnInit(){
+        this.breadcrumb = this.breadcrumbService.getBreadcrumb()
+        this.breadcrumb = this.breadcrumb.name = "Registration"
           this.kad_pengenalan = new FormControl('',[Validators.required, Validators.pattern('^[0-9]{15}$')]),
           this.nama_penuh = new FormControl('',[Validators.required, Validators.pattern('^[a-zA-Z ]{1,30}$')]),
           this.emel = new FormControl('',[Validators.required, Validators.email]),
@@ -74,7 +79,7 @@ export class RegisterComponent{
     isCitizen(){        
         return this.citizenValue
     }
-
+    
     validateIC(){
         return this.kad_pengenalan.valid || this.kad_pengenalan.untouched
     }
@@ -88,7 +93,6 @@ export class RegisterComponent{
         return this.telefon.valid || this.telefon.untouched
     }
     validateCountry(){
-        debugger
         return this.country.valid || this.country.untouched
     }
     validatePassport(){
@@ -96,7 +100,6 @@ export class RegisterComponent{
     }
 
     _numbersOnly(event: any) {
-        debugger
         let pattern = /^[0-9]{15}$/
         let inputChar = String.fromCharCode(event.charCode)
 

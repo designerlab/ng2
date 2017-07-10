@@ -39,11 +39,11 @@
       </ul>
     </div>
     <div class="row menu_botm container" id="confBar">
-      <div class="col-sm-12">
-        <ul class="list-inline hidden-xs font-size-s" id="themeContainer">
+      <div class="col-sm-12" id="themeContainer">
+        <ul class="list-inline hidden-xs font-size-s">
           <li>
             Theme Color:
-               <input #colorPanel *ngFor="let color of colors; let i = index; let firstItem = first" (click)="setClickedColor(i, firstItem)"  [class.colorPaletteActive]="i == selectedRow ? true: false" type="radio" name="bgColor" [(ngModel)]="bgColor" [ngStyle]="{'background': color.bgColor, 'border': '1px solid', 'border-color': color.bgColor}"  class="bgColorBtn bgColor" value="{{color.bgColor}}">
+               <input #colorPanel *ngFor="let color of colors; let i = index; let firstItem = first" (click)="setClickedColor(i, firstItem)"  [class.colorPaletteActive]="i == selectedRow ? true: false" type="button" name="bgColor" [(ngModel)]="bgColor" [ngStyle]="{'background': color.bgColor, 'border': '1px solid', 'border-color': color.bgColor}"  class="bgColorBtn bgColor" value="{{color.bgColor}}">
                 <span><div (click)="resetBgColor()" class="btn btn-xs btn-default"><i class="fa fa-refresh"></i></div></span>
           </li>
           
@@ -66,7 +66,7 @@
                 </select>
             </li>
             <li>
-                <span><div id="resetFontStyle" class="btn btn-xs btn-default"><i class="fa fa-refresh"></i></div></span>
+                <span><div (click)="resetFontStyle()" id="resetFontStyle" class="btn btn-xs btn-default"><i class="fa fa-refresh"></i></div></span>
             </li>
         </ul>
       </div>

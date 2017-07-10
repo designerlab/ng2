@@ -1,16 +1,11 @@
-import { Component, OnInit } from '@angular/core'
+import { Component, OnInit, Input } from '@angular/core'
 import {TranslateService} from '@ngx-translate/core';
 @Component({
     selector: 'events-app',
     template: `
         <top-nav class="top-nav-style" (topNavClick)="getExpand($event)" [style.background]="getTheme()" [style.z-index]="this.zIndex" [style.height]="this.bHeight"></top-nav>
         <nav-bar class="nav-bar-style" [style.top]="this.bTop"></nav-bar>
-        <div class="xtra-space container-fluid">
-            <div class="container">
-                <div class="breadCrumb">
-                </div>
-            </div>
-        </div>
+        <breadcrumb  name="World" (userUpdated)="handleUserUpdated($event)" [ninja]="ninja" (onYell)="yell($event)"></breadcrumb>
         <router-outlet></router-outlet>
         <footer></footer>
     `,
@@ -40,23 +35,13 @@ import {TranslateService} from '@ngx-translate/core';
             transition-duration: 1s;
         }
 
-        .xtra-space{
-            min-height:100px;
-            display:block;
-            position:relative;
-            background:#a7a495;
-        }
-
-        .xtra-space .breadCrumb{
-            padding-top:80px;
-        }
         `]
 })
 export class EventsAppComponent implements OnInit {
-    
+    childData:string
     translatedText: string
     supportedLanguages: any[]
-
+    @Input() langChange: string;
       zIndex = "10000"
       bHeight = "70px"
       bTop = "35px" 
@@ -69,8 +54,13 @@ export class EventsAppComponent implements OnInit {
         // translate.use(browserLang.match(/en|ms/) ? browserLang : 'ms');
     }
 
- 
-
+        yell(e){
+            alert('am yelling')
+        }
+        handleUserUpdated(user) {
+            debugger;
+            // Handle the event
+        }
       ngOnInit() {
         
         }
@@ -89,6 +79,14 @@ export class EventsAppComponent implements OnInit {
 
         getTheme(){
             return localStorage.getItem('themeColor')
+        }
+
+        ninja={
+            name:'sridhar1'
+        }
+        
+        public doSomething(date: any):void {
+            console.log('Picked date: ', date);
         }
 
 }
