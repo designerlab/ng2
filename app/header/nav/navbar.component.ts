@@ -9,20 +9,13 @@ declare var jQuery:any
 @Component({
     selector: 'nav-bar',
     templateUrl: './app/header/nav/navbar.component.html',
-    styleUrls:['./app/css/nav.css'],
-    styles:[`
-        .activeLink{
-            background:{themeColor} !important;
-            color: #fff !important;
-        }
-    `]
+    styleUrls:['./app/css/nav.css']
 
 })
 
 export class NavBarComponent implements OnInit, AfterViewChecked{
     menus:IMenu[]
     lang = "en"
-    themeColor = "#ff0"
     constructor(private navService: NavService, private toastr:ToastrService, private translate:TranslateService){
         translate.onLangChange.subscribe((event: LangChangeEvent) => {
 
@@ -51,13 +44,7 @@ export class NavBarComponent implements OnInit, AfterViewChecked{
         jQuery(function(){
             jQuery("#main-menu > li > a").css({'backgroundColor':'#fff', 'color':'#000'});
             jQuery('#main-menu > li > a.active').css('background-color',localStorage.getItem('themeColor'));
-   
-            jQuery("#main-menu > li > a").mouseover(function() {
-                jQuery(this).css("background-color","red");
-            }).mouseout(function() {
-                jQuery(this).css("background-color","transparent");
-            });
-        });
+       });
   
     }
 

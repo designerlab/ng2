@@ -8,6 +8,7 @@ import {TranslateModule, TranslateLoader} from "@ngx-translate/core"
 import {TranslateHttpLoader} from "@ngx-translate/http-loader"
 import { FooterComponent } from "./footer/footer.component"
 
+
 export function HttpLoaderFactory(http: Http) {
     return new TranslateHttpLoader(http, "./app/i18n/", ".json");
 }
@@ -30,12 +31,16 @@ import { SliderService } from './slider/shared/slider.service'
 import { FooterService } from './footer/footer.service'
 import { SliderComponent } from './slider/slider.component'
 import { TopNavComponent } from './header/topnav/topnav.component'
+import { ArticleComponent } from "./article/article.component"
+import { ContactComponent } from "./header/contact.component"
 import { ToastrService } from './common/toastr.service'
+import { BreadcrumbService } from './header/breadcrumb/breadcrumb.service'
 import { Error404Component } from './error/404.component'
 import { TopNavService } from './header/topnav/topnav.service'
 import { NavService } from './header/nav/nav.service'
 import { AuthService } from './user/auth.service' 
 import { appRoutes } from './routes'
+import { BreadcrumbComponent } from './header/breadcrumb/breadcrumb.component'
 
 
 @NgModule({
@@ -67,9 +72,10 @@ import { appRoutes } from './routes'
         Error404Component,
         SearchComponent,
         FooterComponent,
-        
+        ArticleComponent,
+        BreadcrumbComponent,
       
-        // ContactComponent,
+        ContactComponent,
         // FaqComponent,
         // AboutusComponent,
         // ManualComponent
@@ -86,6 +92,7 @@ import { appRoutes } from './routes'
         EventListResolver,
         AuthService,
         NavService,
+        BreadcrumbService,
         {provide:'canDeactivateCreateEvent', useValue:checkDirtyState},
         { provide: APP_CONFIG, useValue: AppConfig }
         ]

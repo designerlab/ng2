@@ -96,6 +96,7 @@ export class TopNavComponent implements AfterViewChecked {
         jQuery(function(){
             if(localStorage.getItem('themeColor') == "" || localStorage.getItem('themeColor') == null || localStorage.getItem('themeColor') == "#00bdbb"){
                 jQuery('#confBar li > input.bgColorBtn:nth(0)').addClass('colorPaletteActive');
+                localStorage.setItem('themeColor','#00bdbb'); 
             }else{
                 jQuery('#confBar li > input.bgColorBtn:nth(0)').removeClass('colorPaletteActive');
             }
@@ -227,6 +228,13 @@ export class TopNavComponent implements AfterViewChecked {
      onChange($event, deviceValue){
         jQuery("body, .font-size-s, .font-size-m, .font-size-l, .font-size-xl, .font-size-xxl").css('font-family', deviceValue);
         localStorage.setItem('customFontType', deviceValue);
+     }
+
+     resetFontStyle(){
+        jQuery('#fontOpt').val('Roboto');
+        jQuery("body, .font-size-s, .font-size-m, .font-size-l, .font-size-xl, .font-size-xxl").css('font-family', 'Roboto');
+        //jQuery('#fontOpt option[value="Roboto"]').attr("selected", "selected");
+        localStorage.setItem('customFontType', 'Roboto');
      }
 
 

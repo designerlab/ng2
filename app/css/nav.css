@@ -31,7 +31,8 @@ li > a.active {
   height: 60px; }
 
 .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > li > a:hover {
-  background: #00bdbb; }
+  background: #00bdbb;
+  color: #e6436e !important; }
 
 .navbar-default .navbar-nav > li > a {
   padding: 20px;
@@ -44,6 +45,9 @@ li > a.active {
 
 .navbar-default .navbar-nav > li > a:hover {
   color: #fff; }
+
+.navbar-default .navbar-nav > li > a.active:hover {
+  color: #fff !important; }
 
 .navbar-brand {
   float: left;
