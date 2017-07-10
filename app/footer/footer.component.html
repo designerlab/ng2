@@ -41,9 +41,9 @@
                      </div> 
                   </div>
                   <div class="sub-add" *ngIf="eachitm.link && !eachitm.icon">
-                     <div class="col-xs-6" style="padding:3px 0px 0px 3px;">                        
+                     <div class="col-xs-6" style="padding:0px 0px 0px 3px;">                        
                         <a href="{{ eachitm.link }}" >
-                           <div [innerHtml]="eachitm.title" class="font-size-s">
+                           <div [innerHtml]="eachitm.title" class="font-size-s" style="height: 32px; float:left;"> 
                            </div> 
                         </a>                            
                      </div>                        
@@ -55,15 +55,15 @@
                         style="max-width:100%;">
                      </a>
                   </div> 
-                  <div class="col-xs-4" *ngIf="eachitm.today">
+                  <div class="col-xs-4" *ngIf="eachitm.today" style="padding:0px 0px 0px 3px;">
                      <div class="font-size-s">{{eachitm.today}}</div>
                      <h4 class="font-size-m">{{eachitm.todayval}}</h4>
                   </div>
-                  <div class="col-xs-4" *ngIf="eachitm.month">
+                  <div class="col-xs-4" *ngIf="eachitm.month" style="padding:0px 0px 0px 3px;">
                      <div class="font-size-s">{{eachitm.month}}</div>
                      <h4 class="font-size-m">{{eachitm.monthval}}</h4>
                   </div>
-                  <div class="col-xs-4" *ngIf="eachitm.total">
+                  <div class="col-xs-4" *ngIf="eachitm.total" style="padding:0px 0px 0px 3px;">
                      <div class="font-size-s">{{eachitm.total}}</div>
                      <h4 class="font-size-m">{{eachitm.totalval}}</h4>
                   </div>                        
