@@ -1,8 +1,8 @@
-{
+[{
     "count": 5,
     "next": null,
     "previous": null,
-    "results": {
+    "results": [{
         "title": "Perniagaan",
         "description": "<p><img src= https:gosgstg.malaysia.gov.my/public/cms/media/uploads/1_perniagaan.jpgalt= width= 100%/></p><p>Akses mudah kepada maklumat dan perkhidmatan untuk perniagaan</p>",
         "content": [
@@ -68,5 +68,5 @@
         "html_head_title": "Perniagaan | Business | MyGOV - Portal Rasmi Kerajaan Malaysia",
         "html_head_meta_keyword": "perniagaan, business",
         "html_head_meta_description": "Akses mudah kepada maklumat dan perkhidmatan untuk perniagaan"
-    }
-}
+    }]
+}]

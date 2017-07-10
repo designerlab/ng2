@@ -34,6 +34,7 @@ import { TopNavComponent } from './header/topnav/topnav.component'
 import { ArticleComponent } from "./article/article.component"
 import { ContactComponent } from "./header/contact.component"
 import { ToastrService } from './common/toastr.service'
+import { ArticleService } from './article/shared/article.service'
 import { BreadcrumbService } from './header/breadcrumb/breadcrumb.service'
 import { Error404Component } from './error/404.component'
 import { TopNavService } from './header/topnav/topnav.service'
@@ -93,6 +94,7 @@ import { BreadcrumbComponent } from './header/breadcrumb/breadcrumb.component'
         AuthService,
         NavService,
         BreadcrumbService,
+        ArticleService,
         {provide:'canDeactivateCreateEvent', useValue:checkDirtyState},
         { provide: APP_CONFIG, useValue: AppConfig }
         ]

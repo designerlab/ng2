@@ -1,11 +1,12 @@
 import { Component, OnInit, Input } from '@angular/core'
-import {TranslateService} from '@ngx-translate/core';
+import {TranslateService} from '@ngx-translate/core'
+import { BreadcrumbService } from './header/breadcrumb/breadcrumb.service'
 @Component({
     selector: 'events-app',
     template: `
         <top-nav class="top-nav-style" (topNavClick)="getExpand($event)" [style.background]="getTheme()" [style.z-index]="this.zIndex" [style.height]="this.bHeight"></top-nav>
         <nav-bar class="nav-bar-style" [style.top]="this.bTop"></nav-bar>
-        <breadcrumb  name="World" (userUpdated)="handleUserUpdated($event)" [ninja]="ninja" (onYell)="yell($event)"></breadcrumb>
+        <breadcrumb></breadcrumb>
         <router-outlet></router-outlet>
         <footer></footer>
     `,
@@ -38,6 +39,7 @@ import {TranslateService} from '@ngx-translate/core';
         `]
 })
 export class EventsAppComponent implements OnInit {
+    breadcrumb:any
     childData:string
     translatedText: string
     supportedLanguages: any[]
@@ -46,7 +48,7 @@ export class EventsAppComponent implements OnInit {
       bHeight = "70px"
       bTop = "35px" 
 
-      constructor(private translate: TranslateService) {
+      constructor(private translate: TranslateService, private breadcrumbService:BreadcrumbService) {
         translate.addLangs(["en", "ms"]);
         translate.setDefaultLang('ms');
         translate.use('ms');
@@ -62,7 +64,8 @@ export class EventsAppComponent implements OnInit {
             // Handle the event
         }
       ngOnInit() {
-        
+        this.breadcrumb = this.breadcrumbService.getBreadcrumb()
+        this.breadcrumb = this.breadcrumb.name = ""
         }
        getExpand(data) {
             if(data) {

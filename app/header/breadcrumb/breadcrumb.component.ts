@@ -7,23 +7,22 @@ import { BreadcrumbService } from './breadcrumb.service'
         <div class="xtra-space container-fluid">
             <div class="container">
                 <div class="breadCrumb">
-                <h1>Test</h1>
-                <h1>{{breadcrumb.name}}</h1>
-                
+                <h1 *ngIf="!isValid">{{breadcrumb.name}}</h1>
+                <h1 *ngIf="isValid">{{breadcrumb.name | translate}}</h1>
                 </div>
             </div>
         </div>
     `,
     styles:[`
     
-        .xtra-space{
+        .xtra-space {
             min-height:100px;
             display:block;
             position:relative;
             background:#a7a495;
         }
 
-        .xtra-space .breadCrumb{
+        .xtra-space .breadCrumb {
             padding-top:80px;
         }
     `]
@@ -33,26 +32,16 @@ export class BreadcrumbComponent implements OnInit{
     
     _greetMessage : string
     breadcrumb:any
-    @Output() userUpdated = new EventEmitter();
+    isValid:any
+    
     constructor(private breadcrumbService:BreadcrumbService){
-        this.userUpdated.emit("value");
+    
     }
 
     ngOnInit(){
         this.breadcrumb = this.breadcrumbService.getBreadcrumb()
+        this.isValid = this.breadcrumbService.getValid()
     }
-
-    @Input() breadcrumbtitle: string;
-     @Input() name: string;
-     @Input() ninja;
-     @Input()
-        set greetMessage(message : string ){
-            this._greetMessage = message+ " manipulated at child component"; 
-        }
-        get greetmessage(){
-            return this._greetMessage;
-        }
-
     
 }
     
