@@ -1,8 +1,8 @@
-{
+[{
     "count": 2,
     "next": null,
     "previous": null,
-    "results": {
+    "results": [{
         "title": "Perumahan",
         "description": "<p><span><img src= https:gosgstg.malaysia.gov.my/public/cms/media/uploads/7_perumahan.jpgalt= width= 100%/></span></p><p>Maklumat dan perkhidmatan berkaitan dengan perumahan</p>",
         "content": [
@@ -35,5 +35,5 @@
         "html_head_title": "Perumahan | Housing | MyGOV - Portal Rasmi Kerajaan Malaysia",
         "html_head_meta_keyword": "perumahan, housing",
         "html_head_meta_description": "Maklumat dan perkhidmatan berkaitan dengan perumahan"
-    }
-}
+    }]
+}]

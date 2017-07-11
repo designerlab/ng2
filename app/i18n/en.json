@@ -8,6 +8,9 @@
     "search":{
       "label":"How Can We Help You?"
     },
+    "breadcrumb":{
+      "register":"REGISTER"
+    },
     "TITLE": "test in english",
     "SELECT": "Change language"
   }

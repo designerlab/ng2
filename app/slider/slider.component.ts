@@ -3,6 +3,7 @@ import { SliderService } from './shared/slider.service'
 import { ISlider, IResult } from './slider.model'
 import { Router } from '@angular/router'
 import {TranslateService, LangChangeEvent } from '@ngx-translate/core'
+import { BreadcrumbService } from '../header/breadcrumb/breadcrumb.service'
 
 declare var jQuery:any
 
@@ -14,6 +15,8 @@ declare var jQuery:any
 })
 
 export class SliderComponent implements AfterViewChecked {
+    breadcrumb: any
+    isValid: any
     @Output() langChange = new EventEmitter()
     ngAfterViewChecked() {
         jQuery(function(){
@@ -27,7 +30,7 @@ export class SliderComponent implements AfterViewChecked {
     }
 
     slides:ISlider[]
-    constructor(private sliderService: SliderService, private translate:TranslateService, private router:Router){
+    constructor(private sliderService: SliderService, private translate:TranslateService, private router:Router, private breadcrumbService:BreadcrumbService){
         this.lang = translate.currentLang;
         translate.onLangChange.subscribe((event: LangChangeEvent) => {
 
@@ -54,7 +57,10 @@ export class SliderComponent implements AfterViewChecked {
 
     lang = this.lang;
     ngOnInit(){
-      this.sliderService.getSliderData(this.lang)
+        this.breadcrumb = this.breadcrumbService.getBreadcrumb()
+        this.breadcrumb = this.breadcrumb.name = ""
+        this.isValid = this.breadcrumbService.isValid = false
+        this.sliderService.getSliderData(this.lang)
             .subscribe(resSliderData => {
                 this.slides = resSliderData;
             });

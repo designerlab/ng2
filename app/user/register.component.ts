@@ -21,6 +21,7 @@ import { BreadcrumbService } from '../header/breadcrumb/breadcrumb.service'
 
 export class RegisterComponent implements OnInit{
     breadcrumb:any
+    isValid:any
 
       public citizenFormGrp:FormGroup
       public noncitizenFormGrp:FormGroup
@@ -39,7 +40,9 @@ export class RegisterComponent implements OnInit{
     }
     ngOnInit(){
         this.breadcrumb = this.breadcrumbService.getBreadcrumb()
-        this.breadcrumb = this.breadcrumb.name = "Registration"
+        this.breadcrumb = this.breadcrumb.name = "home.breadcrumb.register"
+        this.isValid = this.breadcrumbService.getValid()
+        this.isValid = this.isValid.value = true
           this.kad_pengenalan = new FormControl('',[Validators.required, Validators.pattern('^[0-9]{15}$')]),
           this.nama_penuh = new FormControl('',[Validators.required, Validators.pattern('^[a-zA-Z ]{1,30}$')]),
           this.emel = new FormControl('',[Validators.required, Validators.email]),

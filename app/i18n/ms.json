@@ -8,6 +8,9 @@
     "search":{
       "label":"Bagaimana Kami Boleh Membantu Anda?"
     },
+    "breadcrumb":{
+      "register":"PENDAFTARAN"
+    },
     "TITLE": "test in malay",
     "SELECT": "Change language"
   }
